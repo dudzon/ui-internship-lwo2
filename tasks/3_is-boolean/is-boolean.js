@@ -3,8 +3,8 @@
 // export const isBoolean = input => !!input === input
 
 // 2nd solution: Use typeof operator
-//export const isBoolean = input => 'boolean' === typeof input;
+// export const isBoolean = input => 'boolean' === typeof input;
 
 // 3rd solution: use Boolean object
 
-export const isBoolean = input => Boolean(input) === input;
+export const isBoolean = (input) => Boolean(input) === input;
