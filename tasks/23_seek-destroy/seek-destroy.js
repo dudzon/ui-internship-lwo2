@@ -7,7 +7,6 @@
 
 export function destroyer(arr) {
   const args = Array.prototype.slice.call(arguments);
-  // Filtering the arguments from array
   arr = arr.filter((item) => args.indexOf(item)==-1 ? true :false );
   return arr;
 }
