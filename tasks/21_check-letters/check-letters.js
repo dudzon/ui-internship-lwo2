@@ -3,15 +3,15 @@
 // array with number of indices. Run array every method to find out
 // if all elements in output array > -1,(exist in input string)
 
-export const checkLetters = (arr) =>{
+export const checkLetters = ( arr ) =>{
   const result = [];
   const lowercased = arr[0].toLowerCase();
 
-  for (let item of arr[1].toLowerCase()) {
-    result.push(lowercased.indexOf(item));
+  for ( let item of arr[1].toLowerCase() ) {
+    result.push( lowercased.indexOf(item) );
   }
 
-  return result.every((element) => element > -1);
+  return result.every( (element) => element > -1 );
 };
 
 
