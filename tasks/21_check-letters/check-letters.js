@@ -16,11 +16,11 @@
 
 // Second solution -   Ivan's suggestions
 
-export const checkLetters = ( arr ) =>{
+export const checkLetters = ( arr ) => {
   const lowercased = arr[0].toLowerCase();
 
   for ( let item of arr[1].toLowerCase() ) {
-    if (lowercased.indexOf(item) === -1) {
+    if ( lowercased.indexOf(item) === -1 ) {
       return false;
     }
   }
