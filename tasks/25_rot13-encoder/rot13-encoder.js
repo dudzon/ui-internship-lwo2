@@ -4,12 +4,12 @@
 
 export const rot13Encoder = ( string ) => {
   let result = [];
-
   for ( let i = 0; i <= string.length; i++ ) {
-    if ( string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 77 ) {
-      result.push( String.fromCharCode( string.charCodeAt(i) + 13 ) );
-    } else if ( string.charCodeAt(i) >= 78 && string.charCodeAt(i) <= 90 ) {
-      result.push( String.fromCharCode( string.charCodeAt(i) - 13 ) );
+    let code = string.charCodeAt(i);
+    if ( code >= 65 && code <= 77 ) {
+      result.push( String.fromCharCode( code + 13 ) );
+    } else if ( code >= 78 && code <= 90 ) {
+      result.push( String.fromCharCode( code - 13 ) );
     } else {
       result.push( string[i] );
     }
