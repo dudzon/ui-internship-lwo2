@@ -5,21 +5,22 @@ export class God {
 }
 
 export class Human {
-  constructor(name) {
+  constructor( name, sex ) {
     this.name = name;
+    this.sex = sex;
   }
 }
 
 export class Man extends Human {
   constructor( name, sex ) {
-    super(name);
+    super(name, sex);
     this.sex = 'male';
   }
 }
 
 export class Woman extends Human {
   constructor( name, sex ) {
-    super(name);
+    super(name, sex);
     this.sex = 'female';
   }
 }
