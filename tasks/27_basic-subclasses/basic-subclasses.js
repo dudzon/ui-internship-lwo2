@@ -13,14 +13,12 @@ export class Human {
 
 export class Man extends Human {
   constructor( name, sex ) {
-    super(name, sex);
-    this.sex = 'male';
+    super(name, 'male');
   }
 }
 
 export class Woman extends Human {
   constructor( name, sex ) {
-    super(name, sex);
-    this.sex = 'female';
+    super(name, 'female');
   }
 }
