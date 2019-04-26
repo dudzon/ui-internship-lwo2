@@ -7,7 +7,7 @@
 // So I flattened array using reduce method.
 
 export const followTheSpy = ( arr ) => {
-  let result = arr[0];
+  const result = arr[0];
   let foundRoute;
 
   for ( let i = 1; i < arr.length; i++) {
