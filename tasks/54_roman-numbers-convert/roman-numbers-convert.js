@@ -16,7 +16,7 @@ export const convertToRoman = ( num ) => {
     I: 1,
   };
   let romanNumber = '';
-  let valuesArr = Object.values( romanLetters) ;
+  let valuesArr = Object.values( romanLetters);
 
   // eslint-disable-next-line guard-for-in
   for ( let i in valuesArr ) {
