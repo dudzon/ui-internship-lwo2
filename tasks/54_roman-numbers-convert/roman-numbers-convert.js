@@ -25,9 +25,10 @@ export const convertToRoman = ( num ) => {
   //     num -= valuesArr[i];
   //   }
   // }
+  let romanNumberKeys = Object.keys(romanLetters);
   valuesArr.forEach( (item, index) => {
     while ( num - item >= 0 ) {
-      romanNumber += Object.keys(romanLetters)[index];
+      romanNumber += romanNumberKeys[index];
       num -=item;
     }
   });
