@@ -15,11 +15,7 @@ const symDiff = (a, b) => {
   });
   return result.concat(b);
 };
-
 export const sym = (...args) => {
-  let symmetricDifference = symDiff( args[0], args[1] );
-  for ( let i = 2; i < args.length; i++ ) {
-    symmetricDifference = symDiff( symmetricDifference, args[i] );
-  }
+  let symmetricDifference = args.reduce( (acc, el) => symDiff( acc, el ) );
   return [...new Set( symmetricDifference.sort() )];
 };
