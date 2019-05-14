@@ -5,12 +5,12 @@ const symDiff = (a, b) => {
   a = [...new Set( a.sort() )];
 
   b = [...new Set( b.sort() )];
-
   a.map(( element ) => {
-    if ( b.indexOf( element ) === -1 ) {
+    let doesExist = b.indexOf(element);
+    if ( doesExist === -1 ) {
       result.push( element );
     } else {
-      b.splice( b.indexOf(element), 1 );
+      b.splice( doesExist, 1 );
     }
   });
   return result.concat(b);
