@@ -1,4 +1,4 @@
-// import { whatIsInAName } from './find-object-analogy';
+import { whatIsInAName } from './find-object-analogy';
 
 xdescribe('Find object analogy', () => {
 
