@@ -19,11 +19,18 @@ export const convertToRoman = ( num ) => {
   let valuesArr = Object.values( romanLetters);
 
   // eslint-disable-next-line guard-for-in
-  for ( let i in valuesArr ) {
-    while ( num - valuesArr[i] >= 0 ) {
-      romanNumber += Object.keys( romanLetters )[i];
-      num -= valuesArr[i];
+  // for ( let i in valuesArr ) {
+  //   while ( num - valuesArr[i] >= 0 ) {
+  //     romanNumber += Object.keys( romanLetters )[i];
+  //     num -= valuesArr[i];
+  //   }
+  // }
+  valuesArr.forEach( (item, index) => {
+    while ( num - item >= 0 ) {
+      romanNumber += Object.keys(romanLetters)[index];
+      num -=item;
     }
-  }
+  });
   return romanNumber;
 };
+
