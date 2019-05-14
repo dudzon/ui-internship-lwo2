@@ -15,12 +15,29 @@
 
 // Solution 2
 
+// export const rowWeights = ( arr ) => {
+//   let sumOdd = 0;
+//   let sumEven = 0;
+
+//   for ( let i = 0; i< arr.length; i++ ) {
+//     ( i % 2 === 0 ) ? ( sumEven += arr[i]) : ( sumOdd += arr[i] );
+//   }
+//   return [sumEven, sumOdd];
+// };
+
+// Solution 3 with forEach.
 export const rowWeights = ( arr ) => {
   let sumOdd = 0;
   let sumEven = 0;
 
-  for ( let i = 0; i< arr.length; i++ ) {
-    ( i % 2 === 0 ) ? ( sumEven += arr[i]) : ( sumOdd += arr[i] );
-  }
+  arr.forEach( (item, index) =>{
+    if (index % 2 === 0) {
+      sumEven += item;
+    } else {
+      sumOdd += item;
+    }
+  });
+
+
   return [sumEven, sumOdd];
 };
