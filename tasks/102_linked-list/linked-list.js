@@ -1,8 +1,9 @@
 
 class Node {
-  constructor( value, next = null ) {
+  constructor( value ) {
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 export class LinkedList {
@@ -30,7 +31,6 @@ export class LinkedList {
   }
   pop() {
     const current = this.tail;
-
     if (this.amount === 1) {
       this.head = null;
       this.tail = null;
@@ -42,22 +42,19 @@ export class LinkedList {
     this.amount--;
     return current;
   }
-  iterate() {
-    let values = [];
+  iterate( callback ) {
     if (!this.head) {
       return undefined;
     }
     let current = this.head;
     while (current) {
-      values.push(current.value);
+      callback(current);
       current = current.next;
     }
-    return values;
   }
   insertAfter( element, value ) {
-    let current = this.head;
     const newNode = new Node(value);
-
+    let current = this.head;
     while (current) {
       if (current.value === element) {
         const next = current.next;

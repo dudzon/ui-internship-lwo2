@@ -28,7 +28,7 @@ describe('LinkedList', () => {
     });
 
     test('Should call callback function with every cell when passed into iterate method', () => {
-        let arr = [];
+        const arr = [];
         const firstCellValue = 10;
         const secondCellValue = 20;
 
@@ -39,8 +39,7 @@ describe('LinkedList', () => {
         list.push(firstCellValue);
         list.push(secondCellValue);
 
-
-        arr=list.iterate(cb);
+        list.iterate(cb);
 
         expect(arr).toEqual([firstCellValue, secondCellValue]);
     });
