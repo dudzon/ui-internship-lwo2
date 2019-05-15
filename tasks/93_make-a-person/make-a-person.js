@@ -1,8 +1,8 @@
 export class Person {
   constructor( fullname) {
     this.fullname = fullname;
-    this.first;
-    this.last;
+    this.first = this.fullname.split(' ')[0];
+    this.last = this.fullname.split(' ')[1];
   }
 
   getFullName() {
@@ -20,10 +20,9 @@ export class Person {
     this.fullname = this.first + ' ' + this.last;
   }
   getFirstName() {
-    return this.first = this.fullname.split(' ')[0];
+    return this.first;
   }
   getLastName() {
-    return this.last = this.fullname.split(' ')[1];
+    return this.last;
   }
 }
-
