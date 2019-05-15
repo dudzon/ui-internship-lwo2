@@ -8,8 +8,8 @@ export class Person {
   getFullName() {
     return this.fullname;
   }
-  setFullName(firstAndLast) {
-    this.fullname = firstAndLast;
+  setFullName(fullName) {
+    this.fullname = fullName;
   }
   setFirstName(first) {
     this.first = first;
