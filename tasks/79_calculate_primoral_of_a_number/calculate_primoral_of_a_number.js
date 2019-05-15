@@ -5,7 +5,9 @@ export const numPrimorial = ( num ) => {
   let primesArray = [];
   for ( let i = 2; i > 0; i ++) {
     if ( primesArray.length + 1 <= num ) {
-      getPrime( i, primesArray );
+      if ( getPrime( i)) {
+        primesArray.push(i);
+      }
     } else {
       break;
     }
@@ -13,13 +15,13 @@ export const numPrimorial = ( num ) => {
   return primesArray.reduce(( prev, next ) => prev * next, 1);
 };
 
-const getPrime = ( num, arr ) => {
+const getPrime = ( num ) => {
   for ( let i = 2; i <= Math.sqrt(num); i++ ) {
     if ( num % i === 0 ) {
       return false;
     }
   }
-  return arr.push(num);
+  return true;
 };
 
 
