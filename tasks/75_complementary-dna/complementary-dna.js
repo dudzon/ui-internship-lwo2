@@ -2,17 +2,13 @@ export const DNAStrand = ( str ) => {
   return str.split('').map(( item ) => {
     switch ( item ) {
       case 'G':
-        item = 'C';
-        break;
+        return 'C';
       case 'C':
-        item = 'G';
-        break;
+        return 'G';
       case 'A':
-        item = 'T';
-        break;
+        return 'T';
       case 'T':
-        item = 'A';
-        break;
+        return 'A';
     }
     return item;
   }).join('');

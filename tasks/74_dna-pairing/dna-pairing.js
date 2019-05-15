@@ -2,17 +2,13 @@ export const pairElement = ( str ) => {
   return str.split('').map(( item ) => {
     switch ( item ) {
       case 'G':
-        item = ['G', 'C'];
-        break;
+        return ['G', 'C'];
       case 'C':
-        item = ['C', 'G'];
-        break;
+        return ['C', 'G'];
       case 'A':
-        item = ['A', 'T'];
-        break;
+        return ['A', 'T'];
       case 'T':
-        item = ['T', 'A'];
-        break;
+        return ['T', 'A'];
     }
     return item;
   });
