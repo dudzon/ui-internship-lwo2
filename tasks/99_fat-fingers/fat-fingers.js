@@ -6,7 +6,6 @@ export const fatFingers = ( str ) => {
       capsLock = !capsLock;
     } else {
       if (capsLock) {
-        // eslint-disable-next-line max-len
         result += str[i].toUpperCase();
       } else {
         result += str[i];
