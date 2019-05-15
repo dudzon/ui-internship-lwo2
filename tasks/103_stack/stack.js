@@ -17,7 +17,6 @@ export class Stack {
     } else {
       let current = this.last;
       this.last = newNode;
-      newNode.prev = current;
       this.last.prev = current;
     }
     this.size++;
