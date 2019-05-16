@@ -10,6 +10,8 @@ export class Person {
   }
   setFullName(fullName) {
     this.fullname = fullName;
+    this.first = this.fullname.split(' ')[0];
+    this.last = this.fullname.split(' ')[1];
   }
   setFirstName(first) {
     this.first = first;
