@@ -2,11 +2,12 @@
 
 export const pairwise = ( arr, num ) => {
   let sum = 0;
-  for ( let i = 0; i < arr.length; i++ ) {
-    for ( let j = i + 1; j < arr.length; j++ ) {
-      if ( arr[i] + arr[j] === num ) {
+  let copy = arr.slice();
+  for ( let i = 0; i < copy.length; i++ ) {
+    for ( let j = i + 1; j < copy.length; j++ ) {
+      if ( copy[i] + copy[j] === num ) {
         sum += i + j;
-        arr[i] = arr[j] = NaN;
+        copy[i] = copy[j] = NaN;
       }
     }
   }
