@@ -1,25 +1,20 @@
 export class Person {
   constructor( fullname) {
-    this.fullname = fullname;
-    this.first = this.fullname.split(' ')[0];
-    this.last = this.fullname.split(' ')[1];
+    this.setFullName(fullname);
   }
 
   getFullName() {
-    return this.fullname;
+    return this.first + ' ' + this.last;
   }
   setFullName(fullName) {
-    this.fullname = fullName;
-    this.first = this.fullname.split(' ')[0];
-    this.last = this.fullname.split(' ')[1];
+    this.first = fullName.split(' ')[0];
+    this.last = fullName.split(' ')[1];
   }
   setFirstName(first) {
     this.first = first;
-    this.fullname = this.first + ' ' + this.last;
   }
   setLastName(last) {
     this.last = last;
-    this.fullname = this.first + ' ' + this.last;
   }
   getFirstName() {
     return this.first;
