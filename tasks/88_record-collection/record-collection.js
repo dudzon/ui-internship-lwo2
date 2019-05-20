@@ -24,20 +24,36 @@ const collection = {
   },
 };
 
-export const updateRecords = ( id, prop, value ) =>{
-  if ( collection.hasOwnProperty(id)) {
-    if ( prop !== 'tracks' && value !== '') {
-      collection[id][prop] = value;
-    } else if ( prop === 'tracks' && !collection[id][prop] ) {
+// export const updateRecords = ( id, prop, value ) =>{
+//   if ( collection.hasOwnProperty(id)) {
+//     if ( prop !== 'tracks' && value !== '') {
+//       collection[id][prop] = value;
+//     } else if ( prop === 'tracks' && !collection[id][prop] ) {
+//       collection[id][prop] = [];
+//       collection[id][prop].push(value);
+//     } else if ( prop === 'tracks' && value !=='' ) {
+//       collection[id][prop].push(value);
+//     } else {
+//       delete collection[id][prop];
+//     }
+//   }
+//   return collection;
+// };
+
+export const updateRecords = ( id, prop, value ) => {
+  if ( value === '') {
+    delete collection[id][prop];
+    return collection;
+  }
+  if ( prop === 'tracks') {
+    if ( !collection[id][prop] ) {
       collection[id][prop] = [];
       collection[id][prop].push(value);
-    } else if ( prop === 'tracks' && value !=='' ) {
-      collection[id][prop].push(value);
     } else {
-      delete collection[id][prop];
+      collection[id][prop].push(value);
     }
+  } else {
+    collection[id][prop] = value;
   }
   return collection;
 };
-
-
