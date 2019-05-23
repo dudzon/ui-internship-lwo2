@@ -1,0 +1,106 @@
+/*********************************
+*                                *
+*        GENERAL STYLES          *
+*                                *
+**********************************/
+
+:root {
+  --red: red;
+  --green: green;
+  --blue: blue;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*********************************
+*                                *
+*         APP CONTAINER          *
+*                                *
+**********************************/ 
+
+.filter-app {
+  display: flex;
+  height: 5rem;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*********************************
+*                                *
+*            INPUTS              *
+*                                *
+**********************************/
+
+.filter-app__input{
+    -webkit-appearance: none;
+}
+.filter-app__input:checked + .filter-app__label {
+  opacity: 0.5;
+}
+.filter-app__label {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.label--red,
+.element--red {
+  color: var(--red);
+}
+.label--blue,
+.element--blue {
+  color: var(--blue);
+}
+.label--green,
+.element--green {
+  color: var(--green);
+}
+
+/*********************************
+*                                *
+*         COLOR ELEMENTS         *
+*                                *
+**********************************/
+
+.filter-app__elements-wrapper {
+  width: 85%;
+  margin-left: 2rem;
+}
+.element {
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  width: 2.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.element--red {
+  background: var(--red);
+  border: 1px solid var(--red);
+}
+.element--green {
+  background: var(--green);
+  border: 1px solid var(--green);
+}
+.element--blue {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+/*********************************
+*                                *
+*         INTERACTIONS           *
+*                                *
+**********************************/
+
+.input--red:checked ~ .filter-app__elements-wrapper .element--red {
+  display: none;
+}
+.input--green:checked ~ .filter-app__elements-wrapper .element--green {
+  display: none;
+}
+.input--blue:checked ~ .filter-app__elements-wrapper .element--blue {
+  display: none;
+}
