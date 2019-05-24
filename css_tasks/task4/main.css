@@ -1,0 +1,128 @@
+/****************************
+*                           *
+*      GENERAL STYLES       *
+*                           *
+****************************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --oddRowColor: rgb(238, 234, 234);
+  --hoverColor: rgb(255, 255, 170);
+  --tableRowHeaderColor: rgb(107, 179, 228);
+  --tableBorderColor: #ccc;
+  --tableColumnHeaderColor: aquamarine;
+}
+body {
+  width: 100%;
+}
+
+/****************************
+*                           *
+*      HEADER & INPUTS      *
+*                           *
+****************************/
+
+.schedule__header {
+  margin: 2rem;
+  text-align: center;
+}
+.schedule__input--leisure {
+  margin-left: 10rem;
+}
+.schedule__input--leisure,
+.schedule__input--sport,
+.schedule__input--knowledge {
+  cursor: pointer;
+}
+.input--leisure,
+.input--sport,
+.input--knowledge {
+  padding: 0 0.5rem;
+}
+
+/****************************
+*                           *
+*          TABLE            *
+*                           *
+****************************/
+table {
+  margin: 2rem auto 0;
+  border: 1px solid var(--tableBorderColor);
+  border-collapse: collapse;
+  overflow: hidden;
+}
+tr,
+th,
+td {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--tableBorderColor);
+  white-space: nowrap;
+}
+td,
+th {
+  position: relative;
+}
+thead tr th {
+  background-color: var(--tableColumnHeaderColor);
+}
+thead tr th:first-child {
+  background: none;
+}
+tbody tr:nth-child(odd) td::before {
+  background-color: var(--oddRowColor);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+}
+tbody tr th {
+  background-color: var(--tableRowHeaderColor);
+}
+tbody tr:hover {
+  background: #ffa;
+}
+tbody tr td:hover::after {
+  content: "";
+  height: 10000px;
+  left: 0;
+  position: absolute;
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+tbody tr td:hover::after {
+  background: var(--hoverColor);
+}
+/****************************
+*                           *
+*      INTERACTIONS         *
+*                           *
+****************************/
+
+/*  Filters */
+
+.schedule__input--leisure:checked ~ table tbody .table__sport,
+.schedule__input--leisure:checked ~ table tbody .table__knowledge {
+  display: none;
+}
+.schedule__input--sport:checked ~ table tbody .table__leisure,
+.schedule__input--sport:checked ~ table tbody .table__knowledge {
+  display: none;
+}
+.schedule__input--knowledge:checked ~ table tbody .table__sport,
+.schedule__input--knowledge:checked ~ table tbody .table__leisure {
+  display: none;
+}
+/* Reset odd row cell background */
+.schedule__input--leisure:checked ~ table tbody tr:nth-child(odd),
+.schedule__input--sport:checked ~ table tbody tr:nth-child(odd),
+.schedule__input--knowledge:checked ~ table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
