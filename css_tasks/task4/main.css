@@ -71,6 +71,11 @@ thead tr th {
 thead tr th:first-child {
   background: none;
 }
+table tbody .table__leisure,
+table tbody .table__sport,
+table tbody .table__knowledge{
+  display:none;
+}
 tbody tr:nth-child(odd) td::before {
   background-color: var(--oddRowColor);
   content: "";
@@ -107,22 +112,20 @@ tbody tr td:hover::after {
 
 /*  Filters */
 
-.schedule__input--leisure:checked ~ table tbody .table__sport,
-.schedule__input--leisure:checked ~ table tbody .table__knowledge {
-  display: none;
+.schedule__input--leisure:checked ~ table tbody .table__leisure {
+  display: table-row;
 }
-.schedule__input--sport:checked ~ table tbody .table__leisure,
-.schedule__input--sport:checked ~ table tbody .table__knowledge {
-  display: none;
+.schedule__input--sport:checked ~ table tbody .table__sport{
+  display: table-row;
 }
-.schedule__input--knowledge:checked ~ table tbody .table__sport,
-.schedule__input--knowledge:checked ~ table tbody .table__leisure {
-  display: none;
+.schedule__input--knowledge:checked ~ table tbody .table__knowledge {
+  display: table-row;
 }
 /* Reset odd row cell background */
-.schedule__input--leisure:checked ~ table tbody tr:nth-child(odd),
-.schedule__input--sport:checked ~ table tbody tr:nth-child(odd),
-.schedule__input--knowledge:checked ~ table tbody tr:nth-child(odd) {
+.schedule__input--leisure:checked ~ table tbody tr:nth-child(odd) td::before,
+.schedule__input--sport:checked ~ table tbody tr:nth-child(odd) td::before,
+.schedule__input--knowledge:checked ~ table tbody tr:nth-child(odd) td::before {
   background-color: #fff;
 }
+
 
