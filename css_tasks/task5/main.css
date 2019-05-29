@@ -260,3 +260,24 @@ body {
     height: 400px;
   }
 }
+/**********************
+*                     *
+*   MEDIA QUERIES     *
+*                     *
+***********************/
+
+/* Firefox fix for main article header */
+@supports not (column-span:all){
+  .content__article{
+    margin-top:10rem;
+  }
+  .article__header{
+    position:absolute;
+    left:0;
+    top:170px;
+    width:100%;
+  }
+  .content__article.content__article--secondary{
+    margin-top:0;
+  }
+}
