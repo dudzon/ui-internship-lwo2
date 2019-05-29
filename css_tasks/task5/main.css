@@ -252,7 +252,7 @@ body {
 
 @media screen and (min-width: 1600px) {
   .article__image {
-    max-width: 480px;
+    max-width: 420px;
   }
 }
 @media screen and (max-width: 1440px) {
