@@ -1,12 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task5</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bitter|Cinzel:700,900|Ubuntu:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- INPUTS TO CHANGE DEFAULT STYLES -->
+
+    <div class="container">
+    <label for="theme-toggler" class="container__toggler toggler--theme">Change Theme</label>
+    <input type="checkbox" id="theme-toggler" class="theme-toggler">
+    <label for="font-toggler" class="container__toggler toggler--font">Change Font</label>
+    <input type="checkbox" id="font-toggler" class="font-toggler">
+    <label for="font-size-toggler" class="container__toggler toggler--font-size">Change Font Size</label>
+    <input type="checkbox" id="font-size-toggler" class="font-size-toggler">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__top-bar"></div>
+        <h1 class="header__title">The Daily Herald</h1>
+        <div class="header__info">
+          <span>www.thedailyherald.com</span>
+          <span>The world's favourite newspaper</span>
+          <span>28 May 2019</span>
+          <span>$3.95</span>
+        </div>
+      </header>
+      <!-- MAIN CONTENT  -->
+      <main class="content">
+        <section class="content__main-section">
+          <article class="content__article">
+            <h3 class="article__header">
+              Greens demand more radical climate action
+            </h3>
+            <figure class="article__image-container--main">
+              <img
+                src="3225.jpg"
+                alt="Bunch of nasty greedy politicians"
+                class="article__image"
+              />
+              <figcaption class="article__figcaption">
+                The German Green MEP Sven Giegold, second from right, says the
+                party will put climate policy ‘front and centre’. Photograph:
+                Felipe Trueba/EPA
+              </figcaption>
+            </figure>
+            <div class="article__social-media">
+                <span><svg  aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" width="25px" height="25px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><a xlink:href="http://www.twitter.com"><path fill="#1EA1F2" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"><a></path></svg></span>
+                <span><svg aria-hidden="true" focusable="false" width="25px" height="25px" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><a xlink:href="http://www.facebook.com"><path fill="#4267B2" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"><a></path></svg><span>
+            </div>
+            <h5 class="article__subheader">John Smith</h5>
+            <p class="article__text">
+              Europe’s Greens, big winners in Sunday’s European elections, will
+              use their newfound leverage in a fractured parliament to push an
+              agenda of urgent climate action, social justice and civil
+              liberties, the movement’s leaders say. “This was a great outcome
+              for us – but we now also have a great responsibility, because
+              voters have given us their trust,” Bas Eickhout, a Dutch MEP and
+              the Greens’ co-lead candidate for commission president, told the
+              Guardian. “Our voters, especially the younger generation, for many
+              of whom we are now their first choice, are deeply concerned about
+              the climate crisis, and they are pro-European – but they feel the
+              EU is not delivering. They want us to change the course of
+              Europe.” Sign up to the Green Light email to get the planet's most
+              important stories Read more Riding a surge of public concern over
+              the climate crisis, Greens achieved double-digit scores in several
+              countries, finishing second in Germany – where they doubled their
+              previous score – and Finland and third in Luxembourg and France.
+              With their tally of MEPs surging to 70 from 51 in the last
+              parliament, the Greens group will have roughly the same clout in
+              the 751-seat assembly as the far-right populists led by Italy’s
+              interior minister, Matteo Salvini – and a much better chance of
+              using it. The parliament’s shrinking centre-right and centre-left
+              groups lost their longstanding joint majority in the election,
+              meaning that along with liberal MEPs, Greens could prove critical
+              to achieving broad pro-EU majorities to pass European legislation.
+              The big parties are certainly ready to talk. Manfred Weber, the
+              conservative European People’s party’s lead candidate for
+              commission president, said on Monday that the Greens were clearly
+              “a possible partner. We should sit down together and draft a
+              mandate for the next five years.
+            </p>
+
+            <blockquote class="article__blockquote">
+              "We will need to see much more serious climate action, a real
+              change of attitude: a price on C02, properly tackling aviation,
+              the greening of agriculture,” Eickhout said
+            </blockquote>
+            <p>
+              Under the 2015 Paris deal to limit global warming to well below 2C
+              above pre-industrial levels, the 28-nation EU has pledged by 2030
+              to cut greenhouse gas emissions by at least 40% below the levels
+              in 1990. But scientists and activists say Europe and all other
+              major economies must sharply raise their ambitions. The UN
+              Intergovernmental Panel for Climate Change warned in October that
+              warming is currently on track towards a catastrophic 3C or 4C
+              rise. An NBA star, a TV chef and a comedian: meet some of the new
+              MEPs Read more “We will also want real progress on social
+              protection and reducing inequality in Europe,” Eickhout added.
+              “And we will demand far more vigorous action on the rule of law –
+              no more playing politics. So those are the topics. We’ll talk to
+              all who are interested in addressing them.” Sven Giegold, a senior
+              German MEP, confirmed the party would “insist on negotiating
+              substance first. We aim to negotiate a pro-EU agenda in which
+              climate change policy is front and centre – and no longer just
+              symbolic, but concrete.” Any cross-party agreement with Green
+              backing would also need to include an EU policy on investment and
+              social cohesion, Giegold said, plus an absolute commitment to
+              tackling civil rights backsliding in EU states including Hungary,
+              Poland, Romania, Slovakia and Malta. “We think these election
+              results give us a higher legitimacy to make these demands,”
+              Giegold said. “Parliament now needs to have the time to sit down
+              and discuss all this. We need to see more EU democracy come from
+              this, not less.” Philippe Lamberts, a Belgian Green MEP and leader
+              of the Greens’ group in the European parliament, also warned that
+              the party would not enter into alliances unless the contain
+              concrete measures.
+            </p>
+          </article>
+        </section>
+        <!-- MAIN CONTENT - SECONDARY SECTION -->
+        <section class="content__secondary-section">
+          <article class="content__article content__article--secondary">
+            <h3 class="article__header--secondary">
+              Everything we know about CD Projekt's next RPG
+            </h3>
+
+            <div class="article__social-media">
+                <span><svg  aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" width="25px" height="25px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><a xlink:href="http://www.twitter.com"><path fill="#1EA1F2" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"><a></path></svg></span>
+                <span><svg aria-hidden="true" focusable="false" width="25px" height="25px" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><a xlink:href="http://www.facebook.com"><path fill="#4267B2" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"><a></path></svg><span>
+            </div>
+            <h5 class="article__subheader">Mark Knopfler</h5>
+            <p class="article__text">
+              Cyberpunk 2077 was announced way back in 2012, and the past seven
+              years of news paint CD Projekt's sci-fi RPG as a behemoth of a
+              game, even bigger than The Witcher 3. Like The Wild Hunt,
+              Cyberpunk 2077 is first and foremost an RPG, quest director
+              Mateusz Tomaszkiewicz said recently in an interview with
+              AreaJugones, with "a strong narrative component" leading its FPS
+              combat. At E3 2018 PC Gamer was among the first to sit down and
+              watch an hour-long demo that showed off a dizzying variety of
+              Cyberpunk's systems, character progression, and combat. As for E3
+              2019, CD Projekt RED says will be the company's "most important"
+              E3 ever but later clarified that the public still won't be getting
+              hands-on with the game. When is Cyberpunk 2077 coming out? What
+              will its story be like? Will it really look that good? Here's
+              everything we know about Cyberpunk 2077 so far. Cyberpunk 2077
+              release date CD Projekt hasn't given a date. The developers have
+              given a range, but it's a wide one: we know that it plans to
+              release Cyberpunk 2077 between 2017 and 2021, along with another
+              unannounced RPG. Our guess is that Cyberpunk 2077 will release in
+              2019, and a deleted tweet from a Turkish publisher alluded to a
+              2019 release date. CD Projekt is targeting the current generation
+              of consoles in addition to PC. That only gives the team so much
+              time to get it out the door. If you want even more support, the
+              2019 guess is backed up by comments from a March 2017 financial
+              results conference during which CD Projekt developers said that
+              progress on Cyberpunk is "quite advanced." That said, the "when
+              it's done" motto is something CD Projekt is serious about (The
+              Witcher 3 was delayed, and that turned out pretty well, in the
+              end).
+            </p>
+
+            <blockquote
+              class=" article__blockquote article__blockquote--secondary"
+            >
+              In a recent video from Playstation, going behind the scenes of
+              Cyberpunk's development, the devs said "Cyberpunk 2077 may no
+              longer be the mystery it once was, but work on it is far from
+              over."
+            </blockquote>
+
+            <p>
+              Who knows that means—it could point to a late 2019 release, or
+              much later. Another point of speculation: The head writer left CD
+              Projekt RED for Blizzard in early 2019. It's not for sure, but
+              that may mean that the story and dialogue are fully locked-in at
+              this point. Will Cyberpunk 2077 be at E3 2019? Yes! Cyberpunk 2077
+              will be at E3 2019 for what CD Projekt RED says will be the
+              company's "most important" E3 ever. Attendees still won't be able
+              to get hands on a mouse or controller to play, but you can still
+              see a bit of action in a demo presentation if you're willing to
+              wait in line. The game will be demoed at the South Hall in the LA
+              Convention Center, booth 1023, on June 11-13th. Cyberpunk 2077's
+              E3 2018 gameplay demo Here it is, the video we were waiting for:
+              48 minutes of Cyberpunk 2077 gameplay, with some VO explaining
+              what's going on. Further down in this article, you'll find what we
+              learned from viewing a slightly different version of this demo at
+              E3 2018, as well as other details from interviews and news stories
+              spanning the past several years. Also, check out Andy's
+              impressions of this same demo, played slower with more time to
+              gawk at the surroundings.
+            </p>
+          </article>
+          <aside class="content__secondary--section__aside">
+            <figure class="aside__image-container">
+              <img
+                src="cyberpunk2.jpg"
+                alt="Screenshot from Cyberpunk game"
+                class="article__image--secondary"
+              />
+              <figcaption class="article__figcaption">
+                This is how Cyberpunk is going to look
+              </figcaption>
+            </figure>
+          </aside>
+        </section>
+        <!-- CARLSBERG AD -->
+        <div class="content__ad">
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
