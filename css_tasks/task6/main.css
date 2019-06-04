@@ -5,6 +5,7 @@
   --logoColor: #000;
   --mainColor: #626262;
   --titleColor: #b4ad9e;
+  --backgroundColor: #f0f0f0;
   --mainFontSize: 0.875rem;
   --biggerFontSize: 1.875rem;
 }
@@ -62,13 +63,11 @@ body {
 *                        *
 *************************/
 .jumbotron {
-  width: 100%;
   margin-top: 4.625rem;
 }
 .jumbotron__image {
-  object-fit: contain;
   width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
 /************************* 
 *                        *
@@ -82,7 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 55.8125rem;
-  margin: 0 auto;
+  margin: 0 auto 8.4375rem;
 }
 .content__main-text--headline {
   color: var(--titleColor);
@@ -110,4 +109,154 @@ body {
   font-size: var(--mainFontSize);
   font-weight: 300;
   text-transform: uppercase;
+}
+/************************* 
+*                        *
+*         BLOG           *
+*                        *
+*************************/
+
+.content__blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30rem 30rem;
+  grid-template-areas:
+    " blog1 blog2 "
+    " blog3 blog4 ";
+  grid-gap: 7rem 3.75rem;
+  width: 55.8125rem;
+  margin: 0 auto 6.375rem;
+}
+.content__blog-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    " blog5 blog6"
+    " button button";
+  grid-gap: 7rem 3.75rem;
+  width: 55.8125rem;
+  margin: 6.4375rem auto 6.375rem;
+}
+.content__blog-container {
+  display: flex;
+  flex-direction: column;
+}
+.content__blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content__blog--headline {
+  margin-top: 2rem;
+  color: var(--titleColor);
+  font-family: var(--titleFont);
+  font-size: var(--mainFontSize);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.content__blog--title {
+  margin: 1rem 0 1.25rem;
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: var(--biggerFontSize);
+}
+.content__blog--paragraph {
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: var(--mainFontSize);
+}
+.content__blog-button {
+  grid-column: span 2;
+  width: 10.25rem;
+  height: 3.75rem;
+  margin: 0 auto;
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: 1.25rem;
+  border: 1px solid var(--mainColor);
+  background: none;
+  cursor: pointer;
+}
+/************************* 
+*                        *
+*       NEWSLETTER       *
+*                        *
+*************************/
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 17.9375rem;
+  background-color: var(--backgroundColor);
+}
+.newsletter__title {
+  padding-top: 0.625rem;
+  color: #333;
+  font-family: var(--mainFont);
+  font-size: var(--biggerFontSize);
+  letter-spacing: 0.8px;
+}
+.newsletter__form {
+  display: flex;
+  align-items: center;
+  height: var(--biggerFontSize);
+  width: 25rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid var(--logoColor);
+}
+.newsletter__input {
+  width: 95%;
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: var(--mainFontSize);
+  border: none;
+  background: none;
+  outline: 0;
+}
+.newsletter__input::placeholder,
+.newsletter__input:focus {
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: var(--mainFontSize);
+}
+.newsletter__button {
+  width: 4%;
+  background: none;
+  border: none;
+  cursor:pointer;
+}
+.newsletter__button-icon {
+  color: var(--mainColor);
+}
+/************************* 
+*                        *
+*        FOOTER          *
+*                        *
+*************************/
+.footer {
+  height: 6.0625rem;
+  background-color: var(--backgroundColor);
+}
+.footer__main-container {
+  display: flex;
+  width: 55.8125rem;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__element-text {
+  padding-right: 1.0625rem;
+  font-family: var(--mainFont);
+  font-size: var(--mainFontSize);
+}
+.footer__element:last-child .footer__element-text {
+  padding-right: 0;
+}
+.footer__element img {
+  height: 0.8125rem;
+  padding-left: 1.0625rem;
+  cursor:pointer;
 }
