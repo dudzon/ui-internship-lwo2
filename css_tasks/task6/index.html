@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task6</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu:300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <span class="header__logo">minimø</span>
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-list--item">Lifestyle</li>
+            <li class="header__navigation-list--item">Photodiary</li>
+            <li class="header__navigation-list--item">Music</li>
+            <li class="header__navigation-list--item">Travel</li>
+          </ul>
+        </nav>
+        <img src="assets/svg/bars-solid.svg" alt="Mobile menu icon" class="header__mobile-icon">
+      </header>
+      <!-- JUMBOTRON -->
+      <div class="jumbotron">
+        <picture>
+          <source
+            srcset="assets/image@3x-min.jpg"
+            media="(min-width: 1200px)"
+          />
+          <source srcset="assets/image@2x-min.jpg" media="(min-width: 768px)" />
+          <source srcset="assets/image-min.jpg" media="(max-width: 767.98px)" />
+          <img
+            srcset="assets/image-min.jpg"
+            alt="Picture of two girls"
+            class="jumbotron__image"
+          />
+        </picture>
+      </div>
+      <main class="content">
+        <section class="content__main-text">
+          <span class="content__main-text--headline">Photodiary</span>
+          <h2 class="content__main-text--title">The perfect weekend getaway</h2>
+          <p class="content__main-text--paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Sed ut
+            perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+            inventore veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+            aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+            dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+            quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem.
+          </p>
+          <span class="content__main-text--comment">Leave a comment</span>
+        </section>
+        <!-- BLOG -->
+        <section class="content__blog">
+          <article class="content__blog-container">
+            <picture>
+              <source
+                srcset="assets/blog1@3x-min.jpg"
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="assets/blog1@2x-min.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="assets/blog1-min.jpg"
+                media="(max-width: 767.98px)"
+              />
+              <img
+                srcset="assets/blog1-min.jpg"
+                alt="Picture of music fans"
+                class="content__blog-image"
+              />
+            </picture>
+            <span class="content__blog--headline">Lifestyle</span>
+            <h2 class="content__blog--title">
+              More than just a music festival
+            </h2>
+            <p class="content__blog--paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+          </article>
+          <article class="content__blog-container">
+            <picture>
+              <source
+                srcset="assets/blog2@3x-min.jpg"
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="assets/blog2@2x-min.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="assets/blog2-min.jpg"
+                media="(max-width: 767.98px)"
+              />
+              <img
+                srcset="assets/blog2-min.jpg"
+                alt="Picture of hot black coffee"
+                class="content__blog-image"
+              />
+            </picture>
+            <span class="content__blog--headline">Lifestyle</span>
+            <h2 class="content__blog--title">Life tastes better with coffee</h2>
+            <p class="content__blog--paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+          </article>
+          <article class="content__blog-container">
+            <picture>
+              <source
+                srcset="assets/blog3@3x-min.jpg"
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="assets/blog3@2x-min.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="assets/blog3-min.jpg"
+                media="(max-width: 767.98px)"
+              />
+              <img
+                srcset="assets/blog3-min.jpg"
+                alt="Picture of two people staring at the bridge"
+                class="content__blog-image"
+              />
+            </picture>
+            <span class="content__blog--headline">Photodiary</span>
+            <h2 class="content__blog--title">American dream</h2>
+            <p class="content__blog--paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+          </article>
+          <article class="content__blog-container">
+            <picture>
+              <source
+                srcset="assets/blog4@3x-min.jpg"
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="assets/blog4@2x-min.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="assets/blog4-min.jpg"
+                media="(max-width: 767.98px)"
+              />
+              <img
+                srcset="assets/blog4-min.jpg"
+                alt="Picture of a trekker in a misty day"
+                class="content__blog-image"
+              />
+            </picture>
+            <span class="content__blog--headline">Photodiary</span>
+            <h2 class="content__blog--title">A day exploring the Alps</h2>
+            <p class="content__blog--paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- Container end-->
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <h2 class="newsletter__title">Sign up for our newsletter!</h2>
+      <form class="newsletter__form" action="">
+        <input
+          class="newsletter__input"
+          type="email"
+          placeholder="Enter a valid email address"
+          name="email"
+        />
+        <button class="newsletter__button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="17"
+            viewBox="0 0 24 24"
+            class="newsletter__button-icon"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z"
+            />
+          </svg>
+        </button>
+      </form>
+    </section>
+    <!-- Blog Secondary -->
+    <div class="container">
+      <section class="content__blog-secondary">
+        <article class="content__blog-container">
+          <picture>
+            <source
+              srcset="assets/blog5@3x-min.jpg"
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="assets/blog5@2x-min.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="assets/blog5-min.jpg"
+              media="(max-width: 767.98px)"
+            />
+            <img
+              srcset="assets/blog5-min.jpg"
+              alt="Picture of music fans"
+              class="content__blog-image"
+            />
+          </picture>
+          <span class="content__blog--headline">Lifestyle</span>
+          <h2 class="content__blog--title">
+            Top 10 song for running
+          </h2>
+          <p class="content__blog--paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </article>
+        <article class="content__blog-container">
+          <picture>
+            <source
+              srcset="assets/blog6@3x-min.jpg"
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="assets/blog6@2x-min.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="assets/blog6-min.jpg"
+              media="(max-width: 767.98px)"
+            />
+            <img
+              srcset="assets/blog6-min.jpg"
+              alt="Picture of music fans"
+              class="content__blog-image"
+            />
+          </picture>
+          <span class="content__blog--headline">Lifestyle</span>
+          <h2 class="content__blog--title">
+            Cold winter days
+          </h2>
+          <p class="content__blog--paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </article>
+        <button class="content__blog-button">Load More</button>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__main-container">
+        <div class="footer__element">
+          <span class="footer__element-text">Terms and conditions</span>
+          <span class="footer__element-text">Privacy</span>
+        </div>
+        <div class="footer__element">
+          <span class="footer__element-text">Follow</span>
+          <img src="assets/svg/facebook-f-brands.svg" alt=" Facebook icon " />
+          <img src="assets/svg/twitter-brands.svg" alt=" Twitter icon" />
+          <img src="assets/svg/instagram-brands.svg" alt="Instagram icon" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
