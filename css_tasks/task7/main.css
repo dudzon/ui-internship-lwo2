@@ -1,0 +1,37 @@
+:root {
+  --mainColor: #68899a;
+  --mainContainerWidth: 64%;
+  --topBarTextColor: #868f93;
+  --mainFont: "Lato", sans-serif;
+  --topBarFontSize: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.top-bar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0.3125rem 0;
+  background: #beced6;
+}
+.top-bar__text {
+  width: var(--mainContainerWidth);
+  margin: 0 auto;
+  color: var(--topBarTextColor);
+  font-family: var(--mainFont);
+  font-size: var(--topBarFontSize);
+  text-transform: uppercase;
+  text-align: center;
+}
+.top-bar__btn-close {
+  position: absolute;
+  top:10%;
+  right:18%;
+  color:var(--mainColor);
+  font-family:var(--mainFont);
+  font-size: var(--topBarFontSize);
+}
