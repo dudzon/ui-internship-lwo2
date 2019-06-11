@@ -24,26 +24,26 @@ body {
 *                     *
 ***********************/
 .container__toggler {
-  position: fixed;
-  margin-left: 20px;
-  left: 0;
+  position: absolute;
   cursor: pointer;
   padding: 5px;
   border: 1px solid var(--fontColor);
   border-radius: 5px;
-  width:100px;
+  width: 100px;
   font-family: var(--mainThemeFont);
-  font-size:.77rem;
-  text-align:center
+  font-size: 0.77rem;
+  text-align: center;
 }
 .toggler--theme {
-  top: 48%;
+  top: 18%;
 }
 .toggler--font {
-  top: 52%;
+  top: 18%;
+  left: 40%;
 }
-.toggler--font-size{
-    top:56%;
+.toggler--font-size {
+  top: 18%;
+  left: 75%;
 }
 
 .theme-toggler,
@@ -58,7 +58,6 @@ body {
 ***********************/
 .header {
   width: 100%;
-  height: 7rem;
 }
 .header__top-bar {
   width: 100%;
@@ -76,6 +75,7 @@ body {
 .header__info {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   border: 2px solid var(--mainThemeColor);
   font-family: var(--mainThemeFont);
 }
@@ -99,7 +99,7 @@ body {
 /* MAIN SECTION */
 .content__main-section {
   font-family: var(--mainThemeFont);
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .content__article {
   width: 100%;
@@ -115,6 +115,7 @@ body {
   font-family: var(--articleHeaderFont);
   font-size: 3rem;
   margin-top: 2rem;
+  line-height: 1.5;
 }
 .article__subheader {
   font-style: italic;
@@ -125,7 +126,7 @@ body {
   margin: 0;
 }
 .article__image {
-  max-width: 350px;
+  width: 100%;
 }
 .article__social-media {
   display: flex;
@@ -250,14 +251,45 @@ body {
 
 /* really basic stuff  */
 
-@media screen and (min-width: 1600px) {
-  .article__image {
-    max-width: 420px;
-  }
-}
 @media screen and (max-width: 1440px) {
   .content__ad {
     height: 400px;
+  }
+}
+@media screen and (max-width: 761.98px) {
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 28%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+  .header__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container__toggler {
+    width: 60px;
+  }
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 34%;
+  }
+  .article__header {
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding-top: 3.5rem;
+  }
+}
+@media screen and (max-width: 367px) {
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 43%;
   }
 }
 /**********************
@@ -267,17 +299,17 @@ body {
 ***********************/
 
 /* Firefox fix for main article header */
-@supports not (column-span:all){
-  .content__article{
-    margin-top:10rem;
+@supports not (column-span: all) {
+  .content__article {
+    margin-top: 10rem;
   }
-  .article__header{
-    position:absolute;
-    left:0;
-    top:170px;
-    width:100%;
+  .article__header {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    width: 100%;
   }
-  .content__article.content__article--secondary{
-    margin-top:0;
+  .content__article.content__article--secondary {
+    margin-top: 0;
   }
 }
