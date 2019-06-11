@@ -292,6 +292,33 @@ body {
     top: 43%;
   }
 }
+@media screen and (max-height:800px){
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 24%;
+  }
+@media screen and (max-height:800px) and (max-width:761.98px){
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 33%;
+  }
+}
+@media screen and (max-height:800px) and (max-width:576px){
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 42%;
+  }
+}
+@media screen and (max-height:800px) and (max-width:367px){
+  .toggler--theme,
+  .toggler--font,
+  .toggler--font-size {
+    top: 53%;
+  }
+}
 /**********************
 *                     *
 *   MEDIA QUERIES     *
