@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Single Product Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <p class="top-bar__text">
+        start selling your products or buy them from anywhere!
+      </p>
+      <span role="button" class="top-bar__btn-close">x</span>
+    </div>
+    <header class="container header">
+      <div class="header__language">
+        <p>
+          <img
+            src="assets/usa-flag@2x.png"
+            alt=""
+            class="header__language-flag"
+          />USD<span>&#9660;</span>
+        </p>
+      </div>
+      <div class="header__logo">bonfire</div>
+      <div class="header__cart">cart(3)</div>
+    </header>
+    <nav class="container navbar">
+      <div class="navbar__mobile"></div>
+      <ul class="menu">
+        <li><a href="#" class="menu__item">home</a></li>
+        <li><a href="#" class="menu__item menu__item--sub">men</a></li>
+        <li><a href="#" class="menu__item menu__item--sub">women</a></li>
+        <li><a href="#" class="menu__item">lookbook</a></li>
+        <li><a href="#" class="menu__item">about</a></li>
+        <li><a href="#" class="menu__item">blog</a></li>
+      </ul>
+      <div class="navbar__action">
+        <button class="navbar-action__button">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="heart"
+            class="svg-inline--fa fa-heart fa-w-16"
+            role="img"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor"
+              d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+            ></path>
+          </svg>
+        </button>
+        <button class="navbar-action__button">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="search"
+            class="svg-inline--fa fa-search fa-w-16"
+            role="img"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor"
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <main class="container product">
+      <section class="product-images">
+        <div class="product-images__current"></div>
+        <ul class="product-images-list">
+          <li class="product-images-list__item"></li>
+          <li class="product-images-list__item"></li>
+          <li class="product-images-list__item"></li>
+          <li class="product-images-list__item"></li>
+        </ul>
+      </section>
+      <section class="product-description">
+        <header class="product-description-header">
+          <p class="product-breadcrumbs">
+            <span>&lsaquo;</span><a href="#" class="product-breadcrumbs__link">Back to <span>woman</span></a>
+          </p>
+          <h4 class="product-description__title">
+            the atelier tailored coat
+          </h4>
+          <div class="product-description__review">
+            <div class="product-description__review-container">
+              <span class="product-description__review-star">&#9733;</span>
+              <span class="product-description__review-star">&#9733;</span>
+              <span class="product-description__review-star">&#9733;</span>
+              <span class="product-description__review-star">&#9733;</span>
+              <span class="product-description__review-star--grey"
+                >&#9733;</span
+              >
+              <span class="product-description__review-text">3 Review(s)</span>
+              <span class="product-description__review-text"
+                ><a href="#">add a review</a></span
+              >
+            </div>
+            <span class="product-description__review-price">$499.00</span>
+          </div>
+        </header>
+        <section class="product-description__info">
+          <header class="product-description__header">
+            <p class="product-description__info-paragraph">
+              Availability :<span>In stock</span>
+            </p>
+            <p class="product-description__info-paragraph">
+              Product Code :<span>#4657</span>
+            </p>
+            <p class="product-description__info-paragraph">
+              Tags :<span>Fashion,</span><span>Hood,</span><span>Classic</span>
+            </p>
+          </header>
+          <p class="product-description__text">
+            Sleek, polished, and boasting an impeccably modern fit, this blue,
+            2-but- ton Lazio suit features a notch lapel, flap pockets, and
+            accompanying flat front trousers—all in pure wool by Vitale Barberis
+            Canonico.
+          </p>
+          <ul class="product-description__text-list">
+            <li class="text-list__item">
+              Dark blue suit for a tone-on-tone look
+            </li>
+            <li class="text-list__item">Regular fit</li>
+            <li class="text-list__item">100% Cotton</li>
+            <li class="text-list__item">Free shipping with 4 days delivery</li>
+          </ul>
+        </section>
+        <form action="" class="product-description__form">
+          <div class="form-inputs">
+            <div class="form-inputs__container form-inputs__container--color">
+              <label for="color">Color</label>
+              <select name="color" id="color" class="form-inputs__color">
+                <option value="">Select Color</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+              </select>
+            </div>
+            <div class="form-inputs__container form-inputs__container--size">
+              <label for="size">Size</label>
+              <select name="size" id="size" class="form-inputs__size">
+                <option value="">Select Size</option>
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+                <option value="extra_large">XL</option>
+              </select>
+            </div>
+            <div class="form-inputs__container">
+              <label for="quantity">Qty</label>
+              <input
+                class="form-inputs__quantity"
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="0"
+                max="100"
+                step="1"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <span class="form-button-clear" role="button">clear selection</span>
+          <div class="form-buttons">
+            <button class="form-buttons__cart">add to cart</button>
+            <button class="form-buttons__wishlist">
+              add to wishlist
+            </button>
+          </div>
+        </form>
+        <div class="social">
+          <span class="social-text">share this</span>
+          <span class="social__button social__button--facebook" role="button"
+            >&nbsp;&nbsp;Like</span
+          >
+          <span class="social__button">Share</span>
+          <span class="social__followers">235k</span>
+          <span class="social__button social__button--twitter" role="button"
+            >Tweet</span
+          >
+          <span class="social__followers">93</span>
+          <span
+            class="social__button social__button--pinterest"
+            role="button"
+          ></span>
+          <span class="social__followers">65k+</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
