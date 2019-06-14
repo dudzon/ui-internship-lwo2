@@ -42,7 +42,7 @@
         <li><a href="#" class="menu__item">blog</a></li>
       </ul>
       <div class="navbar__action">
-        <button class="navbar__action-button">
+        <button class="navbar-action__button">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -60,7 +60,7 @@
             ></path>
           </svg>
         </button>
-        <button class="navbar__action-button">
+        <button class="navbar-action__button">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -92,8 +92,8 @@
       </section>
       <section class="product-description">
         <header class="product-description-header">
-          <p class="product-description__breadcrumbs">
-            <span>&lsaquo;</span>Back to <span>woman</span>
+          <p class="product-breadcrumbs">
+            <span>&lsaquo;</span><a href="#" class="product-breadcrumbs__link">Back to <span>woman</span></a>
           </p>
           <h4 class="product-description__title">
             the atelier tailored coat
@@ -133,7 +133,7 @@
             accompanying flat front trousers—all in pure wool by Vitale Barberis
             Canonico.
           </p>
-          <ul class="text-list">
+          <ul class="product-description__text-list">
             <li class="text-list__item">
               Dark blue suit for a tone-on-tone look
             </li>
@@ -142,7 +142,7 @@
             <li class="text-list__item">Free shipping with 4 days delivery</li>
           </ul>
         </section>
-        <form action="" class="form">
+        <form action="" class="product-description__form">
           <div class="form-inputs">
             <div class="form-inputs__container form-inputs__container--color">
               <label for="color">Color</label>
@@ -177,20 +177,29 @@
               />
             </div>
           </div>
-          <span class="button-clear" role="button">clear selection</span>
+          <span class="form-button-clear" role="button">clear selection</span>
           <div class="form-buttons">
-            <button class="form-buttons form-buttons--cart">add to cart</button>
-            <button class="form-buttons form-buttons--wishlist">add to wishlist</button>
+            <button class="form-buttons__cart">add to cart</button>
+            <button class="form-buttons__wishlist">
+              add to wishlist
+            </button>
           </div>
         </form>
         <div class="social">
           <span class="social-text">share this</span>
-          <span class="social__button social__button--facebook" role="button">Like</span>
+          <span class="social__button social__button--facebook" role="button"
+            >&nbsp;&nbsp;Like</span
+          >
           <span class="social__button">Share</span>
           <span class="social__followers">235k</span>
-          <span class="social__button social__button--twitter" role="button">Tweet</span>
+          <span class="social__button social__button--twitter" role="button"
+            >Tweet</span
+          >
           <span class="social__followers">93</span>
-          <span class="social__button social__button--pinterest" role="button"></span>
+          <span
+            class="social__button social__button--pinterest"
+            role="button"
+          ></span>
           <span class="social__followers">65k+</span>
         </div>
       </section>
