@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $secondaryBackgroundColor;
+
+  &__logo {
+    @include logo;
+    span:first-child {
+      font-weight: 700;
+      color: $sectionColor;
+    }
+    span:last-child {
+      color: $mainThemeColor;
+    }
+  }
+  &__navbar {
+    font-family: $primaryFont;
+    font-weight: 600;
+    font-size: $navFontSize;
+    .header-navbar__item {
+      display: inline;
+      padding-left: 2rem;
+      a {
+        color: $navbarColor;
+        text-decoration: none;
+      }
+    }
+  }
+}

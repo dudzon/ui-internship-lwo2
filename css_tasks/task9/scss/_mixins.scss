@@ -1,0 +1,8 @@
+@import 'variables';
+
+@mixin logo{
+    padding:1.25rem 0;
+    font-family:$secondaryFont;
+    font-size: $logoFontSize;
+    text-transform:uppercase;
+}
