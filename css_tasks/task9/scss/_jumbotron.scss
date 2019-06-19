@@ -1,0 +1,123 @@
+@import "variables";
+@import "mixins";
+
+.jumbotron {
+  position: relative;
+  &__image {
+    width: 100%;
+    max-height: 40rem;
+    opacity: 0.82;
+    background: #000;
+  }
+  &__content {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    top: 13.16%;
+    .jumbotron-content__left-column {
+      @include flexColumn;
+      .jumbotron-header__title {
+        @include jumbotronTitle;
+        padding-bottom: 0.75rem;
+        font-size: $jumbotronTitleFontSize;
+        span:first-child {
+          @include logoFirstSpan;
+        }
+        span:last-child {
+          @include logoSecondSpan;
+        }
+      }
+      .jumbotron-header__subtitle {
+        @include sectionHeader;
+        color: $sectionColor;
+      }
+      .jumbotron-left-column__separator {
+        width: 14%;
+        height: 2px;
+        margin-top: 1.5rem;
+        background: $sectionColor;
+      }
+      .jumbotron-left-column__text {
+        margin-top: 1.5rem;
+        font-family: $secondaryFont;
+        font-size: $jumbotronTextFontSize;
+        color: $navbarColor;
+        line-height: 1.44;
+      }
+      .jumbotron-left-column__button {
+        width: 23.61%;
+        margin-top: 7%;
+        padding: 0.75rem 0;
+        font-family: $primaryFont;
+        font-size: $jumbotronTextFontSize;
+        background: transparent;
+        color: $sectionColor;
+        cursor: pointer;
+        &:hover {
+          background: $secondaryBackgroundColor;
+          transform: scale(1.1);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    .jumbotron__form{
+      @include flexColumn;
+      width:70%;
+      max-width:22.5rem;
+      margin:2.75rem auto 0;  
+      background:$sectionColor;
+      border-radius:5px;
+      .jumbotron-form__title{
+        padding:.75rem 0;
+        background:#f5f5f5;
+        text-align:center;
+        text-transform: capitalize;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        span{
+          color:$mainThemeColor;
+          text-transform: uppercase;
+        }
+      }
+      .jumbotron-form__input{
+        @include formInput;
+        padding:.5rem;
+        border-bottom:1px solid $borderColor;
+        &::placeholder{
+          @include inputPlaceholder;
+        }
+      }
+      .jumbotron-form__button{
+        @include button;
+        margin-top:2.6rem;
+        padding:1rem 0;
+        background:$mainThemeColor;
+        border:1px solid $mainThemeColor;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-transform: capitalize;
+        &:hover{
+          @include buttonHover;
+        }
+      }
+    }
+  }
+  .jumbotron__social {
+    margin: 0.75rem 0;
+    background: $sectionColor;
+    .jumbotron-social__left-column {
+      width: 100%;
+      margin-right:22%;
+    }
+    .jumbotron-social__right-column {
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      span {
+        width: 7%;
+        height:2.5rem;
+      }
+    }
+  }
+}

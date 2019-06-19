@@ -9,11 +9,10 @@
   &__logo {
     @include logo;
     span:first-child {
-      font-weight: 700;
-      color: $sectionColor;
+      @include logoFirstSpan;
     }
     span:last-child {
-      color: $mainThemeColor;
+      @include logoSecondSpan;
     }
   }
   &__navbar {
