@@ -1,11 +1,37 @@
 @import "variables";
 @import "mixins";
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.container{
-    padding:0 10%;
+picture {
+  display: block;
+  width: 100%;
+}
+.container {
+  padding: 0 10%;
+}
+.section {
+  display: flex;
+}
+.section__header {
+  @include flexColumn;
+  padding-top:6.75rem;
+  text-align: center;
+}
+.section__headline {
+  @include sectionHeadline;
+}
+.section__separator {
+  @include sectionSeparator;
+}
+.section__separator-center {
+  @include headerSeparator;
+}
+.section__title {
+  @include sectionTitle;
+}
+.section__text {
+  @include sectionText;
 }
