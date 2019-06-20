@@ -8,6 +8,7 @@ $mainTextColor: #86878b;
 $secondTextColor: #333333;
 $sectionColor: #fff;
 $navbarColor: rgba(255, 255, 255, 0.69);
+$pricingBorderColor: rgba(255, 255, 255, 0.19);
 $borderColor: #bdbdbd;
 
 // FONTS
@@ -30,3 +31,4 @@ $jumbotronTextFontSize: calc(
 $sectionTitleFontSize: calc(
   11px + (20 - 11) * ((100vw - 300px) / (1600 - 300))
 );
+$priceFont: calc(14px + (94 - 14) * ((100vw - 300px) / (1600 - 300)));
