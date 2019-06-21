@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+.picture {
+  position: relative;
+  &__header {
+    position: absolute;
+    padding-top: 2rem;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .picture__headline {
+    color: $sectionColor;
+  }
+  .picture__separator {
+    background: $sectionColor;
+  }
+  .picture__text {
+    font-family: $secondaryFont;
+    font-size: $jumbotronTextFontSize;
+  }
+  .picture__button {
+    position: absolute;
+    left: 42%;
+    top: 60%;
+    width: 14.61%;
+    margin-top: 1%;
+    padding: 0.75rem 0;
+    font-family: $primaryFont;
+    font-weight:bold;
+    font-size: $jumbotronTextFontSize;
+    background: transparent;
+    color: $sectionColor;
+    border:2px solid $sectionColor;
+    cursor: pointer;
+    &:hover {
+      background: $secondaryBackgroundColor;
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+  }
+}
