@@ -1,0 +1,46 @@
+// COLORS
+
+$mainBackgroundColor: #f5f5f5;
+$secondaryBackgroundColor: #000;
+$mainThemeColor: #ff8b38;
+$iconColor: #ccc;
+$mainTextColor: #86878b;
+$secondTextColor: #333333;
+$sectionColor: #fff;
+$navbarColor: rgba(255, 255, 255, 0.69);
+$pricingBorderColor: rgba(255, 255, 255, 0.19);
+$borderColor: #bdbdbd;
+
+// FONTS
+$primaryFont: "Open Sans", sans-serif;
+$secondaryFont: "Raleway", sans-serif;
+
+// FONT SIZE
+
+$logoFontSize: calc(12px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+$navFontSize: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+$jumbotronTitleFontSize: calc(
+  12px + (60 - 12) * ((100vw - 300px) / (1600 - 300))
+);
+$jumbotronSubTitleFontSize: calc(
+  14px + (36 - 14) * ((100vw - 300px) / (1600 - 300))
+);
+$jumbotronTextFontSize: calc(
+  10px + (16 - 10) * ((100vw - 300px) / (1600 - 300))
+);
+$sectionTitleFontSize: calc(
+  11px + (20 - 11) * ((100vw - 300px) / (1600 - 300))
+);
+$priceFont: calc(14px + (94 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+// RESPONSIVE UNITS
+
+$jumbotronFormPadding:.25rem;
+$jumbotronButtonTopMargin:1.25rem;
+$jumbotronButtonPadding:.5rem 0;
+$mobilePadding:5rem 0;
+$mobileSmPadding:3rem 0;
+$mobilePricingElementPadding :0;
+//BREAKPOINTS
+$sm: 678px;
+$md:1024px;

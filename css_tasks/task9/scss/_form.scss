@@ -1,0 +1,65 @@
+@import "variables";
+@import "mixins";
+
+.form {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    padding: 5rem 0;
+    .form-left-column {
+      @include flexColumn;
+    }
+    .form-input {
+      @include formInput;
+      width: 90%;
+      padding: 0.5rem;
+      border-bottom: 1px solid $borderColor;
+      &::placeholder {
+        @include inputPlaceholder;
+      }
+    }
+    .form-button {
+      @include button;
+      grid-column: span 2;
+      width: 14.5%;
+      margin: 1rem auto 0;
+      padding: 1rem 0;
+      background: $mainThemeColor;
+      border: 1px solid $mainThemeColor;
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .form {
+    .form-button {
+      width: 20%;
+    }
+  }
+}
+@media screen and( max-width: $sm) {
+  .form {
+    background: $mainBackgroundColor;
+    &__container {
+      @include block;
+      padding: $mobileSmPadding;
+    }
+    .form-input {
+      display: block;
+      margin: 0.5rem auto;
+      border-bottom: 0;
+    }
+    .form-button{
+      @include block;
+      width:20%;
+      min-width:7rem;
+      padding:.5rem 0;
+    }
+  }
+}

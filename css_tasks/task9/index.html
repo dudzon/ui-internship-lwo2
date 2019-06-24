@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <div class="header__logo"><span>ax</span><span>it</span></div>
+      <nav class="header__navbar">
+        <ul class="header-navbar">
+          <li class="header-navbar__item"><a href="#">Features</a></li>
+          <li class="header-navbar__item"><a href="#">About</a></li>
+          <li class="header-navbar__item"><a href="#">Pricing</a></li>
+          <li class="header-navbar__item"><a href="#">Reviews</a></li>
+          <li class="header-navbar__item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+   
+    <span class="header__mobile-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></span>
+    </header>
+    <section class="jumbotron">
+      <picture>
+        <source media="(max-width:678px)" srcset="assets/image-min.png" />
+        <source
+          media="(min-width:679px) and (max-width:1024px)"
+          srcset="assets/image@2x-min.png"
+        />
+        <img
+          src="assets/image@3x-min.png"
+          alt="Buildings"
+          class="jumbotron__image"
+        />
+      </picture>
+      <div class="container jumbotron__content">
+        <div class="jumbotron-content__left-column">
+          <header class="jumbotron-left-column__header">
+            <h1 class="jumbotron-header__title">
+              <span>ax</span><span>it</span>
+            </h1>
+            <p class="jumbotron-header__subtitle">
+              modern axure template <br />for beautiful prototypes
+            </p>
+          </header>
+          <div class="jumbotron-left-column__separator"></div>
+          <p class="jumbotron-left-column__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+            accumsan et viverra justo commodo.
+          </p>
+          <button class="jumbotron-left-column__button">Download</button>
+        </div>
+        <form action="" class="jumbotron__form">
+          <h4 class="jumbotron-form__title section__title" >try your <span>free</span> trial today</h4>
+          <input class="jumbotron-form__input" type="text" name="name" placeholder="Name">
+          <input class="jumbotron-form__input" type="email" name="email" placeholder="Email">
+          <input class="jumbotron-form__input" type="password" name="password" placeholder="Password">
+          <button class="jumbotron-form__button">get started</button>
+        </form>
+      </div>
+      <section class="jumbotron__social">
+        <div class="container section">
+          <div class="jumbotron-social__left-column">
+            <h4 class="section__title">Social media</h4>
+            <p class="section__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet.
+            </p>
+          </div>
+          <div class="jumbotron-social__right-column">
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="100%" height="100%"><path fill="#ccc" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span>
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="#ccc" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span>
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-plus-g" class="svg-inline--fa fa-google-plus-g fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="100%" height="100%"><path fill="#ccc" d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"></path></svg></span>
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest" class="svg-inline--fa fa-pinterest fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="100%" height="100%"><path fill="#ccc" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg></span>
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="stumbleupon" class="svg-inline--fa fa-stumbleupon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="#ccc" d="M502.9 266v69.7c0 62.1-50.3 112.4-112.4 112.4-61.8 0-112.4-49.8-112.4-111.3v-70.2l34.3 16 51.1-15.2V338c0 14.7 12 26.5 26.7 26.5S417 352.7 417 338v-72h85.9zm-224.7-58.2l34.3 16 51.1-15.2V173c0-60.5-51.1-109-112.1-109-60.8 0-112.1 48.2-112.1 108.2v162.4c0 14.9-12 26.7-26.7 26.7S86 349.5 86 334.6V266H0v69.7C0 397.7 50.3 448 112.4 448c61.6 0 112.4-49.5 112.4-110.8V176.9c0-14.7 12-26.7 26.7-26.7s26.7 12 26.7 26.7v30.9z"></path></svg></span>
+            <span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="100%" height="100%"><path fill="#ccc" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg></span>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="tabs">
+     <div class="container tabs-content">
+        <div class="tabs-content__rectangles">
+          <div class="tab-rectangle">Tab 1</div>
+          <div class="tab-rectangle">Tab 2</div>
+          <div class="tab-rectangle">Tab 3</div>
+        </div>
+        <div class="tabs-content__text">
+          <h4 class="tabs-content__title section__title">Tabs with soft transitioning effect</h4>
+          <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+            bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+            justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
+            penatibus et magnis dis parturient montes.</p>
+          <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+            bibendum laoreet.</p>
+          <button class="tabs-content__button">Download</button>
+        </div>
+        <div class= "tabs-content__image"> 
+          <picture>
+            <source media="(min-width:679px) and (max-width:1499px)"srcset="assets/image-right-u-255@2x.png"/>
+         <img
+          src="assets/image-right-u-255@3x.png"
+          alt="Building"
+          />
+          </picture>
+        </div>
+     </div>
+    </section>
+    <section class="standard-section">
+      <div class="container standard-section__content">
+          <div class="standard-section__image-column">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/image-left-sub-list-u-260-min.png" />
+              <source media="(min-width:679px) and (max-width:1024px)"srcset="assets/image-left-sub-list-u-260@2x-min.png"/>
+              <img
+               src="assets/image-left-sub-list-u-260@3x-min.png"
+              alt="City"
+              class="standard-section__image"
+              />
+            </picture>
+        </div>
+        <div class="standard-section__text-column">
+          <h4 class="standard-section__title">Sub list section</h4>
+          <div class="standard-section__separator"></div>
+          <p class="standard-section__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+          euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
+          accumsan et viverra justo commodo.</p>
+          <ul class="standard-section__list">
+            <li class="standard-section-list__item">
+              <div class="standard-section-list-item__wrapper">
+                <h5 class="standard-section-list-item__title">Title</h5>
+                <p class="standard-section-list-item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Aenean euismod bibendum laoreet.</p>
+              </div>
+            </li>
+            <li class="standard-section-list__item">
+              <div class="standard-section-list-item__wrapper">
+                <h5 class="standard-section-list-item__title">Title</h5>
+                <p class="standard-section-list-item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Aenean euismod bibendum laoreet. Proin gravida dolor 
+                sit amet lacus accumsan et viverra justo commodo.</p>
+              </div>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+    <section class="standard-section standard-section--secondary">
+      <div class="container standard-section__content">
+        <div class="standard-section__text-column standard-section__text-column--secondary">
+          <h4 class="standard-section__title">Standard Picture Selection</h4>
+          <div class="standard-section__separator"></div>
+          <p class="standard-section__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+          uismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan 
+          et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis 
+          natoque penatibus et magnis dis parturient montes.</p>
+          <p class="standard-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+          bibendum laoreet.</p>
+        </div>
+        <div class="standard-section__image-column standard-section__image-column--secondary">
+            <picture>
+              <source media="(min-width:679px) and (max-width:1024px)"srcset="assets/image-right-standard-u-262@2x-min.png"/>
+              <img
+               src="assets/image-right-standard-u-262@3x-min.png"
+              alt="City"
+              class="standard-section__image"
+              />
+            </picture>
+        </div>      
+      </div>
+    </section>
+    <section class="awesome container">
+      <header class="section__header">
+        <h2 class="section__headline">why this is awesome</h2>
+        <div class="section__separator-center"></div>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </header>
+      <div class="awesome__container">
+        <div class="awesome__element">
+          <div class="awesome-element__icon--first"></div>
+          <h4 class="awesome-element__title section__title">Thoughtful Design</h4>
+          <p class="awesome-element__text section__text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit. Aenean euismod bibendum laoreet. Proin gravida 
+          dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+        <div class="awesome__element">
+          <div class="awesome-element__icon--second"></div>
+          <h4 class="awesome-element__title section__title">Well Crafted</h4>
+          <p class="awesome-element__text section__text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit. Aenean euismod bibendum laoreet. Proin gravida 
+          dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+        <div class="awesome__element">
+          <div class="awesome-element__icon--third"></div>
+          <h4 class="awesome-element__title section__title">Easy to Customize</h4>
+          <p class="awesome-element__text section__text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit. Aenean euismod bibendum laoreet. Proin gravida 
+          dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pricing container">
+      <header class="section__header">
+        <h2 class="section__headline">pricing options</h2>
+        <div class="section__separator-center"></div>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </header>
+      <div class="pricing__container">
+        <div class="pricing__element">
+          <div class="pricing-element__type">Basic</div>
+          <div class="pricing-element__price">
+            <h3><span>$</span><span>0</span></h3>
+            <h4>Free for life</h4>
+          </div>
+          <div class="pricing-element__info"></div>
+          <div class="pricing-element__item">1 gb of space</div>
+          <div class="pricing-element__item">10 gb of bandwidth</div>
+          <div class="pricing-element__item">3 websites</div>
+          <div class="pricing-element__item">Basic Customization</div>
+          <div class="pricing-element__item">wordpress integration</div>
+          <div class="pricing-element__item">email support</div>
+        </div>
+             
+        <div class="pricing__element pricing__element--active">
+          <div class="pricing-element__type">Professional</div>
+          <div class="pricing-element__price">
+            <h3><span>$</span><span>19</span></h3>
+            <h4>Monthly payment</h4>
+          </div>
+          <div class="pricing-element__info pricing-element__info--active">our most popular</div>
+          <div class="pricing-element__item">5gb of space</div>
+          <div class="pricing-element__item">50 gb of bandwidth</div>
+          <div class="pricing-element__item">12 websites</div>
+          <div class="pricing-element__item">Advanced Customization</div>
+          <div class="pricing-element__item">wordpress integration</div>
+          <div class="pricing-element__item">email support</div>
+        </div>
+        
+        <div class="pricing__element">
+          <div class="pricing-element__type">Enterprise</div>
+          <div class="pricing-element__price">
+            <h3><span>$</span><span>70</span></h3>
+            <h4>Monthly payment</h4>
+          </div>
+          <div class="pricing-element__info"></div>
+          <div class="pricing-element__item">Unlimited space</div>
+          <div class="pricing-element__item">Unlimited bandwidth</div>
+          <div class="pricing-element__item">100websites</div>
+          <div class="pricing-element__item">Advanced Customization</div>
+          <div class="pricing-element__item">wordpress integration</div>
+          <div class="pricing-element__item">email support</div>
+        </div>
+      </div>
+    </section>
+    <section class="customers container">
+      <header class="section__header">
+        <h2 class="section__headline">what our customers are saying</h2>
+        <div class="section__separator-center"></div>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </header>
+      <div class="customers__container">
+
+        <div class="customers__element">
+          <p class="customers-element__text section__text">Lorem ipsum dolor sit amet, </br> consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</p>
+          <div class="customers-element__wrapper">
+            <picture>
+              <source media="(max-width:1024px)"srcset="assets/avatar-2-u-231@2x.png"/>
+              <img
+               src="assets/avatar-2-u-231@3x.png"
+              alt="Person"
+              class="customers-element__image"
+              />
+            </picture>
+            <header>
+              <h5 class="customers-element__name">Jeremy H.</h4>
+              <h6 class="customers-element__job">Manager</h6>
+            </header>
+          </div>
+        </div>
+
+        <div class="customers__element">
+          <p class="customers-element__text section__text">Lorem ipsum dolor sit amet, </br> consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</p>
+        <div class="customers-element__wrapper">
+            <picture>
+              <source media="(max-width:1024px)"srcset="assets/avatar-2-u-231@2x.png"/>
+              <img
+               src="assets/avatar-2-u-231@3x.png"
+              alt="Person"
+              class="customers-element__image"
+              />
+            </picture>
+            <header>
+              <h5 class="customers-element__name">John S.</h4>
+              <h6 class="customers-element__job">Freelancer</h6>
+            </header>
+          </div>
+        </div>
+
+        <div class="customers__element">
+          <p class="customers-element__text section__text">Lorem ipsum dolor sit amet,</br> consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</p>
+        <div class="customers-element__wrapper">
+            <picture>
+              <source media="(max-width:1024px)"srcset="assets/avatar-2-u-231@2x.png"/>
+              <img
+               src="assets/avatar-2-u-231@3x.png"
+              alt="Person"
+              class="customers-element__image"
+              />
+            </picture>
+            <header>
+              <h5 class="customers-element__name">Susan W.</h4>
+              <h6 class="customers-element__job">Photographer</h6>
+            </header>
+          </div>
+        </div>
+
+      </div>
+   </section>
+   <section class="picture">
+      <picture>
+        <source media="(max-width:678px)" srcset="assets/u-25-state-0-min.png" />
+        <source
+          media="(min-width:679px) and (max-width:1024px)"
+          srcset="assets/u-25-state-0@2x-min.png"
+        />
+        <img
+          src="assets/u-25-state-0@3x-min.png"
+          alt="Buildings"
+          class="jumbotron__image"
+        />
+      </picture>
+      <div class="container">
+      <header class="section__header picture__header">
+        <h2 class="section__headline picture__headline">stylish axure design</h2>
+        <div class="section__separator-center picture__separator"></div>
+        <p class="section__text picture__text">Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!  </p>
+      </header>
+      <button class="picture__button">Download</button>
+      </div>
+   </section>
+   <section class="form container">
+      <header class="section__header">
+        <h2 class="section__headline">contact us</h2>
+        <div class="section__separator-center"></div>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </header>
+      <form class="form__container">
+        <div class="form-left-column">
+          <input class= "form-input" type="text" name="name" placeholder="Name" />
+          <input class= "form-input" type="email" name="email" placeholder="Email"/>
+          <input class= "form-input" type="password" name="password" placeholder="Password"/>
+        </div>
+        <div class="form-right-column">
+          <textarea class="form-input" name="message" cols="30" rows="13" placeholder=" Message"></textarea>
+        </div>
+       <button class="form-button">Send message</button>
+      </form>
+    </section>
+    <footer class="container footer">
+      <div class="footer__icons">
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="100%" height="100%"><path fill="#ccc" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span>
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="#ccc" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span>
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-plus-g" class="svg-inline--fa fa-google-plus-g fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="100%" height="100%"><path fill="#ccc" d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"></path></svg></span>
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest" class="svg-inline--fa fa-pinterest fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="100%" height="100%"><path fill="#ccc" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg></span>
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="stumbleupon" class="svg-inline--fa fa-stumbleupon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%"><path fill="#ccc" d="M502.9 266v69.7c0 62.1-50.3 112.4-112.4 112.4-61.8 0-112.4-49.8-112.4-111.3v-70.2l34.3 16 51.1-15.2V338c0 14.7 12 26.5 26.7 26.5S417 352.7 417 338v-72h85.9zm-224.7-58.2l34.3 16 51.1-15.2V173c0-60.5-51.1-109-112.1-109-60.8 0-112.1 48.2-112.1 108.2v162.4c0 14.9-12 26.7-26.7 26.7S86 349.5 86 334.6V266H0v69.7C0 397.7 50.3 448 112.4 448c61.6 0 112.4-49.5 112.4-110.8V176.9c0-14.7 12-26.7 26.7-26.7s26.7 12 26.7 26.7v30.9z"></path></svg></span>
+        <span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="100%" height="100%"><path fill="#ccc" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg></span>       
+      </div>
+      <p class="footer__text section__text">&copy;&nbsp;Axure Design 2015.</p>
+    </footer>
+  </body>
+</html>
