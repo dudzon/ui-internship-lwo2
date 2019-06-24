@@ -54,3 +54,27 @@ background: $sectionColor;
 
   }
 }
+
+// Media queries
+
+@media screen and (max-width: $sm) {
+  .customers {
+    &__container {
+      display: block;
+      padding: 2rem 0;
+    }
+    &__element {
+      margin: 0 auto 3rem;
+      width: 60%;
+      min-width: 15rem;
+      .customers-element__wrapper{
+         padding-top:2.5rem;
+         justify-content:space-between;
+         header{
+             align-items: flex-end;
+         }
+      }
+
+    }
+  }
+}

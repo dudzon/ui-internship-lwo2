@@ -4,12 +4,14 @@
   background: $mainBackgroundColor;
 }
 .tabs-content {
+  @include flex;
   &__rectangles {
     @include standardDesktopPadding;
-    width: 10%;
+    // width: 10%;
+    flex-grow: 1;
     .tab-rectangle {
       @include button;
-      display: flex;
+      @include flex;
       justify-content: center;
       align-items: center;
       width: 7rem;
@@ -38,7 +40,8 @@
   &__text {
     margin-left: 4%;
     @include standardDesktopPadding;
-    width: 40%;
+    // width: 40%;
+    flex-grow: 2;
     .tabs-content__title {
       padding-bottom: 2rem;
     }
@@ -47,7 +50,7 @@
     }
     .tabs-content__button {
       @include button;
-      width: 26.5%;
+      width: 36%;
       margin-top: 2rem;
       padding: 1rem 0;
       background: $mainThemeColor;
@@ -58,7 +61,66 @@
     }
   }
   .tabs-content__image {
+    flex-grow: 3;
     margin-left: 15%;
     @include standardDesktopPadding;
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: $md) and (max-width: 1499px) {
+  .tabs {
+    .tabs-content {
+      &__image {
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .tabs {
+    .tabs-content {
+      &__rectangles {
+        padding: $mobilePadding;
+        width: 20%;
+      }
+      &__text {
+        margin-left: 6%;
+        padding: $mobilePadding;
+      }
+      &__image {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .tabs {
+    .tabs-content {
+      &__rectangles {
+        padding: $mobileSmPadding;
+    
+        .tab-rectangle {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      &__text {
+        margin-left: 6%;
+        padding: $mobileSmPadding;
+
+        .tabs-content__button {
+          margin: 0;
+          padding: $jumbotronButtonPadding;
+          width: 50%;
+        }
+      }
+      &__image {
+        display: none;
+      }
+    }
   }
 }

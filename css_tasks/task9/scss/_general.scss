@@ -9,7 +9,7 @@
   padding: 0 10%;
 }
 .section {
-  display: flex;
+  @include flex;
 }
 .section__header {
   @include flexColumn;
@@ -30,4 +30,17 @@
 }
 .section__text {
   @include sectionText;
+}
+
+// Media queries
+
+@media screen and ( min-width:$sm ) and ( max-width:$md){
+  .section__header{
+    padding-top:3rem;
+  }
+}
+@media screen and( max-width:$sm ){
+  .section__header{
+    padding-top:1.5rem;
+  }
 }
