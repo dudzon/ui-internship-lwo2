@@ -18,7 +18,7 @@ function style() {
   return (
     gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .on('error', sass.logError)
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write())
