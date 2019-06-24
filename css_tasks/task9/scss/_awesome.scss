@@ -7,7 +7,7 @@
     @include flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: $mobilePadding;
   }
   &__element {
     @include flexColumn;
@@ -32,6 +32,29 @@
     .awesome-element__text {
       padding-top: 1rem;
       text-align: center;
+    }
+  }
+}
+
+// Media queries
+
+@media screen and ( min-width:$sm ) and ( max-width:$md){
+  .awesome{
+    &__container{
+      padding:$mobileSmPadding;
+    }
+  }
+}
+@media screen and ( max-width: $sm){
+  .awesome{
+    &__container{
+      display:block;  
+      padding:2rem 0;
+    
+    }
+    &__element{
+      margin:0 auto 1.5rem;
+      width:100%;
     }
   }
 }

@@ -61,43 +61,43 @@
         }
       }
     }
-    .jumbotron__form{
+    .jumbotron__form {
       @include flexColumn;
-      width:70%;
-      max-width:22.5rem;
-      margin:2.75rem auto 0;  
-      background:$sectionColor;
-      border-radius:5px;
-      .jumbotron-form__title{
-        padding:.75rem 0;
-        background:#f5f5f5;
-        text-align:center;
+      width: 70%;
+      max-width: 22.5rem;
+      margin: 2.75rem auto 0;
+      background: $sectionColor;
+      border-radius: 5px;
+      .jumbotron-form__title {
+        padding: 0.75rem 0;
+        background: #f5f5f5;
+        text-align: center;
         text-transform: capitalize;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        span{
-          color:$mainThemeColor;
+        span {
+          color: $mainThemeColor;
           text-transform: uppercase;
         }
       }
-      .jumbotron-form__input{
+      .jumbotron-form__input {
         @include formInput;
-        padding:.5rem;
-        border-bottom:1px solid $borderColor;
-        &::placeholder{
+        padding: 0.5rem;
+        border-bottom: 1px solid $borderColor;
+        &::placeholder {
           @include inputPlaceholder;
         }
       }
-      .jumbotron-form__button{
+      .jumbotron-form__button {
         @include button;
-        margin-top:2.6rem;
-        padding:1rem 0;
-        background:$mainThemeColor;
-        border:1px solid $mainThemeColor;
+        margin-top: 2.6rem;
+        padding: 1rem 0;
+        background: $mainThemeColor;
+        border: 1px solid $mainThemeColor;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         text-transform: capitalize;
-        &:hover{
+        &:hover {
           @include buttonHover;
         }
       }
@@ -108,16 +108,99 @@
     background: $sectionColor;
     .jumbotron-social__left-column {
       width: 100%;
-      margin-right:22%;
+      margin-right: 22%;
     }
     .jumbotron-social__right-column {
       display: flex;
       justify-content: space-between;
-      align-items:center;
+      align-items: center;
       span {
         width: 7%;
-        height:2.5rem;
+        height: 2.5rem;
       }
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .jumbotron {
+    &__content {
+      top: 6%;
+      .jumbotron-content__left-column {
+        .jumbotron-left-column__button {
+          width: 30%;
+          min-width: 6rem;
+        }
+      }
+      .jumbotron__form {
+        margin: 0 auto;
+        justify-content: space-between;
+        .jumbotron-form__title {
+          padding: $jumbotronFormPadding;
+        }
+        .jumbotron-form__input {
+          margin:.5rem auto;
+          padding: $jumbotronFormPadding;
+        }
+        .jumbotron-form__button {
+          @include jumbotronMobileButton;
+        }
+      }
+    }
+    .jumbotron__social {
+      .jumbotron-social__left-column {
+        margin-right: 10%;
+      }
+      .jumbotron-social__right-column {
+        span {
+          width: 5%;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:677.98px) {
+  .jumbotron {
+    picture {
+      display: none;
+    }
+    &__content {
+      position: static;
+      @include block;
+      padding: 2rem 10%;
+      background: #000 url("./../assets/image-min.png") no-repeat;
+      background-size: cover;
+      opacity: 0.82;
+      text-align: center;
+      .jumbotron-content__left-column {
+        .jumbotron-left-column__separator {
+          display: none;
+        }
+        .jumbotron-left-column__button {
+          margin: 1rem auto 0;
+          min-width: 7rem;
+        }
+      }
+      .jumbotron__form {
+        width: 50%;
+        min-width: 15rem;
+        .jumbotron-form__title {
+          padding: $jumbotronFormPadding;
+        }
+        .jumbotron-form__input {
+          padding: $jumbotronFormPadding;
+        }
+        .jumbotron-form__button {
+          @include jumbotronMobileButton;
+        }
+      }
+    }
+    .jumbotron__social{
+      display:none;
     }
   }
 }

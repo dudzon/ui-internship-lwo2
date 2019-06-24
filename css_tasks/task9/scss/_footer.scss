@@ -3,19 +3,32 @@
 
 .footer {
   background: $secondaryBackgroundColor;
-  padding:1rem 0;
+  padding: 1rem 0;
   &__icons {
     display: flex;
-    width:28%;
-    margin:0 auto;
+    width: 28%;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     span {
       width: 5%;
-    //   height: 1.5rem;
+      //   height: 1.5rem;
     }
   }
   &__text {
     text-align: center;
+  }
+}
+// Media queries
+@media screen and (max-width: $sm) {
+  .footer {
+    &__icons {
+      @include flexColumn;
+      span {
+        width: 10%;
+        max-width: 3rem;
+        padding-bottom: 1rem;
+      }
+    }
   }
 }
