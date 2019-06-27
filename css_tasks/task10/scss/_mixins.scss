@@ -1,0 +1,65 @@
+@import "variables";
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin button {
+  padding: 1rem 0;
+  background: $mainThemeColor;
+  color: $secondaryBackground;
+  font-size: $buttonFontSize;
+  text-transform: uppercase;
+  border: 1px solid $mainThemeColor;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@mixin headline {
+  font-size: $mainTextFontSize;
+  color: $mainThemeColor;
+  text-transform: uppercase;
+  line-height: 3.13;
+  letter-spacing: 3.2px;
+}
+@mixin headerText {
+  padding-bottom: 2rem;
+  font-size: $headerTextFontSize;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 1.6px;
+}
+@mixin textDisplay {
+  line-height: 1.63;
+  letter-spacing: 0.64px;
+}
+@mixin elementTitle {
+  padding-bottom: 1rem;
+  font-size: $elementTitleFontSize;
+  font-weight: 500;
+  line-height: 2.27;
+  letter-spacing: 0.88px;
+  text-align: center;
+}
+@mixin elementText {
+  font-size: $mainTextFontSize;
+  font-weight: 500;
+  color: $mainTextColor;
+  opacity: 0.6;
+  line-height: 1.63;
+  letter-spacing: 0.64px;
+  text-align: center;
+}
+@mixin footerText {
+  font-size: $footerFontSize;
+  color: $mainTextColor;
+  opacity: 0.66;
+  line-height: 2.14;
+  letter-spacing: 0.56px;
+}
+@mixin footerBiggerText {
+  font-size: $elementTitleFontSize;
+  font-weight: 500;
+  color: $mainTextColor;
+  line-height: 2.27;
+  letter-spacing: 0.88px;
+}

@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+.footer {
+  position: relative;
+  &__red-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $mainThemeColor;
+    clip-path: polygon(84% 0, 100% 0, 100% 94%, 98% 100%);
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    list-style: none;
+  }
+  .footer-icons {
+    display: block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    margin-right:2rem;
+    &--icon-1 {
+      background: url("../assets/xbox-brands.svg") no-repeat;
+    }
+    &--icon-2 {
+      background: url("../assets/facebook-brands.svg") no-repeat;
+    }
+    &--icon-3 {
+      background: url("../assets/google-plus-g-brands.svg") no-repeat;
+      background-size: cover;
+    }
+    &--icon-4 {
+      background: url("../assets/twitter-brands.svg") no-repeat;
+    }
+  }
+}

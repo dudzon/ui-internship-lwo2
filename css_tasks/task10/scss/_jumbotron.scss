@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixins";
+
+.jumbotron {
+  position: relative;
+  &__image {
+    display: block;
+    width: 100%;
+    max-height: 100vh;
+  }
+  .jumbotron-text {
+    @include flexColumn;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    &__headline {
+      padding-bottom: 1.75rem;
+      font-size: $bigTitleFontSize;
+      font-weight: 100;
+      line-height: 1.25;
+      letter-spacing: 2.4px;
+      text-align: center;
+    }
+    &__button {
+      position: relative;
+      @include button;
+      width: 22%;
+      margin: 0 auto;
+      transition: all 0.3s ease-in 0.2s;
+      &:hover {
+        background: #fff;
+        color: $mainThemeColor;
+        transition: all 0.2s ease-out;
+      }
+
+      &--animated {
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          20% {
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.3);
+            opacity: 0;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $mainThemeColor;
+          border-radius: 5px;
+          animation-name: pulse;
+          animation-duration: 2s;
+          animation-timing-function: ease-out;
+          animation-iteration-count: infinite;
+          z-index: -1;
+        }
+        &:hover:after {
+          background-color: $mainThemeColor;
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+    &__info {
+      font-size: $mainTextFontSize;
+      opacity: 0.6;
+      line-height: 3.36;
+      letter-spacing: 0.56px;
+      text-align: center;
+    }
+  }
+}
