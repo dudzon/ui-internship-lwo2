@@ -3,7 +3,7 @@
 .vscode/
 *.iml
 *.sublime*
-package-lock.json
+css_tasks/task10/css
 
 # common ignores
 node_modules
