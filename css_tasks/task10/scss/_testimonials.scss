@@ -1,0 +1,50 @@
+@import "variables";
+@import "mixins";
+.testimonials {
+  background: #000 url("./../assets/group-4@3x.jpg");
+  background-size: cover;
+}
+.testimonials__icons {
+  justify-content: space-around;
+  padding: 0 10% 5.25rem;
+  margin: 0 auto;
+  background-size: contain;
+  background-position: center;
+}
+.testimonials-icon {
+  display: block;
+  width: 10%;
+  height: 4rem;
+  &--first {
+    position: relative;
+    background: url("./../assets/partner-logo-1@3x.png") no-repeat;
+    @include backgroundIcon;
+  }
+  &--second {
+    background: url("./../assets/partner-logo-4@3x.png") no-repeat;
+    @include backgroundIcon;
+  }
+  &--third {
+    background: url("./../assets/partner-logo-5@3x.png") no-repeat;
+    @include backgroundIcon;
+  }
+  &--fourth {
+    background: url("./../assets/partner-logo-7@3x.png") no-repeat;
+    @include backgroundIcon;
+  }
+  &--fiveth {
+    background: url("./../assets/partner-logo-8@3x.png") no-repeat;
+    @include backgroundIcon;
+  }
+}
+@media screen and (max-width: $md) {
+  .testimonials__icons {
+    padding-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: $sm) {
+  .testimonials__icons {
+    display: flex;
+    padding: 1.5rem 10%;
+  }
+}

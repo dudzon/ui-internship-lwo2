@@ -3,6 +3,7 @@
 .vscode/
 *.iml
 *.sublime*
+package-lock.json
 
 # common ignores
 node_modules
