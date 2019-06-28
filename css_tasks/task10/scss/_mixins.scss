@@ -63,3 +63,12 @@
   line-height: 2.27;
   letter-spacing: 0.88px;
 }
+@mixin inputText {
+  font-size: $mainTextFontSize;
+  color: $mainBackground;
+  text-transform: uppercase;
+}
+@mixin backgroundIcon {
+  background-size: contain;
+  background-position: center;
+}

@@ -16,14 +16,30 @@
   &-left-column {
     padding: 5.625rem 5% 0;
     width: 60%;
-    .design__image{
-        display: block;
-        width:100%;
+    .design__image {
+      display: block;
+      width: 100%;
     }
   }
   &-right-column {
     padding-top: 5.625rem;
     padding-right: 10%;
     width: 45%;
+  }
+}
+@media screen and (max-width: $sm) {
+  .design {
+    display: block;
+    padding-bottom: 0;
+  }
+  .design__red-shape {
+    display: none;
+  }
+  .design-left-column {
+    display: none;
+  }
+  .design-right-column {
+    padding: $mainMobilePadding 10%;
+    width: 100%;
   }
 }

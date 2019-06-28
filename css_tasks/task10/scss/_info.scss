@@ -5,8 +5,7 @@
   display: $flex;
   &__left-column {
     width: 62%;
-    padding-top:9.4375rem;
-    padding-bottom:9.4375rem;
+    padding:$mainPadding 10%;
   }
   &__right-column {
     position: relative;
@@ -21,3 +20,14 @@
     }
   }
 }
+@media screen and (max-width: $md) {
+  .info__left-column {
+    width:100%;
+    padding:$mainMobilePadding 10%;
+    margin: 0 auto;
+  }
+  .info__right-column {
+    display: none;
+  }
+}
+

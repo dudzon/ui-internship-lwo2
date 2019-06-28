@@ -88,20 +88,23 @@ picture {
     width: 23%;
     margin: 0 auto 1.5rem;
     padding: 1rem;
+    @include inputText;
     background: transparent;
     border: 1px solid $mainBackground;
     border-radius: 3px;
     opacity: 0.5;
+
     &::placeholder {
-      font-size: $mainTextFontSize;
-      color: $mainBackground;
-      text-transform: uppercase;
+      @include inputText;
+    }
+    &:focus {
+      @include inputText;
     }
   }
   &__element--footer {
     width: 23%;
     padding: 6rem 1rem 2rem;
-    margin:0;
+    margin: 0;
     list-style: none;
     & > li {
       @include footerText;
@@ -113,8 +116,10 @@ picture {
     input {
       display: block;
       width: 80%;
-      padding: 1rem;
+      padding: 1rem 0 0.5rem 1rem;
       background: $mainBackground;
+      @include inputText;
+      color: $placeholderColor;
       border: 1px solid rgba(141, 141, 141, 0.2);
       border-right: none;
       border-radius: 3px;
@@ -126,16 +131,21 @@ picture {
         letter-spacing: 0.64px;
         text-transform: uppercase;
       }
+      &:focus {
+        font-size: $mainTextFontSize;
+      }
     }
     form {
       position: relative;
     }
+    // It should be a :after pseudoelement on form but it's friday afternoon and I want to deploy.
+    // Will fix it in new sprint ¯\_(ツ)_/¯ !
     .input-element-footer__red-shape {
       position: absolute;
       top: 0;
       left: 80%;
-      width: 49px;
-      height: 49px;
+      width: 47px;
+      height: 47px;
       background: url("./../assets/paper-plane-regular.svg"), $mainThemeColor;
       background-repeat: no-repeat;
       background-position: center;
@@ -144,7 +154,8 @@ picture {
       border-radius: 3px;
       cursor: pointer;
       &:hover {
-        background: url("./../assets/paper-plane-regular-hover.svg"), $additionalBackround;
+        background: url("./../assets/paper-plane-regular-hover.svg"),
+          $additionalBackround;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -187,5 +198,71 @@ picture {
   &--features {
     display: inline;
     text-align: center;
+  }
+}
+@media screen and (max-width: $md) {
+  .header {
+    &__title--form {
+      padding-bottom: 2rem;
+    }
+  }
+  .inner-container {
+    &__element--testimonials {
+      p {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: $md) {
+  .inner-container {
+    &__element--footer {
+      width: 100%;
+      padding: 2rem 0 0 0;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .inner-container__element--footer .input-element-footer__red-shape {
+    height: 45px;
+    width: 45px;
+  }
+}
+@media screen and (max-width: $sm) {
+  .header {
+    &__text {
+      width: 100%;
+    }
+  }
+  .inner-container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    &__element {
+      width: 100%;
+      p {
+        padding-bottom: 3rem;
+      }
+    }
+    &__element--testimonials {
+      padding-top: 3rem;
+      div {
+        margin: 0 auto;
+      }
+      p {
+        padding-bottom: 0;
+      }
+    }
+    &__element--form {
+      display: block;
+      min-width: 70vw;
+      width: 70%;
+    }
+  }
+  // Bad code, bad code :)
+  .inner-container__element--footer .input-element-footer__red-shape {
+    height: 43px;
+    width: 43px;
   }
 }
