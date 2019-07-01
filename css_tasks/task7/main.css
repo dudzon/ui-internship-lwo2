@@ -94,6 +94,7 @@
   text-transform: uppercase;
   text-align: center;
   border: 2px solid #ded3aa;
+  cursor: pointer;
 }
 /**************************     
 *                         *
@@ -104,8 +105,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
   border-top: 1px solid var(--navBorderColor);
   border-bottom: 1px solid var(--navBorderColor);
 }
@@ -182,6 +183,7 @@
   margin-bottom: 1.375rem;
   background: url("https://via.placeholder.com/650") no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .product-images-list {
   display: flex;
@@ -193,6 +195,7 @@
   padding-bottom: 11rem;
   background: url("https://via.placeholder.com/150") no-repeat;
   background-size: cover;
+  background-position: center;
 }
 /**************************     
 *                         *
@@ -277,19 +280,22 @@
   padding-left: 0.3125rem;
   color: var(--mainColor);
 }
+.product-description__info-paragraph a {
+  text-decoration: none;
+}
 .product-description__text {
   padding-top: 2.5rem;
   color: var(--productDescriptionColor);
   font-size: var(--mainFontSize);
   font-weight: 300;
-  letter-spacing: 0.6;
+  letter-spacing: 0.6px;
 }
 .product-description__text-list {
   padding-top: 1rem;
   color: var(--productDescriptionColor);
   font-size: var(--mainFontSize);
   font-weight: 300;
-  letter-spacing: 0.6;
+  letter-spacing: 0.6px;
   list-style: none;
 }
 .text-list__item {
@@ -352,7 +358,11 @@
   border-radius: 0;
 }
 .form-button-clear {
+  display: flex;
   padding-top: 2rem;
+  background: none;
+  border: none;
+
   color: var(--textPrimaryColor);
   font-size: var(--secondaryFontSize);
   text-transform: uppercase;
@@ -366,9 +376,9 @@
 .form-buttons__cart,
 .form-buttons__wishlist {
   display: block;
-  width: 40%;
+  width: 48%;
   font-size: var(--secondaryFontSize);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background: none;
   text-align: center;
   text-transform: uppercase;
@@ -411,7 +421,7 @@
 }
 .social__button {
   padding: 0.25rem 1rem 0.25rem;
-  margin-right:.5rem;
+  margin-right: 0.5rem;
   color: #fff;
   font-size: var(--socialFontSize);
   font-weight: 300;
@@ -424,11 +434,11 @@
   background-position: 4px center;
   text-align: right;
 }
-.social-text{
-  margin-right:.5rem;
+.social-text {
+  margin-right: 0.5rem;
 }
 .social__followers {
-  margin-right:.5rem;
+  margin-right: 0.5rem;
   color: var(--productDescriptionColor);
   font-size: 11px;
   font-weight: 300;
@@ -579,7 +589,7 @@
   }
   .product-images-list__item {
     width: 18%;
-    padding-bottom:8rem;
+    padding-bottom: 8rem;
     background: url("https://via.placeholder.com/75") no-repeat;
   }
   .social {
