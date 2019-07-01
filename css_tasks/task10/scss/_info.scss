@@ -4,12 +4,12 @@
 .info {
   display: $flex;
   &__left-column {
-    width: 62%;
-    padding:$mainPadding 10%;
+    width: calc(100% - #{$infoRightColumnWidth});
+    padding: $mainPadding 10%;
   }
   &__right-column {
     position: relative;
-    width: 38%;
+    width: calc(100% - #{$infoLeftColumnWidth});
     background: $blockBackground;
     .info-right-column__red-shape {
       position: absolute;
@@ -22,12 +22,11 @@
 }
 @media screen and (max-width: $md) {
   .info__left-column {
-    width:100%;
-    padding:$mainMobilePadding 10%;
+    width: 100%;
+    padding: $mainMobilePadding 10%;
     margin: 0 auto;
   }
   .info__right-column {
     display: none;
   }
 }
-
