@@ -12,7 +12,10 @@
     align-items: center;
     span {
       width: 5%;
-      //   height: 1.5rem;
+      cursor: pointer;
+    }
+    span:first-child{
+      width:4%;
     }
   }
   &__text {

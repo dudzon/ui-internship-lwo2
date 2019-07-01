@@ -11,10 +11,11 @@
   }
   &__content {
     position: absolute;
+    top: 13.16%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
-    top: 13.16%;
+
     .jumbotron-content__left-column {
       @include flexColumn;
       .jumbotron-header__title {
@@ -81,11 +82,15 @@
         }
       }
       .jumbotron-form__input {
+        @include inputPlaceholder;
         @include formInput;
         padding: 0.5rem;
         border-bottom: 1px solid $borderColor;
         &::placeholder {
           @include inputPlaceholder;
+        }
+        &:focus{
+          @include focusInput;
         }
       }
       .jumbotron-form__button {
@@ -141,7 +146,7 @@
           padding: $jumbotronFormPadding;
         }
         .jumbotron-form__input {
-          margin:.5rem auto;
+          margin: 0.5rem auto;
           padding: $jumbotronFormPadding;
         }
         .jumbotron-form__button {
@@ -163,7 +168,7 @@
   }
 }
 
-@media screen and (max-width:677.98px) {
+@media screen and (max-width: 677.98px) {
   .jumbotron {
     picture {
       display: none;
@@ -199,8 +204,8 @@
         }
       }
     }
-    .jumbotron__social{
-      display:none;
+    .jumbotron__social {
+      display: none;
     }
   }
 }

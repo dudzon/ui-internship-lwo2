@@ -11,6 +11,7 @@
       @include flexColumn;
     }
     .form-input {
+      @include inputPlaceholder;
       @include formInput;
       width: 90%;
       padding: 0.5rem;
@@ -18,6 +19,12 @@
       &::placeholder {
         @include inputPlaceholder;
       }
+      &:focus {
+        @include focusInput;
+      }
+    }
+    .form-input--textarea{
+    resize:none;
     }
     .form-button {
       @include button;
@@ -51,15 +58,17 @@
       padding: $mobileSmPadding;
     }
     .form-input {
+      @include inputPlaceholder;
+      @include formInput;
       display: block;
       margin: 0.5rem auto;
       border-bottom: 0;
     }
-    .form-button{
+    .form-button {
       @include block;
-      width:20%;
-      min-width:7rem;
-      padding:.5rem 0;
+      width: 20%;
+      min-width: 7rem;
+      padding: 0.5rem 0;
     }
   }
 }
