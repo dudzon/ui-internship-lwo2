@@ -7,7 +7,6 @@
   @include flex;
   &__rectangles {
     @include standardDesktopPadding;
-    // width: 10%;
     flex-grow: 1;
     .tab-rectangle {
       @include button;

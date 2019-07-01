@@ -1,8 +1,8 @@
 @import "variables";
 @import "mixins";
 
-.customers{
-background: $sectionColor;
+.customers {
+  background: $sectionColor;
   &__container {
     @include flex;
     justify-content: space-between;
@@ -14,44 +14,43 @@ background: $sectionColor;
     align-items: center;
     justify-content: space-between;
     width: 30%;
-    .customers-element__text{
-        position:relative;
-        padding:1.2rem .75rem;
-        background:$mainBackgroundColor;
-        &:after{
-            position:absolute;
-            display:block;
-            content:'';
-            width:20px;
-            height:20px;
-            left:30px;
-            bottom:-16px;
-            background:$mainBackgroundColor;
-            clip-path: polygon(50% 100%, 0 0, 100% 0);
-        }
+    .customers-element__text {
+      position: relative;
+      padding: 1.2rem 0.75rem;
+      background: $mainBackgroundColor;
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 30px;
+        bottom: -16px;
+        background: $mainBackgroundColor;
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+      }
     }
-    .customers-element__wrapper{
-        @include flex;
-        padding-top:1.5rem;
-        width:100%;
-        .customers-element__image{
-            width:80%;
+    .customers-element__wrapper {
+      @include flex;
+      padding-top: 1.5rem;
+      width: 100%;
+      .customers-element__image {
+        width: 80%;
+      }
+      header {
+        @include flexColumn;
+        justify-content: center;
+        width: 50%;
+        padding-bottom: 0.5rem;
+        font-family: $primaryFont;
+        h5 {
+          @include sectionTitle;
         }
-        header{
-            @include flexColumn;
-            justify-content:center;
-            width:50%;
-            padding-bottom:.5rem;
-            font-family:$primaryFont;
-            h5{
-                @include sectionTitle;
-            }
-            h6{
-                @include sectionText;
-            }
+        h6 {
+          @include sectionText;
         }
+      }
     }
-
   }
 }
 
@@ -67,14 +66,13 @@ background: $sectionColor;
       margin: 0 auto 3rem;
       width: 60%;
       min-width: 15rem;
-      .customers-element__wrapper{
-         padding-top:2.5rem;
-         justify-content:space-between;
-         header{
-             align-items: flex-end;
-         }
+      .customers-element__wrapper {
+        padding-top: 2.5rem;
+        justify-content: space-between;
+        header {
+          align-items: flex-end;
+        }
       }
-
     }
   }
 }

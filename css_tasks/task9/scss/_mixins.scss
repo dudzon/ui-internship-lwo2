@@ -121,5 +121,8 @@
 }
 @mixin jumbotronMobileButton{
   margin-top:$jumbotronButtonTopMargin;
-  // padding:$jumbotronButtonPadding;
+}
+@mixin focusInput{
+  outline:0;
+  border-bottom:2px solid $mainThemeColor;
 }
