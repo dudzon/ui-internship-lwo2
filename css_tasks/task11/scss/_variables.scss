@@ -1,0 +1,39 @@
+// COLORS
+$mainBackgroundColor: #fff;
+$mainThemeColor: #95e1d3;
+$secondaryThemeColor: #f38181;
+$mainTextColor: #999999;
+$secondaryTextColor: #333333;
+$activeColor: #fce38a;
+$gradient: linear-gradient(
+  to top,
+  rgba(252, 227, 138, 0.9) 0%,
+  rgba(243, 129, 129, 0.9) 100%
+);
+$decorationBackground: #f8f8f8;
+
+// FONTS
+$primaryFont: "Roboto", sans-serif;
+$secondaryFont: "Montserrat", sans-serif;
+$decorativeFont: "Kaushan Script", cursive;
+
+// FONTSIZE
+$titleFontSize: calc(12px + (30 - 12) * ((100vw - 300px) / (1920 - 300)));
+$textFontSize: calc(11px + (15 - 11) * ((100vw - 300px) / (1920 - 300)));
+$headlineFontSize: calc(12px + (24 - 12) * ((100vw - 300px) / (1920 - 300)));
+$bigFontSize: calc(11px + (72 - 11) * ((100vw - 300px) / (1920 - 300)));
+$carouselText: calc(11px + (24 - 11) * ((100vw - 300px) / (1920 - 300)));
+
+// PADDING
+$standardTopPadding: 5.6875rem;
+$standardTabletTopPadding: 3.5rem;
+$standardMobileTopPadding: 2rem;
+
+//BREAKPOINTS
+
+$md: 1024px;
+$sm: 678px;
+$xs: 413px;
+
+//DECORATORS
+$decoratorWidth: calc(30px + (60 - 30) * ((100vw - 300px) / (1920 - 300)));

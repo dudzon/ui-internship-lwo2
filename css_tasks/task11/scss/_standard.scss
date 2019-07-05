@@ -1,0 +1,199 @@
+@import "variables";
+@import "mixins";
+
+.standard__wrapper {
+  display: flex;
+  padding-top: $standardTopPadding;
+}
+.standard__element {
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  h4 {
+    @include titleText;
+    margin-top: 1.5rem;
+  }
+}
+.standard__image {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    transform: translate(-10px, -10px);
+    transition: all 0.5s;
+    box-shadow: 10px 10px 0 0 $mainThemeColor;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.standard__hover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .hover-image {
+    display: none;
+  }
+  &:hover {
+    background: $gradient;
+    &:after {
+      position: absolute;
+      padding-top: 4rem;
+      @include whiteBoldText;
+      font-size: $textFontSize;
+      text-transform: uppercase;
+      text-align: center;
+      content: "super team";
+    }
+    .hover-image {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.standard__hover--team {
+  span {
+    display: none;
+  }
+}
+.standard__hover--team:hover {
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(30px + (56 - 30) * ((100vw - 300px) / (1920 - 300)));
+    height: calc(30px + (56 - 30) * ((100vw - 300px) / (1920 - 300)));
+    background: $activeColor;
+    border-right: 1px solid rgba(243, 129, 129, 0.4);
+    &:first-child {
+      background: $secondaryThemeColor;
+    }
+  }
+  img {
+    margin: 0 auto;
+    width: initial;
+  }
+  &:after {
+    content: "";
+  }
+}
+.standard__subtitle {
+  @include subTitle;
+}
+.standard__wrapper--blog {
+  .standard__image {
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  .standard__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 33%;
+  }
+}
+
+.standard__wrapper--blog {
+  h4 {
+    text-align: left;
+  }
+  .standard__subtitle {
+    margin-top: 0.5rem;
+    text-align: left;
+    font-style: normal;
+  }
+  .standard__social {
+    position: relative;
+    margin-top: 1rem;
+    font-size: $textFontSize;
+    span {
+      margin-top: 0.5rem;
+      display: inline-block;
+      position: relative;
+      padding-left: 1.5rem;
+     
+    }
+    span:first-child {
+      padding-right:.5rem;
+      &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 9%;
+        left: 0;
+        content: "";
+        background: url("../assets/blog-view.png") no-repeat;
+      }
+    }
+    span:last-child {
+      position: relative;
+    
+      &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 9%;
+        left: 0;
+        content: "";
+        background: url("../assets/blog-comment.png") no-repeat;
+      }
+    }
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #e5e5e5;
+      content: "";
+    }
+  }
+}
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .standard__wrapper {
+    padding-top: $standardTabletTopPadding;
+  }
+  .standard__hover {
+    &:hover {
+      &:after {
+        padding-top: 25%;
+      }
+    }
+  }
+  :hover:after {
+    padding-top: 25%;
+  }
+}
+@media screen and (max-width: $md) {
+}
+// @media screen and (max-width: 768px) {
+//   .standard__social span{
+//     display:block;
+//   }
+// }
+@media screen and (max-width: $sm) {
+  .standard__wrapper {
+    display: block;
+    padding-top: $standardMobileTopPadding;
+  }
+  .standard__element {
+    margin: 0 auto 1rem;
+  }
+  .standard__hover {
+    &:hover {
+      &:after {
+        padding-top: 3rem;
+      }
+    }
+  }
+  .standard__wrapper--team {
+    width: 60%;
+    margin: 0 auto;
+  }
+}

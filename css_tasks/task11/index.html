@@ -1,13 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Task 11</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HOME -->
+    <section class="home">
+      <div class="home__background">
+        <picture>
+          <source media="(max-width:678px)" srcset="assets/layer-15-min.jpg" />
+          <source
+            media="(min-width:679px) and (max-width:1024px)"
+            srcset="assets/layer-15@2x-min.jpg"
+          />
+          <img
+            src="assets/layer-15@3x-min.jpg"
+            alt="Eagle"
+            class="home-background__image"
+          />
+        </picture>
+      </div>
+      <header class="header container">
+        <span><a href="#" class="header__logo">MoGo</a></span>
+        <nav class="header__nav">
+          <ul>
+            <li class="header-nav__item"><a href="#">About</a></li>
+            <li class="header-nav__item"><a href="#">Service</a></li>
+            <li class="header-nav__item"><a href="#">Work</a></li>
+            <li class="header-nav__item"><a href="#">Blog</a></li>
+            <li class="header-nav__item"><a href="#">Contact</a></li>
+            <li class="header-nav__item">
+              <span
+                ><img src="assets/shopping-cart-solid.svg" alt="shopping cart"
+              /></span>
+            </li>
+            <li class="header-nav__item">
+              <span><img src="assets/search-solid.svg" alt="search"/></span>
+            </li>
+          </ul>
+        </nav>
+        <span class="header-nav__mobile" role="button"
+          ><img src="assets/bars-solid.svg" alt="mobile menu"
+        /></span>
+      </header>
+      <div class="home__inner container">
+        <h1>Creative Template</h1>
+        <p>
+          Welcome <br />
+          to MoGo
+        </p>
+        <button name="learn-more">Learn more</button>
+        <ul class="home-indicators">
+          <li><span>01</span>intro</li>
+          <li><span>02</span>work</li>
+          <li><span>03</span>about</li>
+          <li><span>04</span>contact</li>
+        </ul>
+      </div>
+    </section>
+    <!-- WHAT WE DO -->
+    <section class="standard container">
+      <header class="main-header">
+        <h2 class="main-header__headline">What we do</h2>
+        <p class="main-header__title">story about us</p>
+        <div class="main-header__separator"></div>
+        <p class="main-header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </header>
+      <div class="standard__wrapper">
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-44@2x.jpg"
+              />
+              <img src="assets/layer-44@3x.jpg" alt="Laptop" />
+            </picture>
+            <div class="standard__hover">
+              <picture>
+                <source
+                  media="(max-width:1024px)"
+                  srcset="assets/users@2x.png"
+                />
+                <img src="assets/users@3x.png" alt="" class="hover-image" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-39@2x.jpg"
+              />
+              <img src="assets/layer-39@3x.jpg" alt="Desk" />
+            </picture>
+            <div class="standard__hover">
+              <picture>
+                <source
+                  media="(max-width:1024px)"
+                  srcset="assets/users@2x.png"
+                />
+                <img src="assets/users@3x.png" alt="" class="hover-image" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-41@2x.jpg"
+              />
+              <img src="assets/layer-41@3x.jpg" alt="Flower" />
+            </picture>
+            <div class="standard__hover">
+              <picture>
+                <source
+                  media="(max-width:1024px)"
+                  srcset="assets/users@2x.png"
+                />
+                <img src="assets/users@3x.png" alt="" class="hover-image" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Green Bar Decoration -->
+    <section class="decoration decoration-green">
+      <div class="container decoration__wrapper">
+        <div class="decoration__element">
+          <span>42</span>
+          <p>Web Design <br />Projects</p>
+        </div>
+        <div class="decoration__element">
+          <span>123</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="decoration__element">
+          <span>15</span>
+          <p>Award Winners</p>
+        </div>
+        <div class="decoration__element">
+          <span>99</span>
+          <p>Cup of cofee</p>
+        </div>
+        <div class="decoration__element">
+          <span>24</span>
+          <p>Members</p>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES -->
+    <section class="container">
+      <header class="main-header">
+        <h2 class="main-header__headline">We work with</h2>
+        <p class="main-header__title">amazing services</p>
+        <div class="main-header__separator"></div>
+      </header>
+      <div class="services">
+        <div class="services__element">
+          <span><img src="assets/alarm@2x.png" alt=""/></span>
+          <div>
+            <h4>Photography</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+          </div>
+        </div>
+        <div class="services__element">
+          <span><img src="assets/line-graph@2x.png" alt=""/></span>
+          <div>
+            <h4>Web Design</h4>
+            <p>
+              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor.
+            </p>
+          </div>
+        </div>
+        <div class="services__element">
+          <span><img src="assets/computer-ok@2x.png" alt=""/></span>
+          <div>
+            <h4>Creativity</h4>
+            <p>
+              Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor.
+            </p>
+          </div>
+        </div>
+        <div class="services__element">
+          <span><img src="assets/book-2@2x.png" alt=""/></span>
+          <div>
+            <h4>Seo</h4>
+            <p>
+              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            </p>
+          </div>
+        </div>
+        <div class="services__element">
+          <span><img src="assets/home@2x.png" alt=""/></span>
+          <div>
+            <h4>Css/Html</h4>
+            <p>
+              Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.
+            </p>
+          </div>
+        </div>
+        <div class="services__element">
+          <span><img src="assets/image@2x.png" alt=""/></span>
+          <div>
+            <h4>Digital</h4>
+            <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DESIGN -->
+    <section class="design">
+      <picture>
+        <source
+          media="(min-width:679px) and (max-width:1024px)"
+          srcset="assets/layer-45@2x-min.jpg"
+        />
+        <img
+          src="assets/layer-45@3x-min.jpg"
+          alt="Mountains"
+          class="home-background__image"
+        />
+      </picture>
+      <header class="main-header main-header--design">
+        <h2 class="main-header__headline">For all devices</h2>
+        <p class="main-header__title">unique design</p>
+        <div class="main-header__separator"></div>
+      </header>
+      <picture>
+        <source
+          media="(min-width:679px) and (max-width:1024px)"
+          srcset="assets/website@2x.png"
+        />
+        <img src="assets/website@3x.png" alt="Website" class="design__image" />
+      </picture>
+      <picture>
+        <source
+          media="(min-width:679px) and (max-width:1024px)"
+          srcset="assets/white@2x.png"
+        />
+        <img
+          src="assets/white@3x.png"
+          alt="Mobile Phone"
+          class="design__image design__image--mobile"
+        />
+      </picture>
+    </section>
+    <section class="container">
+      <header class="main-header">
+        <h2 class="main-header__headline">Service</h2>
+        <p class="main-header__title">what we do</p>
+        <div class="main-header__separator"></div>
+        <p class="main-header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </header>
+    </section>
+    <!-- CAROUSEL -->
+    <section class="decoration decoration-carousel">
+      <div class="container decoration__wrapper decoration__wrapper--carousel">
+        <span>
+          <picture>
+            <source media="(max-width:678px)" srcset="assets/speech-4.png" />
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/speech-4@2x.png"
+            />
+            <img src="assets/speech-4@3x.png" alt="" /> </picture
+        ></span>
+        <p class="decoration-carousel__text">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation.”
+        </p>
+      </div>
+    </section>
+    <section class="standard container">
+      <header class="main-header">
+        <h2 class="main-header__headline">Who we are</h2>
+        <p class="main-header__title">meet our team</p>
+        <div class="main-header__separator"></div>
+        <p class="main-header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </header>
+      <div class="standard__wrapper standard__wrapper--team">
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/layer-16.jpg" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-16@2x.jpg"
+              />
+              <img src="assets/layer-16@3x.jpg" alt="Person" />
+            </picture>
+            <div class="standard__hover standard__hover--team">
+              <span
+                ><a href="https://www.facebook.com"
+                  ><img src="assets/facebook.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.twitter.com"
+                  ><img src="assets/twitter.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.pinterest.com"
+                  ><img src="assets/pinterest.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.instagram.com"
+                  ><img src="assets/instagram.png" alt=""/></a
+              ></span>
+            </div>
+          </div>
+          <h4>Matthew Dix</h4>
+          <p class="standard__subtitle">Graphic Design</p>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/layer-19.jpg" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-19@2x.jpg"
+              />
+              <img src="assets/layer-19@3x.jpg" alt="Person" />
+            </picture>
+            <div class="standard__hover standard__hover--team">
+              <span
+                ><a href="https://www.facebook.com"
+                  ><img src="assets/facebook.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.twitter.com"
+                  ><img src="assets/twitter.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.pinterest.com"
+                  ><img src="assets/pinterest.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.instagram.com"
+                  ><img src="assets/instagram.png" alt=""/></a
+              ></span>
+            </div>
+          </div>
+          <h4>Christopher Campbell</h4>
+          <p class="standard__subtitle">Branding/Ux Design</p>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/layer-18.jpg" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-18@2x.jpg"
+              />
+              <img src="assets/layer-18@3x.jpg" alt="Person" />
+            </picture>
+            <div class="standard__hover standard__hover--team">
+              <span
+                ><a href="https://www.facebook.com"
+                  ><img src="assets/facebook.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.twitter.com"
+                  ><img src="assets/twitter.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.pinterest.com"
+                  ><img src="assets/pinterest.png" alt=""/></a
+              ></span>
+              <span
+                ><a href="https://www.instagram.com"
+                  ><img src="assets/instagram.png" alt=""/></a
+              ></span>
+            </div>
+          </div>
+          <h4>Michael Fertig</h4>
+          <p class="standard__subtitle">Developer</p>
+        </div>
+      </div>
+    </section>
+    <div class="decoration decoration-icons container">
+      <picture>
+        <source media="(max-width:678px)" srcset="assets/layer-25.png" />
+        <source media="(max-width:1024px)" srcset="assets/layer-25@2x.png" />
+        <img src="assets/layer-25@3x.png" alt="Icons" />
+      </picture>
+    </div>
+    <section class="standard container">
+      <header class="main-header">
+        <h2 class="main-header__headline">What we do</h2>
+        <p class="main-header__title">some of our work</p>
+        <div class="main-header__separator"></div>
+        <p class="main-header__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </header>
+    </section>
+    <!-- SECOND CAROUSEL-->
+    <section class="decoration">
+      <div class="container decoration__wrapper decoration__wrapper--carousel">
+        <span>
+          <picture>
+            <source media="(max-width:678px)" srcset="assets/layer-49.jpg" />
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/layer-49@2x.jpg"
+            />
+            <img
+              src="assets/layer-49@3x.jpg"
+              class="decoration-image__carousel"
+              alt=""
+            />
+          </picture>
+        </span>
+        <p class="decoration-carousel__text">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation.”
+        </p>
+      </div>
+    </section>
+    <section class="standard">
+      <header class="main-header">
+        <h2 class="main-header__headline">What people say</h2>
+        <p class="main-header__title">happy clients</p>
+        <div class="main-header__separator"></div>
+      </header>
+    </section>
+    <!-- BLOG -->
+    <section class="standard container">
+      <header class="main-header">
+        <h2 class="main-header__headline">Our stories</h2>
+        <p class="main-header__title">latest blog</p>
+        <div class="main-header__separator"></div>
+      </header>
+      <div class="standard__wrapper standard__wrapper--blog">
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-54@2x.jpg"
+              />
+              <img src="assets/layer-54@3x.jpg" alt="Woman in the office" />
+            </picture>
+          </div>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p class="standard__subtitle">
+            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.
+          </p>
+          <div class="standard__social">
+            <span>542</span>
+            <span>17</span>
+          </div>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-55@2x.jpg"
+              />
+              <img src="assets/layer-55@3x.jpg" alt="Desk with laptop" />
+            </picture>
+          </div>
+          <h4>Sed do eiusmod tempor</h4>
+          <p class="standard__subtitle">
+            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="standard__social">
+            <span>992</span>
+            <span>42</span>
+          </div>
+        </div>
+        <div class="standard__element">
+          <div class="standard__image">
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/layer-57@2x.jpg"
+              />
+              <img src="assets/layer-57@3x.jpg" alt="Man with a tablet" />
+            </picture>
+          </div>
+          <h4>incididunt ut labore et dolore</h4>
+          <p class="standard__subtitle">
+            Elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </p>
+          <div class="standard__social">
+            <span>1560</span>
+            <span>98</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
