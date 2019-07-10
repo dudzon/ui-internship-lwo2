@@ -19,13 +19,28 @@
     text-align: center;
   }
 }
+.decoration--map {
+  position: relative;
+  background: url("../assets/layer-59@2x.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #d9d9d9;
+    opacity: 0.8;
+    content: "";
+  }
+}
 .decoration__wrapper {
   display: flex;
   justify-content: space-between;
   height: 10rem;
 }
 .decoration__wrapper--carousel {
-  position:relative;
+  position: relative;
   height: 100%;
   align-items: center;
   img {
@@ -34,21 +49,21 @@
   .decoration-image__carousel {
     clip-path: circle(50% at 50% 50%);
   }
-  &:before{
-    position:absolute;
-    top:30%;
-    left:10%;
-    font-size:$bigFontSize;
-    content:'\02c2'; 
-    cursor:pointer;
+  &:before {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: $bigFontSize;
+    content: "\02c2";
+    cursor: pointer;
   }
-  &:after{
-    position:absolute;
-    top:30%;
-    right:10%;
-    font-size:$bigFontSize;
-    content:'\02c3';
-    cursor:pointer;
+  &:after {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-size: $bigFontSize;
+    content: "\02c3";
+    cursor: pointer;
   }
 }
 .decoration__element {
@@ -119,20 +134,14 @@
     display: none;
   }
 }
-@media screen and (min-width: $sm) and (max-width: $md) {
-  .decoration-carousel__text {
-    &:hover:after {
-      padding-top: 0;
-    }
-  }
-}
 
 @media screen and (max-width: $sm) {
   .decoration {
-    margin-top: $standardMobileTopPadding;
+    margin-top: 0;
   }
   .decoration__wrapper--carousel,
-  .decoration-carousel {
+  .decoration-carousel,
+  .decoration--map {
     display: none;
   }
 }

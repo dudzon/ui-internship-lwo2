@@ -9,7 +9,7 @@
   color: $mainTextColor;
 }
 .container {
-  padding: 0 18%;
+  padding: 0 15%;
 }
 .container-standard {
   padding: 0 14%;
@@ -34,10 +34,7 @@ picture {
     text-align: center;
   }
   &__separator {
-    margin: 2.5rem auto 0;
-    height: 3px;
-    width: $decoratorWidth;
-    background: $secondaryThemeColor;
+    @include separator;
   }
   &__text {
     margin: 5rem auto 0;
@@ -45,11 +42,36 @@ picture {
     @include normalText;
   }
 }
-.main-header--design {
-  padding-top:3rem;
+.main-header--design,
+.main-header--clients {
+  padding-top: 3rem;
   position: absolute;
   z-index: 20;
 }
+.main-header--clients {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.main-header--map {
+  position: relative;
+  z-index: 30;
+  padding: 2rem 0;
+  h2 {
+    padding-top: 1rem;
+    font-size: $headlineFontSize;
+    font-family: $secondaryFont;
+    font-weight: bold;
+    color: $secondaryThemeColor;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: $sm) and (max-width: $md) {
   .main-header {
     padding-top: $standardTabletTopPadding;
@@ -57,11 +79,11 @@ picture {
       margin-top: 1.25rem;
     }
   }
-  .main-header--design{
-    padding-top:1.5rem;
+  .main-header--design {
+    padding-top: 1.5rem;
   }
-  .main-header--design .main-header__separator{
-    margin-top:1rem;
+  .main-header--design .main-header__separator {
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: $sm) {

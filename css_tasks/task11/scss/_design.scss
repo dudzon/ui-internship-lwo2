@@ -29,14 +29,6 @@
     bottom: -11%;
   }
 }
-
-@media screen and (min-width: $sm) and (max-width: $md) {
-  .design {
-    &:hover:after {
-      padding-top: 0;
-    }
-  }
-}
 @media screen and( max-width: $sm) {
   .design {
     display: none;

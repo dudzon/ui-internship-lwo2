@@ -30,9 +30,24 @@
   font-size: $headlineFontSize;
   color: $secondaryTextColor;
 }
-@mixin normalText{
+@mixin normalText {
   font-size: $textFontSize;
   color: $mainTextColor;
   line-height: 1.6;
   text-align: center;
+}
+@mixin separator {
+  margin: 2.5rem auto 0;
+  height: 3px;
+  width: $decoratorWidth;
+  background: $secondaryThemeColor;
+}
+@mixin accordionImage {
+  position: absolute;
+  top: 28%;
+  display: block;
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  content: "";
 }

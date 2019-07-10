@@ -102,6 +102,9 @@
 }
 
 .standard__wrapper--blog {
+  .standard__element {
+    position: relative;
+  }
   h4 {
     text-align: left;
   }
@@ -119,10 +122,9 @@
       display: inline-block;
       position: relative;
       padding-left: 1.5rem;
-     
     }
     span:first-child {
-      padding-right:.5rem;
+      padding-right: 0.5rem;
       &:before {
         position: absolute;
         width: 100%;
@@ -135,7 +137,7 @@
     }
     span:last-child {
       position: relative;
-    
+
       &:before {
         position: absolute;
         width: 100%;
@@ -154,7 +156,31 @@
       content: "";
     }
   }
+  .standard__date {
+    position: absolute;
+    bottom: 56%;
+    left: -6%;
+    width: 3.75rem;
+    background: $mainThemeColor;
+
+    span {
+      display: block;
+      margin: 0 auto;
+      color: $mainBackgroundColor;
+      text-align: center;
+    }
+    span:first-child {
+      font-family: $secondaryFont;
+      font-size: $titleFontSize;
+      font-weight: bold;
+    }
+    span:last-child {
+      font-style: italic;
+      font-size: $textFontSize;
+    }
+  }
 }
+
 @media screen and (min-width: $sm) and (max-width: $md) {
   .standard__wrapper {
     padding-top: $standardTabletTopPadding;
@@ -166,17 +192,24 @@
       }
     }
   }
-  :hover:after {
-    padding-top: 25%;
+  .standard__wrapper--blog {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    .standard__element {
+      margin: 0 auto 3rem;
+    }
+    .standard__date {
+      top: 54%;
+      bottom: initial;
+      left: -3%;
+      z-index: 30;
+    }
   }
 }
-@media screen and (max-width: $md) {
+@media screen and (max-width: $sm) {
 }
-// @media screen and (max-width: 768px) {
-//   .standard__social span{
-//     display:block;
-//   }
-// }
+
 @media screen and (max-width: $sm) {
   .standard__wrapper {
     display: block;
@@ -195,5 +228,25 @@
   .standard__wrapper--team {
     width: 60%;
     margin: 0 auto;
+  }
+  .standard__wrapper--blog {
+    display: block;
+    .standard__element {
+      margin: 0 auto 3rem;
+    }
+    .standard__date {
+      top: 62%;
+      bottom: initial;
+      left: -3%;
+      z-index: 30;
+    }
+  }
+  .standard__wrapper--blog .standard__element {
+    margin-bottom: 1rem;
+  }
+  .standard__wrapper--blog .standard__element .standard__date {
+    top: 47%;
+    bottom: initial;
+    left: -3%;
   }
 }
