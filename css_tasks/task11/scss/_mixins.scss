@@ -1,0 +1,53 @@
+@import "variables";
+
+@mixin whiteBoldText {
+  font-family: $secondaryFont;
+  font-weight: bold;
+  color: $mainBackgroundColor;
+}
+@mixin titleText {
+  font-family: $secondaryFont;
+  font-size: $textFontSize;
+  color: $secondaryTextColor;
+  text-align: center;
+  text-transform: uppercase;
+}
+@mixin subTitle {
+  font-family: $primaryFont;
+  font-size: $textFontSize;
+  font-style: italic;
+  line-height: 1.6;
+  color: $mainTextColor;
+  text-align: center;
+}
+@mixin normalWhiteText {
+  font-family: $secondaryFont;
+  font-size: $textFontSize;
+  color: $mainBackgroundColor;
+}
+@mixin decorativeText {
+  font-family: $decorativeFont;
+  font-size: $headlineFontSize;
+  color: $secondaryTextColor;
+}
+@mixin normalText {
+  font-size: $textFontSize;
+  color: $mainTextColor;
+  line-height: 1.6;
+  text-align: center;
+}
+@mixin separator {
+  margin: 2.5rem auto 0;
+  height: 3px;
+  width: $decoratorWidth;
+  background: $secondaryThemeColor;
+}
+@mixin accordionImage {
+  position: absolute;
+  top: 28%;
+  display: block;
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  content: "";
+}

@@ -1,0 +1,220 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  background: $decorationBackground;
+}
+.footer__container {
+  position: relative;
+  display: flex;
+  padding-top: $standardTopPadding;
+  padding-bottom: 4.3125rem;
+}
+.footer__logo {
+  font-family: $secondaryFont;
+  font-size: calc(12px + (46 - 12) * ((100vw - 300px) / (1920 - 300)));
+  font-weight: bold;
+  text-decoration: none;
+  color: #ccc;
+}
+.footer__element {
+  flex-basis: 33%;
+  margin-right: 2rem;
+  p:first-child {
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+    @include titleText;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.footer__element:first-child {
+  flex-basis: 40%;
+  p {
+    padding: 1.25rem 0;
+    @include normalText;
+    text-align: left;
+  }
+  p:nth-child(3) {
+    position: relative;
+    font-size: $textFontSize;
+    color: $secondaryTextColor;
+    span {
+      display: inline-block;
+      padding-right: 0.25rem;
+      font-family: $secondaryFont;
+      font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1920 - 300)));
+      font-weight: bold;
+      color: $secondaryTextColor;
+    }
+    &:after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #e5e5e5;
+      content: "";
+    }
+  }
+}
+.footer-social {
+  display: flex;
+  padding-top: 0.5rem;
+  @include subTitle;
+  span {
+    padding-right: 0.5rem;
+  }
+}
+.footer-social__icons {
+  display: flex;
+}
+.footer__form {
+  display: flex;
+  margin-top: 2rem;
+  input {
+    width: 50%;
+    height: 2.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e7e7e7;
+    @include subTitle;
+    text-align: left;
+    &::placeholder {
+      @include subTitle;
+      text-align: left;
+    }
+    &:focus {
+      outline: 1px solid $mainThemeColor;
+    }
+  }
+  button {
+    height: 2.5rem;
+    padding: 0 1rem;
+    background: $mainThemeColor;
+    @include normalWhiteText;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: darken($mainThemeColor, 20%);
+      font-weight: bold;
+    }
+  }
+}
+.footer__element:nth-child(2) {
+  flex-basis: 40%;
+}
+.footer__element:nth-child(3) {
+  margin-right: 0;
+}
+.footer__blog {
+  display: flex;
+  margin-top: 1.75rem;
+  img {
+    display: block;
+    height: 100%;
+    margin-right: 1rem;
+  }
+  h4 {
+    font-family: $secondaryFont;
+    font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1920 - 300)));
+    color: $secondaryTextColor;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  p {
+    padding-top: 0.5rem;
+    font-family: $primaryFont;
+    font-size: calc(9px + (13 - 9) * ((100vw - 300px) / (1920 - 300)));
+    font-style: italic;
+    line-height: 1.85;
+  }
+}
+.footer__separator {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 64%;
+  height: 1px;
+  background: #e5e5e5;
+}
+.footer__footnote {
+  text-align: center;
+  padding: 1rem;
+  p {
+    font-family: $secondaryFont;
+    font-weight: bold;
+    color: $secondaryTextColor;
+  }
+  span {
+    color: $secondaryThemeColor;
+  }
+}
+.footer__element:last-child {
+  margin-right: 0;
+}
+.footer__pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  margin-top: 1.75rem;
+  img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .footer__container {
+    display: block;
+  }
+  .footer__element {
+    margin-right: 0;
+    text-align: center;
+  }
+  .footer__element:first-child p:nth-child(3) {
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+  .footer__form {
+    width: 100%;
+    margin: 2rem 0 0 5rem;
+  }
+  .footer__element:nth-child(2) p,
+  .footer__element:nth-child(3) p {
+    text-align: center;
+  }
+  .footer__blog {
+    display: block;
+    img {
+      margin: 0 auto 1rem;
+    }
+  }
+  .footer__pictures {
+    span {
+      display: block;
+      width: 100%;
+    }
+  }
+  .footer__element:nth-child(3) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .footer__container{
+    padding-top:3rem;
+  }
+  .footer__form {
+    margin: 2rem 0 0 0;
+    width: 100%;
+
+    input {
+      width: 70%;
+    }
+  }
+}

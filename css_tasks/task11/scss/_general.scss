@@ -1,0 +1,104 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primaryFont;
+  color: $mainTextColor;
+}
+.container {
+  padding: 0 15%;
+}
+.container-standard {
+  padding: 0 14%;
+}
+picture {
+  display: block;
+}
+.main-header {
+  padding-top: $standardTopPadding;
+  &__headline {
+    @include decorativeText;
+    text-align: center;
+  }
+  &__title {
+    position: relative;
+    padding-top: 1rem;
+    font-family: $secondaryFont;
+    font-weight: bold;
+    font-size: $titleFontSize;
+    color: $secondaryTextColor;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__separator {
+    @include separator;
+  }
+  &__text {
+    margin: 5rem auto 0;
+    width: 80%;
+    @include normalText;
+  }
+}
+.main-header--design,
+.main-header--clients {
+  padding-top: 3rem;
+  position: absolute;
+  z-index: 20;
+}
+.main-header--clients {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.main-header--map {
+  position: relative;
+  z-index: 30;
+  padding: 2rem 0;
+  h2 {
+    padding-top: 1rem;
+    font-size: $headlineFontSize;
+    font-family: $secondaryFont;
+    font-weight: bold;
+    color: $secondaryThemeColor;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .main-header {
+    padding-top: $standardTabletTopPadding;
+    &__text {
+      margin-top: 1.25rem;
+    }
+  }
+  .main-header--design {
+    padding-top: 1.5rem;
+  }
+  .main-header--design .main-header__separator {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: $sm) {
+  .main-header {
+    padding-top: $standardMobileTopPadding;
+    &__text {
+      margin-top: 2.5rem;
+    }
+    &__separator {
+      margin-top: 1.25rem;
+    }
+  }
+}
+@media screen and (max-width: $xs) {
+  .container {
+    padding: 0 12%;
+  }
+}
