@@ -31,11 +31,7 @@ function watch() {
   browserSync.init({
     watch: true,
     server: {
-<<<<<<< HEAD
-      baseDir: './css_tasks/task10',
-=======
       baseDir: './css_tasks/task11',
->>>>>>> css-task-11
     },
   });
   gulp.watch(paths.styles.src, style);
