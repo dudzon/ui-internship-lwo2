@@ -1,9 +1,9 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-console */
+import {validate} from './jumbotronForm.js';
+// eslint-disable-next-line no-undef
 const jumbotronForm = document.forms.jumbotronForm;
 
-jumbotronForm.addEventListener('submit', (e) => {
-  const jumbotronName = jumbotronForm.elements.name.value;
+const validation = (e)=> {
   e.preventDefault();
-  console.log(jumbotronName);
-});
+  validate(jumbotronForm);
+};
+jumbotronForm.addEventListener('submit', validation);
