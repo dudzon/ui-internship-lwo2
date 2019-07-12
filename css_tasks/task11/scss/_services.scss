@@ -11,17 +11,17 @@
   position: relative;
   display: flex;
   padding: 3rem 0 2rem;
-  span {
+  .services-element__image {
     display: block;
     margin-right: 1rem;
   }
 
-  h4 {
+  .services-element__title{
     margin-bottom: 1rem;
     @include titleText;
     text-align: left;
   }
-  p {
+  .services-element__text {
     @include normalText;
     text-align: left;
   }
