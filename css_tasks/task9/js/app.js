@@ -1,9 +1,12 @@
-import {validate} from './jumbotronForm.js';
-// eslint-disable-next-line no-undef
-const jumbotronForm = document.forms.jumbotronForm;
+/* eslint-disable no-undef */
 
-const validation = (e)=> {
-  e.preventDefault();
-  validate(jumbotronForm);
-};
-jumbotronForm.addEventListener('submit', validation);
+// IMPORTS
+import {validateJumbotronForm, validateFooterForm} from './forms.js';
+
+// HANDLERS
+export const jumbotronForm = document.forms.jumbotronForm;
+export const footerForm = document.forms.footerForm;
+
+// EVENTS
+jumbotronForm.addEventListener('submit', validateJumbotronForm);
+footerForm.addEventListener('submit', validateFooterForm);
