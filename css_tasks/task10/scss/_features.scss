@@ -1,0 +1,50 @@
+@import "variables";
+@import "mixins";
+.features {
+  position: relative;
+  padding-top: $mainPadding;
+  background: $mainBackground;
+  &__image {
+    position: absolute;
+  }
+  &__image--first {
+    top: 0;
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+  &__image--second {
+    top: -2%;
+    right: 10%;
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+  &__image--third {
+    bottom: 0;
+    right: 5%;
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+}
+.features--secondary {
+  padding-top: 6rem;
+}
+.features-secondary__image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: $sm) {
+  .features {
+    padding: $mainMobilePadding 10%;
+  }
+  .features--secondary {
+    padding-bottom: 0;
+  }
+  .features-secondary__image {
+    width: 100%;
+  }
+}

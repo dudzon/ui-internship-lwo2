@@ -1,0 +1,39 @@
+// COLORS
+$mainBackground: #f6f5f3;
+$secondaryBackground: #fff;
+$additionalBackround: #323969;
+$mainThemeColor: #ff6d6d;
+$mainTextColor: #282828;
+$placeholderColor: #8d8d8d;
+$blockBackground: #ededed;
+
+// FONTSIZE
+$bigTitleFontSize: calc(12px + (60 - 12) * ((100vw - 300px) / (1600 - 300)));
+$buttonFontSize: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+$mainTextFontSize: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+$headerTextFontSize: calc(14px + (44 - 14) * ((100vw - 300px) / (1600 - 300)));
+$elementTitleFontSize: calc(
+  12px + (22 - 12) * ((100vw - 300px) / (1600 - 300))
+);
+$footerFontSize: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
+$footerSecondFontSize: calc(
+  12px + (27 - 12) * ((100vw - 300px) / (1600 - 300))
+);
+// FONTS
+$primaryFont: "Exo", sans-serif;
+$secondaryFont: "Lato", sans-serif;
+
+// BREAKPOINTS
+
+$md: 1024px;
+$sm: 678px;
+
+// DISPLAY
+$flex: flex;
+
+// SIZES
+
+$mainPadding: 9.4375rem;
+$mainMobilePadding: 4rem;
+$infoLeftColumnWidth:62%;
+$infoRightColumnWidth:38%;

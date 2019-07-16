@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+.design {
+  position: relative;
+  display: flex;
+  padding-bottom: 5.625rem;
+  &__red-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5.625rem 0;
+    clip-path: polygon(0 0, 9% 0, 35% 100%, 0% 100%);
+    background: $mainThemeColor;
+    z-index: -1;
+  }
+  &-left-column {
+    padding: 5.625rem 5% 0;
+    width: 50%;
+    .design__image {
+      display: block;
+      width: 100%;
+    }
+  }
+  &-right-column {
+    padding-top: 5.625rem;
+    padding-right: 10%;
+    width: 45%;
+  }
+}
+@media screen and (max-width: $sm) {
+  .design {
+    display: block;
+    padding-bottom: 0;
+  }
+  .design__red-shape {
+    display: none;
+  }
+  .design-left-column {
+    display: none;
+  }
+  .design-right-column {
+    padding: $mainMobilePadding 10%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+.form {
+  padding-top: 4rem;
+  background: $additionalBackround;
+  &__button {
+    @include button;
+    opacity: 1;
+    &:hover {
+      background: #fff;
+      color: $mainThemeColor;
+    }
+  }
+  &__terms {
+    position: relative;
+    padding-bottom: 3rem;
+    font-size: $mainTextFontSize;
+    color: #fff;
+    opacity: 0.6;
+    line-height: 4.69;
+    letter-spacing: 0.64px;
+    text-align: center;
+    a {
+      color: #fff;
+      opacity: 0.6;
+    }
+  }
+  &__text {
+    position: absolute;
+    bottom: 185%;
+    right: 13%;
+    font-size: $mainTextFontSize;
+    color: $mainBackground;
+    letter-spacing: 0.64px;
+    text-transform: initial;
+    &:before {
+      position: absolute;
+      top: 1.5rem;
+      left: -1.5rem;
+      content: "";
+      width: 5%;
+      height: 100%;
+      background: url("../assets/arrow@2x.png") no-repeat;
+    }
+  }
+}
+@media screen and (max-width: $md) {
+  .form__text {
+    display: none;
+  }
+}
+@media screen and (max-width: $sm) {
+  .form__terms {
+    padding-bottom: 1.5rem;
+  }
+}

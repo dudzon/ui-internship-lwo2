@@ -3,6 +3,7 @@
 .vscode/
 *.iml
 *.sublime*
+css_tasks/task10/css
 
 # common ignores
 node_modules
