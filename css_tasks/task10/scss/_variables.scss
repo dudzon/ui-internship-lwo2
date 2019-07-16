@@ -19,6 +19,7 @@ $footerFontSize: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
 $footerSecondFontSize: calc(
   12px + (27 - 12) * ((100vw - 300px) / (1600 - 300))
 );
+$errorFontSize: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
 // FONTS
 $primaryFont: "Exo", sans-serif;
 $secondaryFont: "Lato", sans-serif;
@@ -35,5 +36,5 @@ $flex: flex;
 
 $mainPadding: 9.4375rem;
 $mainMobilePadding: 4rem;
-$infoLeftColumnWidth:62%;
-$infoRightColumnWidth:38%;
+$infoLeftColumnWidth: 62%;
+$infoRightColumnWidth: 38%;

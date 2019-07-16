@@ -4,12 +4,19 @@
   padding-top: 4rem;
   background: $additionalBackround;
   &__button {
+    flex-basis: 30%;
+    height: 100%;
     @include button;
     opacity: 1;
+
     &:hover {
       background: #fff;
       color: $mainThemeColor;
     }
+  }
+  .disabled {
+    cursor: not-allowed;
+    opacity: 0.07;
   }
   &__terms {
     position: relative;
@@ -44,9 +51,21 @@
     }
   }
 }
+.form-error {
+  padding-bottom:1rem;
+  font-size: $errorFontSize;
+  color: $mainBackground;
+  text-align:center;
+  
+}
 @media screen and (max-width: $md) {
   .form__text {
     display: none;
+  }
+  .form__button{
+    display:block;
+    margin:0 auto;
+    width:70%;
   }
 }
 @media screen and (max-width: $sm) {
