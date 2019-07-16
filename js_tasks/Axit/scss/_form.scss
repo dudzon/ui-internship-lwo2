@@ -13,6 +13,7 @@
     .form-input {
       @include inputPlaceholder;
       @include formInput;
+      margin:1.5rem 0;
       width: 90%;
       padding: 0.5rem;
       border-bottom: 1px solid $borderColor;

@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+
+.awesome {
+  background: $sectionColor;
+  &__container {
+    @include flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: $mobilePadding;
+  }
+  &__element {
+    @include flexColumn;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    .awesome-element__icon--first {
+      background: url("./../assets/svg/lightbulb-regular.svg") no-repeat;
+      @include awesomeIcon;
+    }
+    .awesome-element__icon--second {
+      background: url("./../assets/svg/keyboard-regular.svg") no-repeat;
+      @include awesomeIcon;
+    }
+    .awesome-element__icon--third {
+      background: url("./../assets/svg/bolt-solid.svg") no-repeat;
+      @include awesomeIcon;
+    }
+    .awesome-element__title {
+      padding-top: 1.5rem;
+    }
+    .awesome-element__text {
+      padding-top: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// Media queries
+
+@media screen and ( min-width:$sm ) and ( max-width:$md){
+  .awesome{
+    &__container{
+      padding:$mobileSmPadding;
+    }
+  }
+}
+@media screen and ( max-width: $sm){
+  .awesome{
+    &__container{
+      display:block;  
+      padding:2rem 0;
+    
+    }
+    &__element{
+      margin:0 auto 1.5rem;
+      width:100%;
+    }
+  }
+}
