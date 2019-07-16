@@ -1,20 +1,23 @@
-/* eslint-disable max-len */
-/* eslint-disable no-undef */
-import {signup} from './app.js';
 
+/* eslint-disable max-len */
+import {constants} from './constants.js';
+
+const {nameText, emailText, emailPattern, passwordPattern, passwordText} = constants;
+
+const namePattern = /^[a - zA - Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
 
 const validateForm = (e) => {
-  validateName(signup, e);
-  validateEmail(signup, e);
-  validatePassword(signup, e);
+  validateName(e.target, e);
+  validateEmail(e.target, e);
+  validatePassword(e.target, e);
 };
 
 const validateName = (formName, e) => {
   const name = formName.elements.name;
-  const nameText = 'Only latin letters';
   const nameValue = name.value;
-  const namePattern = /^[a-zA-Z]+$/g;
   hideWarning(name);
+  console.log(namePattern.test(nameValue));
+  console.log(nameValue)
   if (!namePattern.test(nameValue)) {
     showWarning(name, nameText);
     e.preventDefault();
@@ -25,9 +28,7 @@ const validateName = (formName, e) => {
 
 const validateEmail = (formName, e) => {
   const email = formName.elements.email;
-  const emailText = 'Provide valid email address';
   const emailValue = email.value;
-  const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   hideWarning(email);
   if (!emailPattern.test(emailValue)) {
     showWarning(email, emailText);
@@ -39,10 +40,7 @@ const validateEmail = (formName, e) => {
 
 const validatePassword = (formName, e) => {
   const password = formName.elements.password;
-  const passwordText =
-        'Password should have at least  6 characters including:capital letter, lowercased letter, digit and special character';
   const passwordValue = password.value;
-  const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/;
   hideWarning(password);
   if (!passwordPattern.test(passwordValue)) {
     showWarning(password, passwordText);
