@@ -13,6 +13,9 @@ const paths = {
   html: {
     src: 'js_tasks/Axit/*.html',
   },
+  js: {
+    src: 'css_tasks/ task9/*.js',
+  },
 };
 function style() {
   return (
