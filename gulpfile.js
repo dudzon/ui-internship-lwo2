@@ -7,11 +7,11 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const paths = {
   styles: {
-    src: 'css_tasks/task9/scss/*.scss',
-    dest: 'css_tasks/task9/css/',
+    src: 'js_tasks/Axit/scss/*.scss',
+    dest: 'js_tasks/Axit/css/',
   },
   html: {
-    src: 'css_tasks/ task9/*.html',
+    src: 'js_tasks/Axit/*.html',
   },
 };
 function style() {
@@ -31,7 +31,7 @@ function watch() {
   browserSync.init({
     watch: true,
     server: {
-      baseDir: './css_tasks/task9',
+      baseDir: './js_tasks/Axit',
     },
   });
   gulp.watch(paths.styles.src, style);

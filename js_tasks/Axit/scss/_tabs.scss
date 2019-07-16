@@ -1,0 +1,125 @@
+@import "variables";
+@import "mixins";
+.tabs {
+  background: $mainBackgroundColor;
+}
+.tabs-content {
+  @include flex;
+  &__rectangles {
+    @include standardDesktopPadding;
+    flex-grow: 1;
+    .tab-rectangle {
+      @include button;
+      @include flex;
+      justify-content: center;
+      align-items: center;
+      width: 7rem;
+      height: 7rem;
+      margin-bottom: 2px;
+      background: $secondaryBackgroundColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:first-child {
+        background: $mainThemeColor;
+        &:hover {
+          transform: rotate(-30deg) scale(1.2);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      &:hover {
+        transform: rotate(30deg) scale(0.8);
+        transition: all 0.5s ease-in-out;
+        &:last-child {
+          transform: rotate(-30deg) scale(1.2) translate(300px, -300px);
+          transition: all 1s ease-in-out;
+        }
+      }
+    }
+  }
+  &__text {
+    margin-left: 4%;
+    @include standardDesktopPadding;
+    // width: 40%;
+    flex-grow: 2;
+    .tabs-content__title {
+      padding-bottom: 2rem;
+    }
+    & > .tabs-content__paragraph {
+      padding-bottom: 1rem;
+    }
+    .tabs-content__button {
+      @include button;
+      width: 36%;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      background: $mainThemeColor;
+      border: 1px solid $mainThemeColor;
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
+  .tabs-content__image {
+    flex-grow: 3;
+    margin-left: 15%;
+    @include standardDesktopPadding;
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: $md) and (max-width: 1499px) {
+  .tabs {
+    .tabs-content {
+      &__image {
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .tabs {
+    .tabs-content {
+      &__rectangles {
+        padding: $mobilePadding;
+        width: 20%;
+      }
+      &__text {
+        margin-left: 6%;
+        padding: $mobilePadding;
+      }
+      &__image {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .tabs {
+    .tabs-content {
+      &__rectangles {
+        padding: $mobileSmPadding;
+    
+        .tab-rectangle {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      &__text {
+        margin-left: 6%;
+        padding: $mobileSmPadding;
+
+        .tabs-content__button {
+          margin: 0;
+          padding: $jumbotronButtonPadding;
+          width: 50%;
+        }
+      }
+      &__image {
+        display: none;
+      }
+    }
+  }
+}

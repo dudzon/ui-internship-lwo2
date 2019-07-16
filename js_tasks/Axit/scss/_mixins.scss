@@ -1,0 +1,128 @@
+@import "variables";
+
+@mixin logo {
+  padding: 1.25rem 0;
+  font-family: $secondaryFont;
+  font-size: $logoFontSize;
+  text-transform: uppercase;
+}
+@mixin jumbotronTitle {
+  font-family: $secondaryFont;
+  text-transform: uppercase;
+}
+@mixin logoFirstSpan {
+  font-weight: 700;
+  color: $sectionColor;
+}
+@mixin logoSecondSpan {
+  font-weight: normal;
+  color: $mainThemeColor;
+}
+@mixin sectionHeader {
+  font-family: $secondaryFont;
+  font-size: $jumbotronSubTitleFontSize;
+  text-transform: uppercase;
+}
+@mixin flex {
+  display: flex;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin sectionTitle {
+  font-family: $primaryFont;
+  font-size: $sectionTitleFontSize;
+  font-weight: bold;
+  color: $secondTextColor;
+}
+@mixin sectionText {
+  font-family: $primaryFont;
+  font-size: $navFontSize;
+  line-height: 1.43;
+  color: $mainTextColor;
+}
+@mixin formInput {
+  margin: 1rem auto;
+  width: 80%;
+  border: none;
+}
+@mixin inputPlaceholder {
+  font-family: $primaryFont;
+  font-size: $navFontSize;
+  color: $borderColor;
+}
+@mixin button {
+  font-family: $primaryFont;
+  font-size: $navFontSize;
+  line-height: 1.33;
+  color: $sectionColor;
+  font-weight: 600;
+  cursor: pointer;
+}
+@mixin buttonHover {
+  color: $mainThemeColor;
+  background: $secondaryBackgroundColor;
+}
+
+@mixin standardDesktopPadding {
+  padding-top: 9.1875rem;
+  padding-bottom: 7.125rem;
+}
+@mixin standardFilterImage {
+  filter: brightness(85%) contrast(107%) grayscale(5%) opacity(91%)
+    saturate(78%) sepia(5%);
+}
+@mixin sectionSeparator {
+  width: 14%;
+  height: 2px;
+  margin-top: 1.5rem;
+  background: $mainThemeColor;
+}
+@mixin headerSeparator {
+  width: 6%;
+  height: 2px;
+  margin: 1.5rem auto;
+  background: $mainThemeColor;
+}
+@mixin listSectionIcon {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  left: -4rem;
+  background-position: center;
+  border: 2px solid $mainThemeColor;
+  border-radius: 50%;
+}
+@mixin sectionHeadline {
+  font-family: $secondaryFont;
+  font-size: $jumbotronSubTitleFontSize;
+  font-weight: normal;
+  color: $secondTextColor;
+  text-transform: uppercase;
+  line-height: 1.19;
+}
+@mixin awesomeIcon {
+  width: 4rem;
+  height: 4rem;
+  background-position: center;
+  border: 2px solid $mainThemeColor;
+  border-radius: 50%;
+}
+
+@mixin block{
+  display:block;
+}
+@mixin centerBlock{
+  width:100%;
+  margin:0 auto;
+}
+@mixin jumbotronMobileButton{
+  margin-top:$jumbotronButtonTopMargin;
+}
+@mixin focusInput{
+  outline:0;
+  border-bottom:2px solid $mainThemeColor;
+}

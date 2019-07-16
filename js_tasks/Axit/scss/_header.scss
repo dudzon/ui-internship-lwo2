@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $secondaryBackgroundColor;
+
+  &__logo {
+    @include logo;
+    span:first-child {
+      @include logoFirstSpan;
+    }
+    span:last-child {
+      @include logoSecondSpan;
+    }
+  }
+  &__navbar {
+    font-family: $primaryFont;
+    font-weight: 600;
+    font-size: $navFontSize;
+    .header-navbar__item {
+      display: inline;
+      padding-left: 2rem;
+      a {
+        color: $navbarColor;
+        text-decoration: none;
+      }
+    }
+  }
+  &__mobile-icon {
+    display: none;
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: $sm) {
+  .header {
+    &__navbar {
+      .header-navbar {
+        display: none;
+      }
+    }
+    &__mobile-icon {
+      position: absolute;
+      display:block;
+      height: 1.25rem;
+      width:1.25rem;
+      right: 50px;
+      top: 16px;
+      cursor:pointer;
+    }
+  }
+}

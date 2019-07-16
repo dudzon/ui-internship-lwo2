@@ -1,0 +1,65 @@
+@import "variables";
+@import "mixins";
+
+.picture {
+  position: relative;
+  &__header {
+    position: absolute;
+    padding-top: 2rem;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .picture__headline {
+    color: $sectionColor;
+  }
+  .picture__separator {
+    background: $sectionColor;
+  }
+  .picture__text {
+    font-family: $secondaryFont;
+    font-size: $jumbotronTextFontSize;
+  }
+  .picture__button {
+    position: absolute;
+    left: 42%;
+    top: 60%;
+    width: 14.61%;
+    margin-top: 1.5rem;
+    padding: 0.75rem 0;
+    font-family: $primaryFont;
+    font-weight: bold;
+    font-size: $jumbotronTextFontSize;
+    background: transparent;
+    color: $sectionColor;
+    border: 2px solid $sectionColor;
+    cursor: pointer;
+    &:hover {
+      background: $secondaryBackgroundColor;
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .picture {
+    .picture__header {
+      margin-top: 0;
+      padding-top: 0;
+      .picture__separator{
+        margin:.75rem auto;
+      }
+    }
+    .picture__button {
+      padding: $jumbotronFormPadding;
+    }
+  }
+}
+@media screen and ( max-width: $sm){
+  .picture{
+    display:none;
+  }
+}
