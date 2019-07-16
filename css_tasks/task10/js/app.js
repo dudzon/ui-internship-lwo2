@@ -1,5 +1,14 @@
-import {validateForm} from './form.js';
+import {
+  submitForm,
+  removeDisabledState,
+  addDisabledState,
+} from './form.js';
+import {constants} from './constants.js';
+const {signupForm, formButton, inputs} = constants;
 
-const signup = document.forms.signup;
-
-signup.addEventListener('submit', validateForm);
+// EVENTS
+signupForm.addEventListener('submit', submitForm);
+inputs.forEach((item) =>
+  item.addEventListener('focus', () => removeDisabledState(formButton))
+);
+signupForm.addEventListener('submit', () => addDisabledState(formButton));

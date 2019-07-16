@@ -1,12 +1,17 @@
-
 /* eslint-disable max-len */
 import {constants} from './constants.js';
 
-const {nameText, emailText, emailPattern, passwordPattern, passwordText} = constants;
+const {
+  nameText,
+  namePattern,
+  emailText,
+  emailPattern,
+  passwordPattern,
+  passwordText,
+  formInputContainer,
+} = constants;
 
-const namePattern = /^[a - zA - Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-
-const validateForm = (e) => {
+const submitForm = (e) => {
   validateName(e.target, e);
   validateEmail(e.target, e);
   validatePassword(e.target, e);
@@ -16,8 +21,6 @@ const validateName = (formName, e) => {
   const name = formName.elements.name;
   const nameValue = name.value;
   hideWarning(name);
-  console.log(namePattern.test(nameValue));
-  console.log(nameValue)
   if (!namePattern.test(nameValue)) {
     showWarning(name, nameText);
     e.preventDefault();
@@ -29,6 +32,7 @@ const validateName = (formName, e) => {
 const validateEmail = (formName, e) => {
   const email = formName.elements.email;
   const emailValue = email.value;
+
   hideWarning(email);
   if (!emailPattern.test(emailValue)) {
     showWarning(email, emailText);
@@ -48,6 +52,8 @@ const validatePassword = (formName, e) => {
   }
 };
 
+// Show warning
+
 const showWarning = (formName, text) => {
   const warningMessage = document
       .createRange()
@@ -64,4 +70,27 @@ const hideWarning = (elem) => {
   }
 };
 
-export {validateForm};
+// Add disabled class to the button
+
+const addDisabledState = (elem) => {
+  const inputContainers = [...formInputContainer];
+  inputContainers.forEach((item) => {
+    const lastChild = item.lastElementChild.classList.contains('form-error');
+    if (lastChild) {
+      elem.classList.add('disabled');
+    }
+  });
+};
+
+//  Remove disabled class from the button
+const removeDisabledState = (elem) => {
+  const hasClass = elem.classList.contains('disabled');
+  if (hasClass) {
+    elem.classList.remove('disabled');
+  }
+};
+export {
+  submitForm,
+  addDisabledState,
+  removeDisabledState,
+};
