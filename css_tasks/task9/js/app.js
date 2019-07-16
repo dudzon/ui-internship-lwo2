@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
 
 // IMPORTS
-import {validateJumbotronForm, validateFooterForm} from './forms.js';
+import {submitLoginForm, submitContactForm} from './forms.js';
 
 // HANDLERS
-export const jumbotronForm = document.forms.jumbotronForm;
-export const footerForm = document.forms.footerForm;
+const loginForm = document.forms.loginForm;
+const contactForm = document.forms.contactForm;
 
 // EVENTS
-jumbotronForm.addEventListener('submit', validateJumbotronForm);
-footerForm.addEventListener('submit', validateFooterForm);
+loginForm.addEventListener('submit', submitLoginForm);
+contactForm.addEventListener('submit', submitContactForm);

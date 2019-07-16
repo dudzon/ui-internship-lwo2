@@ -1,27 +1,32 @@
 /* eslint-disable max-len */
 /* eslint-disable no-undef */
 
-import {jumbotronForm, footerForm} from './app.js';
+import {constants} from './constants.js';
 
+const {nameText,
+  namePattern,
+  emailText,
+  emailPattern,
+  passwordText,
+  passwordPattern,
+  messageText} = constants;
 
-const validateJumbotronForm = (e) => {
-  validateName(jumbotronForm, e);
-  validateEmail(jumbotronForm, e);
-  validatePassword(jumbotronForm, e);
+const submitLoginForm = (e) => {
+  validateName(e.target, e);
+  validateEmail(e.target, e);
+  validatePassword(e.target, e);
 };
-const validateFooterForm = (e) => {
-  validateName(footerForm, e);
-  validateEmail(footerForm, e);
-  validateMessage(footerForm, e);
+const submitContactForm = (e) => {
+  validateName(e.target, e);
+  validateEmail(e.target, e);
+  validateMessage(e.target, e);
 };
 
 //  Validate Name Input
 
 const validateName = (formName, e) => {
   const name = formName.elements.name;
-  const nameText = 'Only latin letters';
   const nameValue = name.value;
-  const namePattern = /^[a-zA-Z]+$/g;
   hideWarning(name);
   if (!namePattern.test(nameValue)) {
     showWarning(name, nameText);
@@ -33,9 +38,7 @@ const validateName = (formName, e) => {
 
 const validateEmail = (formName, e) => {
   const email = formName.elements.email;
-  const emailText = 'Provide valid email address';
   const emailValue = email.value;
-  const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   hideWarning(email);
   if (!emailPattern.test(emailValue)) {
     showWarning(email, emailText);
@@ -47,10 +50,7 @@ const validateEmail = (formName, e) => {
 
 const validatePassword = (formName, e) => {
   const password = formName.elements.password;
-  const passwordText =
-    'Password should have at least  6 characters including:capital letter, lowercased letter, digit and special character';
   const passwordValue = password.value;
-  const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/;
   hideWarning(password);
   if (!passwordPattern.test(passwordValue)) {
     showWarning(password, passwordText);
@@ -61,7 +61,6 @@ const validatePassword = (formName, e) => {
 
 const validateMessage = (formName, e) => {
   const message = formName.elements.message;
-  const messageText = 'Your message must have between 1 and 250 characters';
   const messageValue = message.value;
   hideWarning(message);
   if (messageValue.length < 1 || messageValue.length > 250) {
@@ -88,4 +87,4 @@ const hideWarning = (elem) => {
   }
 };
 
-export {validateJumbotronForm, validateFooterForm};
+export {submitLoginForm, submitContactForm};
