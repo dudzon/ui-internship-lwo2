@@ -13,6 +13,9 @@ const paths = {
   html: {
     src: 'css_tasks/task10/*.html',
   },
+  js: {
+    src: 'css_tasks/task10/*.js',
+  },
 };
 function style() {
   return (
