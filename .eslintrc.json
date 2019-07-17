@@ -9,6 +9,6 @@
     },
     "globals": {
         "Set": true,
-        "document":true
-      }
+        "document":true,
+    },
 }

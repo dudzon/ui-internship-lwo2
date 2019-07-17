@@ -13,4 +13,5 @@ export const constants = {
   inputs: [
     ...document.querySelectorAll('input.inner-container__element--form'),
   ],
+  formText: document.querySelector('.form__text'),
 };
