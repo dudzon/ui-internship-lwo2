@@ -87,19 +87,31 @@
     </section>
     <section class="tabs">
      <div class="container tabs-content">
-        <div class="tabs-content__rectangles">
-          <div class="tab-rectangle">Tab 1</div>
-          <div class="tab-rectangle">Tab 2</div>
-          <div class="tab-rectangle">Tab 3</div>
+        <div class="tabs-content__elements">
+          <div data-active='active' data-tab="tab1" class="tab-element">Tab 1</div>
+          <div data-tab="tab2" class="tab-element">Tab 2</div>
+          <div data-tab="tab3" class="tab-element">Tab 3</div>
         </div>
-        <div class="tabs-content__text">
-          <h4 class="tabs-content__title section__title">Tabs with soft transitioning effect</h4>
-          <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
-            bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
-            justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
-            penatibus et magnis dis parturient montes.</p>
-          <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
-            bibendum laoreet.</p>
+        <div>
+          <div class= "tabs-content__text" data-tab="tab1" data-active-text="active">
+              <h4 class="tabs-content__title section__title">Tabs with soft transitioning effect</h4>
+              <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+              justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+              penatibus et magnis dis parturient montes.</p>
+              <p class="tabs-content__paragraph section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet.</p>
+           </div>
+           <div class= "tabs-content__text" data-tab="tab2">
+              <h4 class="tabs-content__title section__title">Another tabs, happy tabs</h4>
+              <p class="tabs-content__paragraph section__text">Fusce condimentum laoreet turpis ut consectetur. Vestibulum sollicitudin ligula mi, id vehicula leo sagittis sed. Aliquam in urna ut eros vestibulum interdum vitae sed est. Quisque congue non ipsum at suscipit. Pellentesque dapibus, lorem in ultricies luctus, ante felis efficitur enim, id pellentesque nisi felis in ligula.</p>
+              <p class="tabs-content__paragraph section__text">Quisque vitae ligula quis massa interdum volutpat. Mauris sed vulputate turpis. Sed dictum metus vel purus consectetur, in ornare neque condimentum.</p>
+           </div>
+            <div class= "tabs-content__text" data-tab="tab3">
+              <h4 class="tabs-content__title section__title">Jesus Christ, tabs again!</h4>
+              <p class="tabs-content__paragraph section__text">Sed bibendum dictum est aliquam condimentum. Praesent id justo in mi volutpat gravida. Duis at arcu sapien. Phasellus pulvinar bibendum risus. Quisque ultrices, sapien nec malesuada finibus, tellus libero pretium nisi, nec iaculis tortor elit sit amet lacus. Sed dictum lectus at enim tempor semper. Proin augue nunc, sollicitudin ac posuere et, molestie id ex. Nunc ultrices rutrum ornare. </p>
+              <p class="tabs-content__paragraph section__text">Vestibulum id libero in mauris fermentum aliquam. Nullam elit eros, fringilla a condimentum et, auctor eget nisi.</p>
+           </div>
           <button class="tabs-content__button">Download</button>
         </div>
         <div class= "tabs-content__image"> 
@@ -374,5 +386,6 @@
       </div>
       <p class="footer__text section__text">&copy;&nbsp;Axure Design 2015.</p>
     </footer>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

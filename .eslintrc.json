@@ -8,6 +8,7 @@
         "require-jsdoc": 0
     },
     "globals": {
-        "Set": true
+        "Set": true,
+        "document":true
       }
 }
