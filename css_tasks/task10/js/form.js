@@ -83,14 +83,13 @@ const addDisabledState = (elem) => {
 };
 
 //  Remove disabled class from the button
-const removeDisabledState = (elem) => {
+const removeDisabledState = (elem, item) => {
   const hasClass = elem.classList.contains('disabled');
   if (hasClass) {
     elem.classList.remove('disabled');
   }
 };
-export {
-  submitForm,
-  addDisabledState,
-  removeDisabledState,
+const hideFormText = (elem) => {
+  elem.style.display = 'none';
 };
+export {submitForm, addDisabledState, removeDisabledState, hideFormText};
