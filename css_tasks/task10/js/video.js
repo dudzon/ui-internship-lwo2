@@ -17,7 +17,6 @@ const handleLoadedVideo = (image, media, text, button, element) => {
   text.style.display = 'flex';
   element.style.display = 'none';
   button.style.display ='block';
-  
 };
 
 const handleLoadingVideo = (text) => {

@@ -4,7 +4,7 @@ import {handleVideo, handleLoadedVideo, handleLoadingVideo} from './video.js';
 const {playButton, video, jumbotronText, jumbotronImage, message} = constants;
 
 // EVENTS
-
+video.load();
 // Load hide text until video is loaded
 video.addEventListener('waiting', () => handleLoadingVideo(jumbotronText));
 
