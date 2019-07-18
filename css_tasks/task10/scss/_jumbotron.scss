@@ -3,14 +3,13 @@
 
 .jumbotron {
   position: relative;
-  width:100%;
+  width: 100%;
   &__image {
     @include jumbotronElement;
   }
   &__video {
     display: none;
     width: 100%;
-  
   }
   .jumbotron-text {
     @include flexColumn;
@@ -84,9 +83,27 @@
       color: $mainTextColor;
       text-align: center;
     }
+    .jumbotron-message {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $mainTextColor;
+      font-weight: bold;
+      font-size: $footerSecondFontSize;
+      animation:blink 2s linear infinite;
+    }
   }
 }
-
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: $sm) and (max-width: $md) {
   .jumbotron-text__button.jumbotron-text__button--animated {
     width: 35%;

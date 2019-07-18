@@ -11,10 +11,13 @@ const handleVideo = (elem, video) => {
   }
 };
 
-const handleLoadedVideo = (image, media, text) => {
+const handleLoadedVideo = (image, media, text, button, element) => {
   image.remove();
   media.style.display = 'block';
   text.style.display = 'flex';
+  element.style.display = 'none';
+  button.style.display ='block';
+  
 };
 
 const handleLoadingVideo = (text) => {
