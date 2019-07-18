@@ -6,11 +6,11 @@ const {playButton, video, jumbotronText, jumbotronImage, message} = constants;
 // EVENTS
 
 // Load hide text until video is loaded
-video.addEventListener('loadstart', () => handleLoadingVideo(jumbotronText));
+video.addEventListener('waiting', () => handleLoadingVideo(jumbotronText));
 
 //  and display it after with video
 
-video.addEventListener('canplay', () =>
+video.addEventListener('canplaythrough', () =>
   handleLoadedVideo(jumbotronImage, video, jumbotronText, playButton, message)
 );
 
