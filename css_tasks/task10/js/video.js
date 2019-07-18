@@ -11,4 +11,13 @@ const handleVideo = (elem, video) => {
   }
 };
 
-export {handleVideo};
+const handleLoadedVideo = (image, media, text) => {
+  image.remove();
+  media.style.display = 'block';
+  text.style.display = 'flex';
+};
+
+const handleLoadingVideo = (text) => {
+  text.style.display = 'none';
+};
+export {handleVideo, handleLoadedVideo, handleLoadingVideo};
