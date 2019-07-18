@@ -10,7 +10,7 @@ video.addEventListener('waiting', () => handleLoadingVideo(jumbotronText));
 
 //  and display it after with video
 
-video.addEventListener('canplaythrough',
+video.addEventListener('canplay',
     () => handleLoadedVideo(jumbotronImage, video, jumbotronText));
 
 //  play or pause video
