@@ -1,0 +1,124 @@
+@import "variables";
+
+@mixin whiteBoldText {
+  font-family: $secondaryFont;
+  font-weight: bold;
+  color: $mainBackgroundColor;
+}
+@mixin titleText {
+  font-family: $secondaryFont;
+  font-size: $textFontSize;
+  color: $secondaryTextColor;
+  text-align: center;
+  text-transform: uppercase;
+}
+@mixin subTitle {
+  font-family: $primaryFont;
+  font-size: $textFontSize;
+  font-style: italic;
+  line-height: 1.6;
+  color: $mainTextColor;
+  text-align: center;
+}
+@mixin normalWhiteText {
+  font-family: $secondaryFont;
+  font-size: $textFontSize;
+  color: $mainBackgroundColor;
+}
+@mixin decorativeText {
+  font-family: $decorativeFont;
+  font-size: $headlineFontSize;
+  color: $secondaryTextColor;
+}
+@mixin normalText {
+  font-size: $textFontSize;
+  color: $mainTextColor;
+  line-height: 1.6;
+  text-align: center;
+}
+@mixin separator {
+  margin: 2.5rem auto 0;
+  height: 3px;
+  width: $decoratorWidth;
+  background: $secondaryThemeColor;
+}
+@mixin accordionImage {
+  position: absolute;
+  top: 28%;
+  display: block;
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
+@mixin navLink {
+  font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1920 - 300)));
+  font-family: $secondaryFont;
+  color: $mainBackgroundColor;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@mixin homeText {
+  font-size: calc(14px + (150 - 14) * ((100vw - 300px) / (1920 - 300)));
+  line-height: 0.93;
+  text-align: center;
+  text-transform: uppercase;
+}
+@mixin homeButton {
+  font-size: $textFontSize;
+  background: transparent;
+  border: 3px solid $mainBackgroundColor;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@mixin indicatorElement {
+  font-family: $secondaryFont;
+  font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1920 - 300)));
+  color: $mainBackgroundColor;
+  text-transform: uppercase;
+}
+@mixin indicatorElementDetails {
+  width: calc(30px + (160 - 30) * ((100vw - 300px) / (1920 - 300)));
+  background: $mainBackgroundColor;
+}
+@mixin standardHoverIcon {
+  width: calc(30px + (56 - 30) * ((100vw - 300px) / (1920 - 300)));
+  height: calc(30px + (56 - 30) * ((100vw - 300px) / (1920 - 300)));
+  background: $activeColor;
+  border-right: 1px solid rgba(243, 129, 129, 0.4);
+}
+@mixin mapPointer {
+  font-size: $headlineFontSize;
+  font-family: $secondaryFont;
+  font-weight: bold;
+  color: $secondaryThemeColor;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin footerLogo {
+  font-family: $secondaryFont;
+  font-size: calc(12px + (46 - 12) * ((100vw - 300px) / (1920 - 300)));
+  font-weight: bold;
+  text-decoration: none;
+  color: #ccc;
+}
+@mixin followersAmount {
+  padding-right: 0.25rem;
+  font-family: $secondaryFont;
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1920 - 300)));
+  font-weight: bold;
+  color: $secondaryTextColor;
+}
+@mixin footerBlogTitle {
+  font-family: $secondaryFont;
+  font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1920 - 300)));
+  color: $secondaryTextColor;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+@mixin footerBlogDate {
+  font-family: $primaryFont;
+  font-size: calc(9px + (13 - 9) * ((100vw - 300px) / (1920 - 300)));
+  font-style: italic;
+  line-height: 1.85;
+}

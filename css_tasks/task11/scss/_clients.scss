@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+.clients {
+  position: relative;
+  margin-top: 6rem;
+  height: 40rem;
+  background: url("../assets/layer-53@3x-min.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #d9d9d9;
+    opacity: 0.8;
+    content: "";
+  }
+}
+.clients__wrapper {
+  padding-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3rem 2rem;
+  width: 100%;
+}
+.clients__element {
+  display: flex;
+  z-index: 30;
+
+  .clients-element__image-wrapper {
+    display: block;
+    width: 15%;
+    padding-right: 1rem;
+  }
+  .clients-element__image {
+    width: 100%;
+    clip-path: circle(50% at 50% 50%);
+  }
+}
+.clients-element__content {
+  width: 80%;
+  .clients-element__title {
+    @include titleText;
+    padding-bottom: 0.5rem;
+    text-align: left;
+  }
+  .clients-element__subtitle {
+    position: relative;
+    @include subTitle;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    &::after {
+      @include separator;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 2rem;
+      content: "";
+    }
+  }
+  .clients-element__text {
+    @include normalText;
+    margin-top: 1.5rem;
+    font-style: normal;
+    text-align: left;
+  }
+}
+@media screen and (max-width: $md) {
+  .clients {
+    height: 55rem;
+  }
+  .clients__wrapper {
+    position: absolute;
+    z-index: 20;
+    display: block;
+  }
+  .clients__element {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: $sm) {
+  .clients {
+    margin: 0;
+  }
+  .clients__wrapper {
+    padding-top: 10rem;
+  }
+}

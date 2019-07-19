@@ -1,0 +1,88 @@
+@import "variables";
+@import "mixins";
+.service {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  padding-top: $standardTopPadding;
+}
+.service__element {
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.service-accordion{
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+  cursor:pointer;
+  &__text {
+    padding: 10px;
+    @include subTitle;
+    text-align: left;
+  }
+}
+.service-accordion__title{
+  position: relative;
+  padding: 1rem 0;
+  @include titleText;
+  &::after {
+    position: absolute;
+    top: 39%;
+    right: 2%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url("../assets/arrow-down@2x.png") no-repeat;
+    background-size: contain;
+  }
+  &:focus {
+    outline: 1px solid $mainThemeColor;
+  }
+}
+
+.service-accordion[open] {
+  border: 1px solid $mainThemeColor;
+}
+.service-accordion[open] .service-accordion__title::after {
+  background: url("../assets/arrow-up@2x.png") no-repeat;
+  background-size: contain;
+}
+.service-accordion--first .service-accordion__title::before {
+  @include accordionImage;
+  background: url("../assets/picture@2x.png") no-repeat;
+  background-size: contain;
+}
+.service-accordion--second .service-accordion__title::before {
+  @include accordionImage;
+  background: url("../assets/equalizer@2x.png") no-repeat;
+  background-size: contain;
+}
+.service-accordion--third .service-accordion__title::before {
+  @include accordionImage;
+  background: url("../assets/bullseye@2x.png") no-repeat;
+  background-size: contain;
+}
+
+.service-accordion__title::-webkit-details-marker {
+  color: transparent;
+}
+.service-accordion__title::-moz-list-bullet {
+  list-style-type: none;
+  padding-right: 1rem;
+}
+@media screen and (min-width: $sm) and (max-width: $md) {
+  .service {
+    padding-top: $standardTabletTopPadding;
+  }
+}
+@media screen and (max-width: $sm) {
+  .service {
+    display: block;
+    padding-top: $standardMobileTopPadding;
+  }
+  .service__element:last-child{
+      margin-top:2rem;
+  }
+}

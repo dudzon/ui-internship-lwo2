@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem 2rem;
+  padding-bottom: 4rem;
+}
+.services__element {
+  position: relative;
+  display: flex;
+  padding: 3rem 0 2rem;
+  .services-element__image {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  .services-element__title{
+    margin-bottom: 1rem;
+    @include titleText;
+    text-align: left;
+  }
+  .services-element__text {
+    @include normalText;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .services__element {
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: $sm) {
+  .services {
+    display: block;
+  }
+}
