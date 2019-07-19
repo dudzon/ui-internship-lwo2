@@ -14,9 +14,9 @@
       color: $mainThemeColor;
     }
   }
-  .disabled {
+  &__button:disabled {
     cursor: not-allowed;
-    opacity: 0.07;
+    opacity: 0.7;
   }
   &__terms {
     position: relative;
@@ -59,6 +59,11 @@
   font-size: $errorFontSize;
   color: $mainBackground;
   text-align: center;
+}
+.form-success-text{
+  font-size:$mainTextFontSize;
+  text-align:center;
+  color:$mainThemeColor;
 }
 @media screen and (max-width: $md) {
   .form__text {

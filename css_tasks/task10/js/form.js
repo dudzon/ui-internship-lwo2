@@ -1,5 +1,5 @@
-/* eslint-disable max-len */
 import {constants} from './constants.js';
+import {DOMElements} from './elements.js';
 
 const {
   nameText,
@@ -8,47 +8,55 @@ const {
   emailPattern,
   passwordPattern,
   passwordText,
-  formInputContainer,
+  successText,
 } = constants;
+const {
+  formInputContainer,
+  inputs,
+  signupForm,
+  formButton,
+  formText,
+} = DOMElements;
 
 const submitForm = (e) => {
-  validateName(e.target, e);
-  validateEmail(e.target, e);
-  validatePassword(e.target, e);
+  e.preventDefault();
+  validateName(e.target);
+  validateEmail(e.target);
+  validatePassword(e.target);
+  showSuccessMessage();
 };
 
-const validateName = (formName, e) => {
+const validateName = (formName) => {
   const name = formName.elements.name;
   const nameValue = name.value;
   hideWarning(name);
+  name.addEventListener('focus', () => removeDisabledState(formButton));
   if (!namePattern.test(nameValue)) {
-    showWarning(name, nameText);
-    e.preventDefault();
+    handleError(name, nameText, formButton);
   }
 };
 
 //  Validate Email Input
 
-const validateEmail = (formName, e) => {
+const validateEmail = (formName) => {
   const email = formName.elements.email;
   const emailValue = email.value;
-
   hideWarning(email);
+  email.addEventListener('focus', () => removeDisabledState(formButton));
   if (!emailPattern.test(emailValue)) {
-    showWarning(email, emailText);
-    e.preventDefault();
+    handleError(email, emailText, formButton);
   }
 };
 
 // Validate Password Input
 
-const validatePassword = (formName, e) => {
+const validatePassword = (formName) => {
   const password = formName.elements.password;
   const passwordValue = password.value;
+  password.addEventListener('focus', () => removeDisabledState(formButton));
   hideWarning(password);
   if (!passwordPattern.test(passwordValue)) {
-    showWarning(password, passwordText);
-    e.preventDefault();
+    handleError(password, passwordText, formButton);
   }
 };
 
@@ -70,26 +78,80 @@ const hideWarning = (elem) => {
   }
 };
 
-// Add disabled class to the button
+// Add disabled attribute to the button
 
 const addDisabledState = (elem) => {
-  const inputContainers = [...formInputContainer];
-  inputContainers.forEach((item) => {
+  formInputContainer.forEach((item) => {
     const lastChild = item.lastElementChild.classList.contains('form-error');
     if (lastChild) {
-      elem.classList.add('disabled');
+      elem.setAttribute('disabled', true);
     }
   });
 };
 
-//  Remove disabled class from the button
-const removeDisabledState = (elem, item) => {
-  const hasClass = elem.classList.contains('disabled');
-  if (hasClass) {
-    elem.classList.remove('disabled');
+// Remove disabled attribute from the button
+const removeDisabledState = (elem) => {
+  const disabled = elem.hasAttribute('disabled');
+  if (disabled) {
+    elem.removeAttribute('disabled');
   }
 };
+
+// Hide marketing slogan above the button ( it's absolutely positioned )
+// because if there are any errors, it breaks the layout.
+// It's not important when you are signing up.
+
 const hideFormText = (elem) => {
   elem.style.display = 'none';
 };
-export {submitForm, addDisabledState, removeDisabledState, hideFormText};
+
+//  Create success message
+const createSuccessMessage = () => {
+  const successMessage = document
+      .createRange()
+      .createContextualFragment(
+          `<p class="form-success-text">${successText}</p>`
+      );
+  return successMessage;
+};
+
+// show to the user notification that input has not been validated,
+// add the disabled status to the button and hide that
+// marketing text above the button.
+
+const handleError = (input, inputText, handler) => {
+  showWarning(input, inputText);
+  addDisabledState(handler);
+  hideFormText(formText);
+};
+
+//  Check if there are any errors displayed
+
+const checkErrors = () => {
+  const errorArray = [];
+  formInputContainer.map((container) => {
+    if (container.lastElementChild.tagName === 'P') {
+      errorArray.push(container);
+    }
+  });
+  return errorArray;
+};
+
+// If there are no errors, clear all inputs and show success message
+// I mocked sending data with POST method by reloading the page after
+// three seconds.
+
+const showSuccessMessage = () => {
+  const message = createSuccessMessage();
+  const checkError = checkErrors();
+
+  if (!checkError.length) {
+    inputs.forEach((input) => (input.value = ''));
+    signupForm.after(message);
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+  }
+};
+
+export {submitForm, removeDisabledState};
