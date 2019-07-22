@@ -3,4 +3,6 @@ import {DOMElements} from './elements.js';
 const {signupForm} = DOMElements;
 
 // EVENTS
-signupForm.addEventListener('submit', submitForm);
+document.addEventListener('DOMContentLoaded', () => {
+  signupForm.addEventListener('submit', submitForm);
+});
