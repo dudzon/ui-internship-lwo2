@@ -1,47 +1,50 @@
-import {DOMElements as elems} from './elements.js';
-const {popup, body, overlay} = elems;
-const showPopup = (node) => {
-  // if popup is displayed, do nothing
+// Once again I would like to keep logic here and export to app.js
+// only functions that are attached to event handlers
 
-  if (popup.firstElementChild) {
-    return;
-  }
-  createActiveImage(node);
+// import {DOMElements as elems} from './elements.js';
+// const {popup, body, overlay} = elems;
+// const showPopup = (node) => {
+//   // if popup is displayed, do nothing
 
-  //  additional styling to properly display popup
-  popup.style.display = 'flex';
-  body.classList.add('popup-body');
-  overlay.style.display = 'block';
-};
+//   if (popup.firstElementChild) {
+//     return;
+//   }
+//   createActiveImage(node);
 
-//  pick active image
-const setActiveImage = (node) => {
-  const image = node.closest('.gallery__element').firstElementChild
-      .lastElementChild;
-  return image;
-};
+//   //  additional styling to properly display popup
+//   popup.style.display = 'flex';
+//   body.classList.add('popup-body');
+//   overlay.style.display = 'block';
+// };
 
-// create active image and populate popup
-// I played with data attributes but in this
-// case, it is not really needed right now
+// //  pick active image
+// const setActiveImage = (node) => {
+//   const image = node.closest('.gallery__element').firstElementChild
+//       .lastElementChild;
+//   return image;
+// };
 
-const createActiveImage = (node) => {
-  const active = setActiveImage(node);
-  const currentSrc = active.src;
-  const image = document.createElement('IMG');
-  image.src = currentSrc;
-  image.setAttribute('data-image-active', 'active');
-  popup.appendChild(image);
-};
+// // create active image and populate popup
+// // I played with data attributes but in this
+// // case, it is not really needed right now
 
-//  remove popup - remove image in popup from DOM
-//  styling to hide overlay
+// const createActiveImage = (node) => {
+//   const active = setActiveImage(node);
+//   const currentSrc = active.src;
+//   const image = document.createElement('IMG');
+//   image.src = currentSrc;
+//   image.setAttribute('data-image-active', 'active');
+//   popup.appendChild(image);
+// };
 
-const removePopup = () => {
-  popup.style.display = 'none';
-  popup.firstElementChild.remove();
-  body.classList.remove('popup-body');
-  overlay.style.display = 'none';
-};
+// //  remove popup - remove image in popup from DOM
+// //  styling to hide overlay
 
-export {showPopup, removePopup};
+// const removePopup = () => {
+//   popup.style.display = 'none';
+//   popup.firstElementChild.remove();
+//   body.classList.remove('popup-body');
+//   overlay.style.display = 'none';
+// };
+
+// export {showPopup, removePopup};
