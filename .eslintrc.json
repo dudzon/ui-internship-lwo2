@@ -1,13 +1,15 @@
 {
-    "extends": ["eslint:recommended", "google"],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-    },
-    "rules": {
-        "require-jsdoc": 0
-    },
-    "globals": {
-        "Set": true
-      }
+  "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "require-jsdoc": 0
+  },
+  "globals": {
+    "Set": true,
+    "document": true,
+    "Promise": true
+  }
 }
