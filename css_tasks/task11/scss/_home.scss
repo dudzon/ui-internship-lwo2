@@ -18,13 +18,15 @@
   max-height: 100vh;
 }
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  z-index: 200;
 
   &__logo {
     flex-grow: 1;
@@ -57,7 +59,7 @@
   }
 }
 
-.header-nav__item a:hover {
+.header-nav__item a[data-active="active"] {
   padding-bottom: 10px;
   color: $activeColor;
   border-bottom: 3px solid $activeColor;

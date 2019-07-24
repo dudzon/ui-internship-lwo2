@@ -1,12 +1,12 @@
 import {elements} from './elements.js';
 export function scroll() {
   elements.then((data) => {
-    const {navbar} = data;
+    const {navbar, header, links} = data;
 
-    navbar.addEventListener('click', (e) => handleScroll(e.target, e));
-
+    // smooth scrolling
     const handleScroll = (item, e) => {
       e.preventDefault();
+      setActiveLink(item);
       if (item.tagName !== 'A') return;
       const id = item.getAttribute('href');
       const element = document.querySelector(id);
@@ -16,5 +16,23 @@ export function scroll() {
         top: element.offsetTop,
       });
     };
+
+    // Header background
+
+    const setHeaderBackground = () => {
+      window.scrollY >= 100
+        ? (header.style.background = 'grey')
+        : (header.style.background = 'none');
+    };
+    //  Show currently clicked link
+
+    const setActiveLink = (item) => {
+      links.forEach((link) => link.removeAttribute('data-active'));
+      item.setAttribute('data-active', 'active');
+    };
+    navbar.addEventListener('click', (e) => handleScroll(e.target, e));
+    window.addEventListener('scroll', setHeaderBackground);
+    // if user refreshes the page, calculate current header position
+    window.addEventListener('load', setHeaderBackground);
   });
 }
