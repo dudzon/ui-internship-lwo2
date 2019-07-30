@@ -11,6 +11,7 @@
     "Set": true,
     "document": true,
     "window": true,
-    "Promise": true
+    "Promise": true,
+    "fetch": true
   }
 }

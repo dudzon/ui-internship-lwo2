@@ -1,2 +1,2 @@
-import {fetch} from './fetch.js';
-fetch();
+import {fetchData} from './fetch.js';
+fetchData();

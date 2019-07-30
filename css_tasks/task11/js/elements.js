@@ -1,7 +1,8 @@
 export const elements = new Promise((res) => {
   document.addEventListener('DOMContentLoaded', () => {
     const DOMElements = {
-      dd: 'titt',
+      mainBlog: document.querySelector('.standard__wrapper--blog'),
+      footerBlog: document.querySelector('.footer__element--second'),
     };
     res(DOMElements);
   });
