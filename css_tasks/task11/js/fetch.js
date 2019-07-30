@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import {elements} from './elements.js';
 import {constants} from './constants.js';
-import {mainBlogsFragment} from './fragments.js';
+import {mainBlogsFragment, footerBlogsFragment} from './fragments.js';
 export function fetchData() {
   elements.then(({mainBlog, footerBlog}) => {
     const {url} = constants;
@@ -15,11 +15,12 @@ export function fetchData() {
           // 1. iterate through sliced Array with fetched data.
           // 2. create an element to fill documentFragment() with
           // proper CSS class.
-          // 3. import text to display on the page.
-          // 4. append fragment with data and display on the page.
+          // 3. import proper HTML structure to display on the page.
+          // 4. append fragment with correct HTML and display it on the page.
           // Yes I know, this destructuring looks scary and unintuitive at first glance.
-
-          const showBlogs = (handler, blogs, className, fragment) => {
+          // Pictures in footer don't have the same sizes, because the last picture has
+          // different dimensions, I could set max-height to them but the last image will be distorted.
+          const showBlogs = (handler, blogs, className, data, fragment) => {
             blogs.forEach(
                 ({
                   title,
@@ -31,7 +32,7 @@ export function fetchData() {
                 }) => {
                   const div = document.createElement('div');
                   div.classList.add(className);
-                  const text = mainBlogsFragment(
+                  const text = data(
                       title,
                       watched,
                       comments,
@@ -45,7 +46,20 @@ export function fetchData() {
             );
             handler.append(fragment);
           };
-          showBlogs(mainBlog, postsToDisplay, 'standard__element', frag);
+          showBlogs(
+              mainBlog,
+              postsToDisplay,
+              'standard__element',
+              mainBlogsFragment,
+              frag
+          );
+          showBlogs(
+              footerBlog,
+              postsToDisplay,
+              'footer__blog',
+              footerBlogsFragment,
+              frag
+          );
         });
   });
 }
