@@ -1,90 +1,64 @@
 /* eslint-disable max-len */
-/* eslint-disable no-undef */
 
 import {constants} from './constants.js';
+import {elements} from './elements.js';
 
-const {nameText,
-  namePattern,
-  emailText,
-  emailPattern,
-  passwordText,
-  passwordPattern,
-  messageText} = constants;
+export function form() {
+  elements.then((data) => {
+    const {
+      nameText,
+      namePattern,
+      emailText,
+      emailPattern,
+      passwordText,
+      passwordPattern,
+      messageText,
+    } = constants;
+    const {loginForm, contactForm} = data;
+    const submitLoginForm = (e) => {
+      validate(e.target, e, 'name', namePattern, nameText);
+      validate(e.target, e, 'email', emailPattern, emailText);
+      validate(e.target, e, 'password', passwordPattern, passwordText);
+    };
+    const submitContactForm = (e) => {
+      validate(e.target, e, 'name', namePattern, nameText);
+      validate(e.target, e, 'email', emailPattern, emailText);
+      validate(e.target, e, 'message', null, messageText);
+    };
 
-const submitLoginForm = (e) => {
-  validateName(e.target, e);
-  validateEmail(e.target, e);
-  validatePassword(e.target, e);
-};
-const submitContactForm = (e) => {
-  validateName(e.target, e);
-  validateEmail(e.target, e);
-  validateMessage(e.target, e);
-};
+    // Validate input
 
-//  Validate Name Input
+    const validate = (element, e, string, pattern, inputText) => {
+      const input = element.elements[string];
+      const inputValue = input.value;
+      hideWarning(input);
+      if (
+        inputValue.length < 1 ||
+        inputValue.length > 250 ||
+        (pattern && !pattern.test(inputValue))
+      ) {
+        showWarning(input, inputText);
+        e.preventDefault();
+      }
+    };
+    // Show warning message when form fails validation
 
-const validateName = (formName, e) => {
-  const name = formName.elements.name;
-  const nameValue = name.value;
-  hideWarning(name);
-  if (!namePattern.test(nameValue)) {
-    showWarning(name, nameText);
-    e.preventDefault();
-  }
-};
+    const showWarning = (formName, text) => {
+      const warningMessage = document
+          .createRange()
+          .createContextualFragment(`<p class="form-error">${text}</p>`);
+      formName.after(warningMessage);
+    };
 
-//  Validate Email Input
+    // Hide warning message if the input passes validation
 
-const validateEmail = (formName, e) => {
-  const email = formName.elements.email;
-  const emailValue = email.value;
-  hideWarning(email);
-  if (!emailPattern.test(emailValue)) {
-    showWarning(email, emailText);
-    e.preventDefault();
-  }
-};
-
-// Validate Password Input
-
-const validatePassword = (formName, e) => {
-  const password = formName.elements.password;
-  const passwordValue = password.value;
-  hideWarning(password);
-  if (!passwordPattern.test(passwordValue)) {
-    showWarning(password, passwordText);
-    e.preventDefault();
-  }
-};
-// Validate Message Textarea
-
-const validateMessage = (formName, e) => {
-  const message = formName.elements.message;
-  const messageValue = message.value;
-  hideWarning(message);
-  if (messageValue.length < 1 || messageValue.length > 250) {
-    showWarning(message, messageText);
-    e.preventDefault();
-  }
-};
-
-// Show warning message when form fails validation
-
-const showWarning = (formName, text) => {
-  const warningMessage = document
-      .createRange()
-      .createContextualFragment(`<p class="form-error">${text}</p>`);
-  formName.after(warningMessage);
-};
-
-// Hide warning message if the input passes validation
-
-const hideWarning = (elem) => {
-  const warning = elem.nextElementSibling;
-  if (warning && warning.classList.contains('form-error')) {
-    warning.remove();
-  }
-};
-
-export {submitLoginForm, submitContactForm};
+    const hideWarning = (elem) => {
+      const warning = elem.nextElementSibling;
+      if (warning && warning.classList.contains('form-error')) {
+        warning.remove();
+      }
+    };
+    loginForm.addEventListener('submit', submitLoginForm);
+    contactForm.addEventListener('submit', submitContactForm);
+  });
+}
