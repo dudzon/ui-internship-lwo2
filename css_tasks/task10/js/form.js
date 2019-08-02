@@ -22,12 +22,12 @@ export function form() {
 
     const submitForm = (e) => {
       e.preventDefault();
-      validate(e.target, e, 'name', namePattern, nameText);
-      validate(e.target, e, 'email', emailPattern, emailText);
-      validate(e.target, e, 'password', passwordPattern, passwordText);
+      validate(e.target, 'name', namePattern, nameText);
+      validate(e.target, 'email', emailPattern, emailText);
+      validate(e.target, 'password', passwordPattern, passwordText);
       showSuccessMessage();
     };
-    const validate = (element, e, string, pattern, inputText) => {
+    const validate = (element, string, pattern, inputText) => {
       const input = element.elements[string];
       const inputValue = input.value;
       hideWarning(input);
