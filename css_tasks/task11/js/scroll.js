@@ -1,14 +1,13 @@
 import {elements} from './elements.js';
 export function scroll() {
   elements.then((data) => {
-    const {navbar, header, links} = data;
+    const {navbar, header, links, sections} = data;
 
     // smooth scrolling
-    const handleScroll = (item, e) => {
+    const handleActiveLink = (e) => {
       e.preventDefault();
-      setActiveLink(item);
-      if (item.tagName !== 'A') return;
-      const id = item.getAttribute('href');
+      if (e.target.tagName !== 'A') return;
+      const id = e.target.getAttribute('href');
       const element = document.querySelector(id);
       window.scrollTo({
         behavior: 'smooth',
@@ -24,14 +23,37 @@ export function scroll() {
         ? (header.style.background = 'grey')
         : (header.style.background = 'none');
     };
-    //  Show currently clicked link
 
-    const setActiveLink = (item) => {
-      links.forEach((link) => link.removeAttribute('data-active'));
-      item.setAttribute('data-active', 'active');
+    const findLinkedSection = (sectionList, sectionElement) => {
+      const highlightedLink = Object.keys(sectionList).find(
+          (item) => item === sectionElement
+      );
+      return sectionList[highlightedLink];
     };
-    navbar.addEventListener('click', (e) => handleScroll(e.target, e));
+    //  Highlight proper link associated with currently scrolled section
+
+    const showActiveLink = (linkList, sectionList) => {
+      const scrollCurrentPosition = document.documentElement.scrollTop;
+
+      for (let link of linkList) {
+        const sectionNames = link.getAttribute('href');
+        const currentSection = findLinkedSection(sectionList, sectionNames);
+        if (
+          currentSection.offsetTop - currentSection.scrollHeight <=
+            scrollCurrentPosition &&
+          currentSection.offsetTop + currentSection.scrollHeight >
+            scrollCurrentPosition
+        ) {
+          link.setAttribute('data-active', 'active');
+        } else {
+          link.removeAttribute('data-active');
+        }
+      }
+    };
+
+    navbar.addEventListener('click', (e) => handleActiveLink(e));
     window.addEventListener('scroll', setHeaderBackground);
+    window.addEventListener('scroll', () => showActiveLink(links, sections));
     // if user refreshes the page, calculate current header position
     window.addEventListener('load', setHeaderBackground);
   });
