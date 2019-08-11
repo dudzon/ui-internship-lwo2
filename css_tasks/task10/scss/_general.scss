@@ -49,8 +49,13 @@ picture {
 }
 .inner-container {
   display: flex;
+  .form-input__container {
+    @include flexColumn;
+    flex-basis: 30%;
+  }
   &__element {
-    width: 30%;
+    // width: 30%;
+    // flex-basis:30%;
     margin: 0 auto;
     h3 {
       padding-top: 1.5rem;
@@ -200,12 +205,14 @@ picture {
     text-align: center;
   }
 }
+
 @media screen and (max-width: $md) {
   .header {
     &__title--form {
       padding-bottom: 2rem;
     }
   }
+
   .inner-container {
     &__element--testimonials {
       p {
@@ -223,9 +230,16 @@ picture {
   }
 }
 
+
 @media screen and (min-width: $sm) and (max-width: $md) {
   .inner-container__element--footer form {
     width: 50%;
+  }
+  .inner-container.inner-container--form {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 @media screen and (max-width: $sm) {
@@ -254,9 +268,7 @@ picture {
       }
     }
     &__element--form {
-      display: block;
-      min-width: 70vw;
-      width: 70%;
+      margin: 0 0 1.5rem;
     }
     &__element--footer {
       margin: 0;
@@ -265,5 +277,9 @@ picture {
         width: 70%;
       }
     }
+  }
+  .inner-container.inner-container--form {
+    width: 70%;
+    padding: 0;
   }
 }
