@@ -1,6 +1,4 @@
-import {submitForm} from './form.js';
-import {DOMElements} from './elements.js';
-const {signupForm} = DOMElements;
-
-// EVENTS
-signupForm.addEventListener('submit', submitForm);
+import {form} from './form.js';
+form();
+import {videoInit} from './video.js';
+videoInit();

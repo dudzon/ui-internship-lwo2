@@ -10,7 +10,9 @@
   "globals": {
     "Set": true,
     "document": true,
-    "window":true,
-    "setTimeout":true
+    "window": true,
+    "setTimeout": true,
+    "Promise": true,
+    "fetch": true
   }
 }

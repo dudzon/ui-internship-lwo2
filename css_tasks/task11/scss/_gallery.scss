@@ -1,16 +1,19 @@
 @import "variables";
 @import "mixins";
-
+.gallery-container {
+  position: relative;
+}
 .gallery {
-  width: 100%;
-  padding-top: $standardTopPadding;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding-top: $standardTopPadding;
 }
 .gallery__element {
   position: relative;
   display: flex;
-  cursor:pointer;
+  cursor: pointer;
   &--big {
     grid-row: span 2;
   }
@@ -33,16 +36,16 @@
   height: 100%;
   width: 100%;
   visibility: hidden;
-  h3 {
+  .gallery-hover__title {
     @include normalWhiteText;
-    padding-top:.5rem;
-    text-transform:uppercase;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
   }
-  p {
+  .gallery-hover__text {
     @include normalText;
-    padding-top:1rem;
-    color:$mainBackgroundColor;
-    font-style:italic;
+    padding-top: 1rem;
+    color: $mainBackgroundColor;
+    font-style: italic;
   }
 }
 @media screen and (max-width: $md) {
@@ -54,11 +57,11 @@
   .gallery {
     padding-top: $standardMobileTopPadding;
   }
-  .gallery__element:hover div{
-      visibility:initial;
-      background:none;
+  .gallery__element:hover .gallery__hover {
+    visibility: initial;
+    background: none;
   }
-  .gallery__hover{
-      display:none;
+  .gallery__hover {
+    display: none;
   }
 }

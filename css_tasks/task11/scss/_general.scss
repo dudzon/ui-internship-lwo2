@@ -8,6 +8,9 @@
   font-family: $primaryFont;
   color: $mainTextColor;
 }
+.body{
+  position:relative;
+}
 .container {
   padding: 0 15%;
 }
@@ -57,14 +60,9 @@ picture {
   position: relative;
   z-index: 30;
   padding: 2rem 0;
-  h2 {
+  .main-header__pointer {
     padding-top: 1rem;
-    font-size: $headlineFontSize;
-    font-family: $secondaryFont;
-    font-weight: bold;
-    color: $secondaryThemeColor;
-    text-transform: uppercase;
-    text-align: center;
+    @include mapPointer;
   }
   img {
     display: block;

@@ -1,90 +1,73 @@
 /* eslint-disable max-len */
-/* eslint-disable no-undef */
 
 import {constants} from './constants.js';
+import {elements} from './elements.js';
 
-const {nameText,
-  namePattern,
-  emailText,
-  emailPattern,
-  passwordText,
-  passwordPattern,
-  messageText} = constants;
+export function form() {
+  elements.then((data) => {
+    const {
+      nameText,
+      namePattern,
+      emailText,
+      emailPattern,
+      passwordText,
+      passwordPattern,
+      messageText,
+    } = constants;
+    const {loginForm, contactForm} = data;
+    const submitLoginForm = (e) => {
+      e.preventDefault();
+      validate(e.target, 'name', namePattern, nameText);
+      validate(e.target, 'email', emailPattern, emailText);
+      validate(e.target, 'password', passwordPattern, passwordText);
+      checkErrors(e.target);
+    };
+    const submitContactForm = (e) => {
+      e.preventDefault();
+      validate(e.target, 'name', namePattern, nameText);
+      validate(e.target, 'email', emailPattern, emailText);
+      validate(e.target, 'message', null, messageText);
+      checkErrors(e.target);
+    };
 
-const submitLoginForm = (e) => {
-  validateName(e.target, e);
-  validateEmail(e.target, e);
-  validatePassword(e.target, e);
-};
-const submitContactForm = (e) => {
-  validateName(e.target, e);
-  validateEmail(e.target, e);
-  validateMessage(e.target, e);
-};
+    // Validate input
 
-//  Validate Name Input
+    const validate = (element, string, pattern, inputText) => {
+      const input = element.elements[string];
+      const inputValue = input.value;
+      hideWarning(input, element);
+      if (
+        inputValue.length < 1 ||
+        inputValue.length > 250 ||
+        (pattern && !pattern.test(inputValue))
+      ) {
+        showWarning(input, inputText, element);
+      }
+    };
+    // Show warning message when form fails validation
 
-const validateName = (formName, e) => {
-  const name = formName.elements.name;
-  const nameValue = name.value;
-  hideWarning(name);
-  if (!namePattern.test(nameValue)) {
-    showWarning(name, nameText);
-    e.preventDefault();
-  }
-};
+    const showWarning = (formName, text, form) => {
+      const warningMessage = document
+          .createRange()
+          .createContextualFragment(`<p class="form-error">${text}</p>`);
+      form.setAttribute('data-error', 'error');
+      formName.after(warningMessage);
+    };
 
-//  Validate Email Input
+    // Hide warning message if the input passes validation
 
-const validateEmail = (formName, e) => {
-  const email = formName.elements.email;
-  const emailValue = email.value;
-  hideWarning(email);
-  if (!emailPattern.test(emailValue)) {
-    showWarning(email, emailText);
-    e.preventDefault();
-  }
-};
+    const hideWarning = (elem, form) => {
+      const warning = elem.nextElementSibling;
+      if (warning && warning.classList.contains('form-error')) {
+        warning.remove();
+        form.removeAttribute('data-error');
+      }
+    };
+    const checkErrors = (element) => {
+      if (!element.hasAttribute('data-error')) window.location.reload();
+    };
 
-// Validate Password Input
-
-const validatePassword = (formName, e) => {
-  const password = formName.elements.password;
-  const passwordValue = password.value;
-  hideWarning(password);
-  if (!passwordPattern.test(passwordValue)) {
-    showWarning(password, passwordText);
-    e.preventDefault();
-  }
-};
-// Validate Message Textarea
-
-const validateMessage = (formName, e) => {
-  const message = formName.elements.message;
-  const messageValue = message.value;
-  hideWarning(message);
-  if (messageValue.length < 1 || messageValue.length > 250) {
-    showWarning(message, messageText);
-    e.preventDefault();
-  }
-};
-
-// Show warning message when form fails validation
-
-const showWarning = (formName, text) => {
-  const warningMessage = document
-      .createRange()
-      .createContextualFragment(`<p class="form-error">${text}</p>`);
-  formName.after(warningMessage);
-};
-
-// Hide warning message if the input passes validation
-
-const hideWarning = (elem) => {
-  const warning = elem.nextElementSibling;
-  if (warning && warning.classList.contains('form-error')) {
-    warning.remove();
-  }
-};
-
-export {submitLoginForm, submitContactForm};
+    loginForm.addEventListener('submit', submitLoginForm);
+    contactForm.addEventListener('submit', submitContactForm);
+  });
+}

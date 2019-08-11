@@ -18,13 +18,15 @@
   max-height: 100vh;
 }
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  z-index: 200;
 
   &__logo {
     flex-grow: 1;
@@ -45,11 +47,7 @@
   display: block;
   margin-right: calc(11px + (42 - 11) * ((100vw - 300px) / (1920 - 300)));
   a {
-    font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1920 - 300)));
-    font-family: $secondaryFont;
-    color: $mainBackgroundColor;
-    text-transform: uppercase;
-    text-decoration: none;
+    @include navLink;
   }
   span {
     vertical-align: middle;
@@ -61,18 +59,10 @@
   }
 }
 
-.header-nav__item:first-child a {
-  position: relative;
+.header-nav__item a[data-active="active"] {
+  padding-bottom: 10px;
   color: $activeColor;
-  &:after {
-    display: block;
-    position: absolute;
-    top: 150%;
-    height: 3px;
-    width: 100%;
-    content: "";
-    background: $activeColor;
-  }
+  border-bottom: 3px solid $activeColor;
 }
 .header-nav__mobile {
   display: none;
@@ -84,21 +74,18 @@
   top: 0;
   width: 100%;
   margin-top: 10%;
-  h1 {
+  .home__title {
     font-family: $decorativeFont;
     font-size: $bigFontSize;
     color: $mainBackgroundColor;
     text-align: center;
   }
-  p {
+  .home__text {
     position: relative;
     padding-top: 1.5%;
     @include whiteBoldText;
-    font-size: calc(14px + (150 - 14) * ((100vw - 300px) / (1920 - 300)));
-    line-height: 0.93;
-    text-align: center;
-    text-transform: uppercase;
-    &:after {
+    @include homeText;
+    &::after {
       position: absolute;
       top: 100%;
       left: 48%;
@@ -109,17 +96,13 @@
       content: "";
     }
   }
-  button {
+  .home__button {
     position: relative;
     display: block;
     margin: 10% auto 0;
     padding: 1% 5%;
     @include whiteBoldText;
-    font-size: $textFontSize;
-    background: transparent;
-    border: 3px solid $mainBackgroundColor;
-    text-transform: uppercase;
-    cursor: pointer;
+    @include homeButton;
     &:hover {
       background: $secondaryThemeColor;
     }
@@ -131,37 +114,32 @@
     justify-content: space-between;
     list-style: none;
 
-    li {
+    &__element {
       position: relative;
-      font-family: $secondaryFont;
       margin-right: 2%;
-      font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1920 - 300)));
-      color: $mainBackgroundColor;
-      text-transform: uppercase;
-      &:before {
+      @include indicatorElement;
+      &::before {
         position: absolute;
         bottom: 120%;
         left: 0;
         display: inline-block;
         padding-left: 10%;
         height: 3px;
-        width: calc(30px + (160 - 30) * ((100vw - 300px) / (1920 - 300)));
-        background: $mainBackgroundColor;
+        @include indicatorElementDetails;
         content: "";
       }
-      &:first-child {
-        &:before {
-          background: linear-gradient(
-            to right,
-            $secondaryThemeColor 0%,
-            $secondaryThemeColor 30%,
-            $mainBackgroundColor 30%,
-            $mainBackgroundColor 70%,
-            $mainBackgroundColor 100%
-          );
-        }
-      }
     }
+    &__element--active::before {
+      background: linear-gradient(
+        to right,
+        $secondaryThemeColor 0%,
+        $secondaryThemeColor 30%,
+        $mainBackgroundColor 30%,
+        $mainBackgroundColor 70%,
+        $mainBackgroundColor 100%
+      );
+    }
+
     span {
       margin-right: 10%;
       @include whiteBoldText;

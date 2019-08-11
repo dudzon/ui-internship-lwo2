@@ -1,157 +1,139 @@
 import {constants} from './constants.js';
-import {DOMElements} from './elements.js';
+import {elements} from './elements.js';
 
-const {
-  nameText,
-  namePattern,
-  emailText,
-  emailPattern,
-  passwordPattern,
-  passwordText,
-  successText,
-} = constants;
-const {
-  formInputContainer,
-  inputs,
-  signupForm,
-  formButton,
-  formText,
-} = DOMElements;
+export function form() {
+  elements.then((data) => {
+    const {
+      nameText,
+      namePattern,
+      emailText,
+      emailPattern,
+      passwordPattern,
+      passwordText,
+      successText,
+    } = constants;
+    const {
+      formInputContainer,
+      inputs,
+      signupForm,
+      formButton,
+      formText,
+    } = data;
 
-const submitForm = (e) => {
-  e.preventDefault();
-  validateName(e.target);
-  validateEmail(e.target);
-  validatePassword(e.target);
-  showSuccessMessage();
-};
+    const submitForm = (e) => {
+      e.preventDefault();
+      validate(e.target, 'name', namePattern, nameText);
+      validate(e.target, 'email', emailPattern, emailText);
+      validate(e.target, 'password', passwordPattern, passwordText);
+      showSuccessMessage();
+    };
+    const validate = (element, string, pattern, inputText) => {
+      const input = element.elements[string];
+      const inputValue = input.value;
+      hideWarning(input);
+      input.addEventListener('focus', () => removeDisabledState(formButton));
+      if (pattern && !pattern.test(inputValue)) {
+        handleError(input, inputText, formButton);
+      }
+    };
 
-const validateName = (formName) => {
-  const name = formName.elements.name;
-  const nameValue = name.value;
-  hideWarning(name);
-  name.addEventListener('focus', () => removeDisabledState(formButton));
-  if (!namePattern.test(nameValue)) {
-    handleError(name, nameText, formButton);
-  }
-};
+    // Show warning
 
-//  Validate Email Input
+    const showWarning = (formName, text) => {
+      const warningMessage = document
+          .createRange()
+          .createContextualFragment(`<p class="form-error">${text}</p>`);
+      formName.after(warningMessage);
+    };
 
-const validateEmail = (formName) => {
-  const email = formName.elements.email;
-  const emailValue = email.value;
-  hideWarning(email);
-  email.addEventListener('focus', () => removeDisabledState(formButton));
-  if (!emailPattern.test(emailValue)) {
-    handleError(email, emailText, formButton);
-  }
-};
+    // Hide warning message if the input passes validation
 
-// Validate Password Input
+    const hideWarning = (elem) => {
+      const warning = elem.nextElementSibling;
+      if (warning && warning.classList.contains('form-error')) {
+        warning.remove();
+      }
+    };
 
-const validatePassword = (formName) => {
-  const password = formName.elements.password;
-  const passwordValue = password.value;
-  password.addEventListener('focus', () => removeDisabledState(formButton));
-  hideWarning(password);
-  if (!passwordPattern.test(passwordValue)) {
-    handleError(password, passwordText, formButton);
-  }
-};
+    // Add disabled attribute to the button
 
-// Show warning
+    const addDisabledState = (elem) => {
+      formInputContainer.forEach((item) => {
+        const lastChild = item.lastElementChild.classList.contains(
+            'form-error'
+        );
+        if (lastChild) {
+          elem.setAttribute('disabled', true);
+        }
+      });
+    };
 
-const showWarning = (formName, text) => {
-  const warningMessage = document
-      .createRange()
-      .createContextualFragment(`<p class="form-error">${text}</p>`);
-  formName.after(warningMessage);
-};
+    // Remove disabled attribute from the button
+    const removeDisabledState = (elem) => {
+      const disabled = elem.hasAttribute('disabled');
+      if (disabled) {
+        elem.removeAttribute('disabled');
+      }
+    };
 
-// Hide warning message if the input passes validation
+    // Hide marketing slogan above the button ( it's absolutely positioned )
+    // because if there are any errors, it breaks the layout.
+    // It's not important when you are signing up.
 
-const hideWarning = (elem) => {
-  const warning = elem.nextElementSibling;
-  if (warning && warning.classList.contains('form-error')) {
-    warning.remove();
-  }
-};
+    const hideFormText = (elem) => {
+      elem.style.display = 'none';
+    };
 
-// Add disabled attribute to the button
+    //  Create success message
+    const createSuccessMessage = () => {
+      const successMessage = document
+          .createRange()
+          .createContextualFragment(
+              `<p class="form-success-text">${successText}</p>`
+          );
+      return successMessage;
+    };
 
-const addDisabledState = (elem) => {
-  formInputContainer.forEach((item) => {
-    const lastChild = item.lastElementChild.classList.contains('form-error');
-    if (lastChild) {
-      elem.setAttribute('disabled', true);
-    }
+    // show to the user notification that input has not been validated,
+    // add the disabled status to the button and hide that
+    // marketing text above the button.
+
+    const handleError = (input, inputText, handler) => {
+      showWarning(input, inputText);
+      addDisabledState(handler);
+      hideFormText(formText);
+    };
+
+    //  Check if there are any errors displayed
+
+    const checkErrors = () => {
+      const errorArray = [];
+      formInputContainer.map((container) => {
+        if (container.lastElementChild.tagName === 'P') {
+          errorArray.push(container);
+        }
+      });
+      return errorArray;
+    };
+
+    // If there are no errors, clear all inputs and show success message
+    // I mocked sending data with POST method by reloading the page after
+    // three seconds.
+
+    const showSuccessMessage = () => {
+      const message = createSuccessMessage();
+      const checkError = checkErrors();
+
+      if (!checkError.length) {
+        inputs.forEach((input) => (input.value = ''));
+        signupForm.after(message);
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      }
+    };
+    // EVENT
+    signupForm.addEventListener('submit', submitForm);
   });
-};
+}
 
-// Remove disabled attribute from the button
-const removeDisabledState = (elem) => {
-  const disabled = elem.hasAttribute('disabled');
-  if (disabled) {
-    elem.removeAttribute('disabled');
-  }
-};
-
-// Hide marketing slogan above the button ( it's absolutely positioned )
-// because if there are any errors, it breaks the layout.
-// It's not important when you are signing up.
-
-const hideFormText = (elem) => {
-  elem.style.display = 'none';
-};
-
-//  Create success message
-const createSuccessMessage = () => {
-  const successMessage = document
-      .createRange()
-      .createContextualFragment(
-          `<p class="form-success-text">${successText}</p>`
-      );
-  return successMessage;
-};
-
-// show to the user notification that input has not been validated,
-// add the disabled status to the button and hide that
-// marketing text above the button.
-
-const handleError = (input, inputText, handler) => {
-  showWarning(input, inputText);
-  addDisabledState(handler);
-  hideFormText(formText);
-};
-
-//  Check if there are any errors displayed
-
-const checkErrors = () => {
-  const errorArray = [];
-  formInputContainer.map((container) => {
-    if (container.lastElementChild.tagName === 'P') {
-      errorArray.push(container);
-    }
-  });
-  return errorArray;
-};
-
-// If there are no errors, clear all inputs and show success message
-// I mocked sending data with POST method by reloading the page after
-// three seconds.
-
-const showSuccessMessage = () => {
-  const message = createSuccessMessage();
-  const checkError = checkErrors();
-
-  if (!checkError.length) {
-    inputs.forEach((input) => (input.value = ''));
-    signupForm.after(message);
-    setTimeout(() => {
-      window.location.reload();
-    }, 3000);
-  }
-};
-
-export {submitForm, removeDisabledState};

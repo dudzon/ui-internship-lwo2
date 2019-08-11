@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="overlay"></div>
     <!-- HOME -->
     <section class="home">
       <div class="home__background">
@@ -32,11 +33,11 @@
         <span><a href="#" class="header__logo">MoGo</a></span>
         <nav class="header__nav">
           <ul>
-            <li class="header-nav__item"><a href="#">About</a></li>
-            <li class="header-nav__item"><a href="#">Service</a></li>
-            <li class="header-nav__item"><a href="#">Work</a></li>
-            <li class="header-nav__item"><a href="#">Blog</a></li>
-            <li class="header-nav__item"><a href="#">Contact</a></li>
+            <li class="header-nav__item"><a href="#about">About</a></li>
+            <li class="header-nav__item"><a href="#service">Service</a></li>
+            <li class="header-nav__item"><a href="#work">Work</a></li>
+            <li class="header-nav__item"><a href="#blog">Blog</a></li>
+            <li class="header-nav__item"><a href="#contact">Contact</a></li>
             <li class="header-nav__item">
               <span
                 ><img src="assets/shopping-cart-solid.svg" alt="shopping cart"
@@ -47,27 +48,26 @@
             </li>
           </ul>
         </nav>
-        <span class="header-nav__mobile" role="button"
-          ><img src="assets/bars-solid.svg" alt="mobile menu"
-        /></span>
+        <span class="header-nav__mobile" role="button">
+          <img src="assets/bars-solid.svg" alt="mobile menu" />
+        </span>
       </header>
       <div class="home__inner container">
-        <h1>Creative Template</h1>
-        <p>
-          Welcome <br />
-          to MoGo
-        </p>
-        <button name="learn-more">Learn more</button>
+        <h1 class="home__title">Creative Template</h1>
+        <p class="home__text">Welcome to MoGo</p>
+        <button class="home__button" name="learn-more">Learn more</button>
         <ul class="home-indicators">
-          <li><span>01</span>intro</li>
-          <li><span>02</span>work</li>
-          <li><span>03</span>about</li>
-          <li><span>04</span>contact</li>
+          <li class="home-indicators__element home-indicators__element--active">
+            <span>01</span>intro
+          </li>
+          <li class="home-indicators__element "><span>02</span>work</li>
+          <li class="home-indicators__element "><span>03</span>about</li>
+          <li class="home-indicators__element "><span>04</span>contact</li>
         </ul>
       </div>
     </section>
     <!-- WHAT WE DO -->
-    <section class="standard container">
+    <section class="standard container" id="about">
       <header class="main-header">
         <h2 class="main-header__headline">What we do</h2>
         <p class="main-header__title">story about us</p>
@@ -146,24 +146,34 @@
     <div class="decoration decoration-green">
       <div class="container decoration__wrapper">
         <div class="decoration__element">
-          <span>42</span>
-          <p>Web Design <br />Projects</p>
+          <div class="decoration-element__wrapper">
+            <span class="decoration-element__green-number">42</span>
+            <p class="decoration-element__green-text">Web Design Projects</p>
+          </div>
         </div>
         <div class="decoration__element">
-          <span>123</span>
-          <p>Happy Clients</p>
+          <div class="decorartion-element__wrapper">
+            <span class="decoration-element__green-number">123</span>
+            <p class="decoration-element__green-text">Happy Clients</p>
+          </div>
         </div>
         <div class="decoration__element">
-          <span>15</span>
-          <p>Award Winners</p>
+          <div class="decoration-element__wrapper">
+            <span class="decoration-element__green-number">15</span>
+            <p class="decoration-element__green-text">Award Winners</p>
+          </div>
         </div>
         <div class="decoration__element">
-          <span>99</span>
-          <p>Cup of cofee</p>
+          <div class="decoration-element__wrapper">
+            <span class="decoration-element__green-number">99</span>
+            <p class="decoration-element__green-text">Cup of cofee</p>
+          </div>
         </div>
         <div class="decoration__element">
-          <span>24</span>
-          <p>Members</p>
+          <div class="decoration-element__wrapper">
+            <span class="decoration-element__green-number">24</span>
+            <p class="decoration-element__green-text">Members</p>
+          </div>
         </div>
       </div>
     </div>
@@ -176,58 +186,72 @@
       </header>
       <div class="services">
         <div class="services__element">
-          <span><img src="assets/alarm@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/alarm@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Photography</h4>
-            <p>
+            <h4 class="services-element__title">Photography</h4>
+            <p class="services-element__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor.
             </p>
           </div>
         </div>
         <div class="services__element">
-          <span><img src="assets/line-graph@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/line-graph@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Web Design</h4>
-            <p>
+            <h4 class="services-element__title">Web Design</h4>
+            <p class="services-element__text">
               Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor.
             </p>
           </div>
         </div>
         <div class="services__element">
-          <span><img src="assets/computer-ok@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/computer-ok@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Creativity</h4>
-            <p>
+            <h4 class="services-element__title">Creativity</h4>
+            <p class="services-element__text">
               Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor.
             </p>
           </div>
         </div>
         <div class="services__element">
-          <span><img src="assets/book-2@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/book-2@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Seo</h4>
-            <p>
+            <h4 class="services-element__title">Seo</h4>
+            <p class="services-element__text">
               Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
             </p>
           </div>
         </div>
         <div class="services__element">
-          <span><img src="assets/home@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/home@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Css/Html</h4>
-            <p>
+            <h4 class="services-element__title">Css/Html</h4>
+            <p class="services-element__text">
               Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.
             </p>
           </div>
         </div>
         <div class="services__element">
-          <span><img src="assets/image@2x.png" alt=""/></span>
+          <span class="services-element__image"
+            ><img src="assets/image@2x.png" alt=""
+          /></span>
           <div>
-            <h4>Digital</h4>
-            <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <h4 class="services-element__title">Digital</h4>
+            <p class="services-element__text">
+              Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
           </div>
         </div>
       </div>
@@ -270,7 +294,7 @@
       </picture>
     </section>
     <!-- SERVICE -->
-    <section class="container">
+    <section class="container" id="service">
       <header class="main-header">
         <h2 class="main-header__headline">Service</h2>
         <p class="main-header__title">what we do</p>
@@ -289,13 +313,27 @@
               media="(max-width:1024px)"
               srcset="assets/layer-43@2x.jpg"
             />
-            <img src="assets/layer-43@3x.jpg" alt="Man painting the wall" />
+            <img src="assets/layer-43@3x.jpg" alt="Man painting the wall" data-image="image1" data-image-active="active"/>
+          </picture>
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/layer-33@2x.jpg"
+            />
+            <img src="assets/layer-33@3x.jpg" alt="Man painting the wall" data-image="image2" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/layer-35@2x.jpg"
+            />
+            <img src="assets/layer-35@3x.jpg" alt="Man painting the wall" data-image="image3" />
           </picture>
         </div>
         <div class="service__element">
-          <details>
-            <summary>Photography</summary>
-            <p>
+          <details class="service-accordion service-accordion--first" data-image="image1">
+            <summary class="service-accordion__title">Photography</summary>
+            <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -305,9 +343,9 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </details>
-          <details>
-            <summary>Creativity</summary>
-            <p>
+          <details class="service-accordion service-accordion--second" data-image="image2">
+            <summary class="service-accordion__title">Creativity</summary>
+            <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -317,9 +355,9 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </details>
-          <details>
-            <summary>Web Design</summary>
-            <p>
+          <details class="service-accordion service-accordion--third" data-image="image3">
+            <summary class="service-accordion__title">Web Design</summary>
+            <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -334,23 +372,72 @@
     </section>
     <!-- CAROUSEL -->
     <div class="decoration decoration-carousel">
-      <div class="container decoration__wrapper decoration__wrapper--carousel">
-        <span>
-          <picture>
-            <source media="(max-width:678px)" srcset="assets/speech-4.png" />
-            <source
-              media="(max-width:1024px)"
-              srcset="assets/speech-4@2x.png"
-            />
-            <img src="assets/speech-4@3x.png" alt="" /> </picture
-        ></span>
-        <p class="decoration-carousel__text">
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.”
-        </p>
+      <div
+        class="container decoration__wrapper decoration__wrapper--carousel-first"
+      >
+        <div class="carousel-item carousel-first active">
+          <span class="decoration-carousel__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/speech-4.png" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/speech-4@2x.png"
+              />
+              <img src="assets/speech-4@3x.png" alt="" />
+            </picture>
+          </span>
+          <p class="decoration-carousel__text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.”
+          </p>
+        </div>
+        <div class="carousel-item carousel-second">
+          <span class="decoration-carousel__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/speech-4.png" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/speech-4@2x.png"
+              />
+              <img src="assets/speech-4@3x.png" alt="" />
+            </picture>
+          </span>
+          <p class="decoration-carousel__text">
+            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Morbi bibendum volutpat ante, mollis dapibus
+            nunc laoreet in. Quisque nisl dolor, hendrerit ut finibus eget,
+            molestie nec justo"
+          </p>
+        </div>
+        <div class="carousel-item carousel-third">
+          <span class="decoration-carousel__image">
+            <picture>
+              <source media="(max-width:678px)" srcset="assets/speech-4.png" />
+              <source
+                media="(max-width:1024px)"
+                srcset="assets/speech-4@2x.png"
+              />
+              <img src="assets/speech-4@3x.png" alt="" />
+            </picture>
+          </span>
+          <p class="decoration-carousel__text">
+            "Proin tincidunt tellus in faucibus pulvinar. Proin posuere id felis
+            nec eleifend. Aliquam eu ullamcorper leo, ut finibus orci. Nullam
+            urna lorem, dictum in urna a, dignissim commodo dui."
+          </p>
+        </div>
+        <span
+          class="decoration-carousel__arrow decoration-carousel__arrow--right"
+          >&gt;</span
+        >
+        <span
+          class="decoration-carousel__arrow decoration-carousel__arrow--left"
+          >&lt;</span
+        >
       </div>
     </div>
+    <!-- TEAM -->
     <section class="standard container">
       <header class="main-header">
         <h2 class="main-header__headline">Who we are</h2>
@@ -375,25 +462,29 @@
               <img src="assets/layer-16@3x.jpg" alt="Person" />
             </picture>
             <div class="standard__hover standard__hover--team">
-              <span
-                ><a href="https://www.facebook.com"
-                  ><img src="assets/facebook.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.twitter.com"
-                  ><img src="assets/twitter.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.pinterest.com"
-                  ><img src="assets/pinterest.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.instagram.com"
-                  ><img src="assets/instagram.png" alt=""/></a
-              ></span>
+              <span class="standard-hover-icon">
+                <a href="https://www.facebook.com">
+                  <img src="assets/facebook.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.twitter.com">
+                  <img src="assets/twitter.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.pinterest.com">
+                  <img src="assets/pinterest.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.instagram.com">
+                  <img src="assets/instagram.png" alt="" />
+                </a>
+              </span>
             </div>
           </div>
-          <h4>Matthew Dix</h4>
+          <h4 class="standard__title">Matthew Dix</h4>
           <p class="standard__subtitle">Graphic Design</p>
         </div>
         <div class="standard__element">
@@ -407,25 +498,29 @@
               <img src="assets/layer-19@3x.jpg" alt="Person" />
             </picture>
             <div class="standard__hover standard__hover--team">
-              <span
-                ><a href="https://www.facebook.com"
-                  ><img src="assets/facebook.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.twitter.com"
-                  ><img src="assets/twitter.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.pinterest.com"
-                  ><img src="assets/pinterest.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.instagram.com"
-                  ><img src="assets/instagram.png" alt=""/></a
-              ></span>
+              <span class="standard-hover-icon">
+                <a href="https://www.facebook.com">
+                  <img src="assets/facebook.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.twitter.com">
+                  <img src="assets/twitter.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.pinterest.com">
+                  <img src="assets/pinterest.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.instagram.com">
+                  <img src="assets/instagram.png" alt="" />
+                </a>
+              </span>
             </div>
           </div>
-          <h4>Christopher Campbell</h4>
+          <h4 class="standard__title">Christopher Campbell</h4>
           <p class="standard__subtitle">Branding/Ux Design</p>
         </div>
         <div class="standard__element">
@@ -439,29 +534,34 @@
               <img src="assets/layer-18@3x.jpg" alt="Person" />
             </picture>
             <div class="standard__hover standard__hover--team">
-              <span
-                ><a href="https://www.facebook.com"
-                  ><img src="assets/facebook.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.twitter.com"
-                  ><img src="assets/twitter.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.pinterest.com"
-                  ><img src="assets/pinterest.png" alt=""/></a
-              ></span>
-              <span
-                ><a href="https://www.instagram.com"
-                  ><img src="assets/instagram.png" alt=""/></a
-              ></span>
+              <span class="standard-hover-icon">
+                <a href="https://www.facebook.com">
+                  <img src="assets/facebook.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.twitter.com">
+                  <img src="assets/twitter.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.pinterest.com">
+                  <img src="assets/pinterest.png" alt="" />
+                </a>
+              </span>
+              <span class="standard-hover-icon">
+                <a href="https://www.instagram.com">
+                  <img src="assets/instagram.png" alt="" />
+                </a>
+              </span>
             </div>
           </div>
-          <h4>Michael Fertig</h4>
+          <h4 class="standard__title">Michael Fertig</h4>
           <p class="standard__subtitle">Developer</p>
         </div>
       </div>
     </section>
+    <!-- ICONS -->
     <div class="decoration decoration-icons container">
       <picture>
         <source media="(max-width:678px)" srcset="assets/layer-25.png" />
@@ -470,7 +570,7 @@
       </picture>
     </div>
     <!-- GALLERY -->
-    <section>
+    <section id ="work">
       <header class="main-header container">
         <h2 class="main-header__headline">What we do</h2>
         <p class="main-header__title">some of our work</p>
@@ -496,8 +596,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element">
@@ -513,8 +613,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element gallery__element--big">
@@ -530,8 +630,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element">
@@ -547,8 +647,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element">
@@ -564,8 +664,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element">
@@ -581,8 +681,8 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
         <div class="gallery__element">
@@ -598,34 +698,90 @@
               />
               <img src="assets/picture-white@3x.png" alt="" />
             </picture>
-            <h3>Creatively designed</h3>
-            <p>Lorem ipsum dolor sit</p>
+            <h3 class="gallery-hover__title">Creatively designed</h3>
+            <p class="gallery-hover__text">Lorem ipsum dolor sit</p>
           </div>
         </div>
+          <div class="popup"></div>
       </div>
     </section>
     <!-- SECOND CAROUSEL-->
     <div class="decoration">
-      <div class="container decoration__wrapper decoration__wrapper--carousel">
-        <span>
+      <div
+        class="container decoration__wrapper decoration__wrapper--carousel-second"
+      >
+        <div class="carousel-item carousel-first active">
+          <span>
           <picture>
             <source media="(max-width:678px)" srcset="assets/layer-49.jpg" />
             <source
-              media="(max-width:1024px)"
-              srcset="assets/layer-49@2x.jpg"
+            media="(max-width:1024px)"
+            srcset="assets/layer-49@2x.jpg"
             />
             <img
-              src="assets/layer-49@3x.jpg"
-              class="decoration-image__carousel"
-              alt=""
+            src="assets/layer-49@3x.jpg"
+            class="decoration-image__carousel"
+            alt=""
             />
           </picture>
         </span>
-        <p class="decoration-carousel__text">
+          <p class="decoration-carousel__text">
           “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation.”
-        </p>
+          </p>
+      </div>
+      <div class="carousel-item carousel-second">
+          <span>
+          <picture>
+            <source media="(max-width:678px)" srcset="assets/layer-47.jpg" />
+            <source
+            media="(max-width:1024px)"
+            srcset="assets/layer-47@2x.jpg"
+            />
+            <img
+            src="assets/layer-47@3x.jpg"
+            class="decoration-image__carousel"
+            alt=""
+            />
+          </picture>
+        </span>
+          <p class="decoration-carousel__text">
+            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Morbi bibendum volutpat ante, mollis dapibus
+            nunc laoreet in. Quisque nisl dolor, hendrerit ut finibus eget,
+            molestie nec justo"
+          </p>
+      </div>
+      <div class="carousel-item carousel-third">
+          <span>
+          <picture>
+            <source media="(max-width:678px)" srcset="assets/layer-51.jpg" />
+            <source
+            media="(max-width:1024px)"
+            srcset="assets/layer-51@2x.jpg"
+            />
+            <img
+            src="assets/layer-51@3x.jpg"
+            class="decoration-image__carousel"
+            alt=""
+            />
+          </picture>
+        </span>
+          <p class="decoration-carousel__text">
+            "Proin tincidunt tellus in faucibus pulvinar. Proin posuere id felis
+            nec eleifend. Aliquam eu ullamcorper leo, ut finibus orci. Nullam
+            urna lorem, dictum in urna a, dignissim commodo dui."
+          </p>
+      </div>
+        <span
+          class="decoration-carousel__arrow decoration-carousel__arrow--right"
+          >&gt;</span
+        >
+        <span
+          class="decoration-carousel__arrow decoration-carousel__arrow--left"
+          >&lt;</span
+        >
       </div>
     </div>
     <!-- CLIENTS -->
@@ -637,9 +793,15 @@
       </header>
       <div class="clients__wrapper container">
         <div class="clients__element">
-          <span><img src="assets/layer-47@2x.png" alt=""/></span>
+          <span class="clients-element__image-wrapper">
+            <img
+              class="clients-element__image"
+              src="assets/layer-47@2x.png"
+              alt=""
+            />
+          </span>
           <div class="clients-element__content">
-            <h4>Matthew Dix</h4>
+            <h4 class="clients-element__title">Matthew Dix</h4>
             <p class="clients-element__subtitle">Graphic Design</p>
             <p class="clients-element__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -649,9 +811,15 @@
           </div>
         </div>
         <div class="clients__element">
-          <span><img src="assets/layer-49@2x.png" alt=""/></span>
+          <span class="clients-element__image-wrapper">
+            <img
+              class="clients-element__image"
+              src="assets/layer-49@2x.png"
+              alt=""
+            />
+          </span>
           <div class="clients-element__content">
-            <h4>Nick Karvounis</h4>
+            <h4 class="clients-element__title">Nick Karvounis</h4>
             <p class="clients-element__subtitle">Graphic Design</p>
             <p class="clients-element__text">
               Sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -661,9 +829,15 @@
           </div>
         </div>
         <div class="clients__element">
-          <span><img src="assets/layer-50@2x.png" alt=""/></span>
+          <span class="clients-element__image-wrapper">
+            <img
+              class="clients-element__image"
+              src="assets/layer-50@2x.png"
+              alt=""
+            />
+          </span>
           <div class="clients-element__content">
-            <h4>Jaelynn Castillo</h4>
+            <h4 class="clients-element__title">Jaelynn Castillo</h4>
             <p class="clients-element__subtitle">Graphic Design</p>
             <p class="clients-element__text">
               Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -673,9 +847,15 @@
           </div>
         </div>
         <div class="clients__element">
-          <span><img src="assets/layer-51@2x.png" alt=""/></span>
+          <span class="clients-element__image-wrapper">
+            <img
+              class="clients-element__image"
+              src="assets/layer-51@2x.png"
+              alt=""
+            />
+          </span>
           <div class="clients-element__content">
-            <h4>Mike Petrucci</h4>
+            <h4 class="clients-element__title">Mike Petrucci</h4>
             <p class="clients-element__subtitle">Graphic Design</p>
             <p class="clients-element__text">
               Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -686,86 +866,13 @@
       </div>
     </section>
     <!-- BLOG -->
-    <section class="standard container">
+    <section class="standard container" id="blog">
       <header class="main-header">
         <h2 class="main-header__headline">Our stories</h2>
         <p class="main-header__title">latest blog</p>
         <div class="main-header__separator"></div>
       </header>
-      <div class="standard__wrapper standard__wrapper--blog">
-        <div class="standard__element">
-          <div class="standard__image">
-            <picture>
-              <source
-                media="(max-width:1024px)"
-                srcset="assets/layer-54@2x.jpg"
-              />
-              <img src="assets/layer-54@3x.jpg" alt="Woman in the office" />
-            </picture>
-          </div>
-          <h4>Lorem ipsum dolor sit amet</h4>
-          <p class="standard__subtitle">
-            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
-          </p>
-          <div class="standard__date">
-            <span>15</span>
-            <span>Jun</span>
-          </div>
-          <div class="standard__social">
-            <span>542</span>
-            <span>17</span>
-          </div>
-        </div>
-        <div class="standard__element">
-          <div class="standard__image">
-            <picture>
-              <source
-                media="(max-width:1024px)"
-                srcset="assets/layer-55@2x.jpg"
-              />
-              <img src="assets/layer-55@3x.jpg" alt="Desk with laptop" />
-            </picture>
-          </div>
-          <h4>Sed do eiusmod tempor</h4>
-          <p class="standard__subtitle">
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
-          <div class="standard__date">
-            <span>15</span>
-            <span>Jun</span>
-          </div>
-          <div class="standard__social">
-            <span>992</span>
-            <span>42</span>
-          </div>
-        </div>
-        <div class="standard__element">
-          <div class="standard__image">
-            <picture>
-              <source
-                media="(max-width:1024px)"
-                srcset="assets/layer-57@2x.jpg"
-              />
-              <img src="assets/layer-57@3x.jpg" alt="Man with a tablet" />
-            </picture>
-          </div>
-          <h4>incididunt ut labore et dolore</h4>
-          <p class="standard__subtitle">
-            Elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </p>
-          <div class="standard__date">
-            <span>15</span>
-            <span>Jun</span>
-          </div>
-          <div class="standard__social">
-            <span>1560</span>
-            <span>98</span>
-          </div>
-        </div>
-      </div>
+      <div class="standard__wrapper standard__wrapper--blog"></div>
     </section>
     <!-- DECORATION MAP -->
     <div class="decoration decoration--map">
@@ -774,123 +881,159 @@
           <source media="(max-width:1024px)" srcset="assets/pin-2@2x.png" />
           <img src="assets/pin-2@2x.png" alt="" />
         </picture>
-        <h2>Open Map</h2>
+        <h2 class="main-header__pointer">Open Map</h2>
         <div class="main-header__separator"></div>
       </header>
     </div>
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id ="contact">
       <div class="footer__container container">
-        <div class="footer__element">
-          <span><a href="#" class="footer__logo">MoGo</a></span>
-          <p>
+        <div class="footer__element footer__element--first">
+          <span>
+            <a href="#" class="footer__logo">MoGo</a>
+          </span>
+          <p class="footer__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <p><span>15k</span>followers</p>
+          <p class="footer__followers">
+            <span class="footer-followers__amount">15k</span>followers
+          </p>
           <div class="footer-social">
-            <span>Follow us:</span>
-            <span
-              ><a href="https://www.facebook.com"
-                ><img src="assets/footer__facebook.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.twitter.com"
-                ><img src="assets/footer__twitter.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.instagram.com"
-                ><img src="assets/footer__instagram.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.pinterest.com"
-                ><img src="assets/footer__pinterest.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.google.com"
-                ><img src="assets/footer__google.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.youtube.com"
-                ><img src="assets/footer__youtube.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.dribbble.com"
-                ><img src="assets/footer__dribble.png" alt=""/></a
-            ></span>
-            <span
-              ><a href="https://www.tumblr.com"
-                ><img src="assets/footer__tumblr.png" alt=""/></a
-            ></span>
+            <span class="footer-social__text">Follow us:</span>
+            <span class="footer-social__icon">
+              <a href="https://www.facebook.com">
+                <img src="assets/footer__facebook.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.twitter.com">
+                <img src="assets/footer__twitter.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.instagram.com">
+                <img src="assets/footer__instagram.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.pinterest.com">
+                <img src="assets/footer__pinterest.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.google.com">
+                <img src="assets/footer__google.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.youtube.com">
+                <img src="assets/footer__youtube.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.dribbble.com">
+                <img src="assets/footer__dribble.png" alt="" />
+              </a>
+            </span>
+            <span class="footer-social__icon">
+              <a href="https://www.tumblr.com">
+                <img src="assets/footer__tumblr.png" alt="" />
+              </a>
+            </span>
           </div>
           <form class="footer__form" action="">
-            <input type="email" name="email" placeholder="Your email..." />
-            <button>Subscribe</button>
+            <input
+              class="footer-form__input"
+              type="email"
+              name="email"
+              placeholder="Your email..."
+            />
+            <button class="footer-form__button">Subscribe</button>
           </form>
         </div>
-        <div class="footer__element">
-          <p>Blogs</p>
-          <div class="footer__blog">
-            <img src="assets/footer-blog-photo-2@2x.jpg" alt="Lights" />
-            <div>
-              <h4>Lorem ipsum dolor sit amet, consectetur adipiscing</h4>
-              <p>Jan 9, 2016</p>
-            </div>
-          </div>
-          <div class="footer__blog">
-            <img src="assets/footer-blog-photo-1@2x.jpg" alt="Lights" />
-            <div>
-              <h4>Consectetur adipiscing elit, sed do eiusmod tempor</h4>
-              <p>Jan 9, 2016</p>
-            </div>
-          </div>
-          <div class="footer__blog">
-            <img src="assets/footer-blog-photo-3@2x.jpg" alt="Boy" />
-            <div>
-              <h4>sed do eiusmod tempor incididunt ut labore</h4>
-              <p>Jan 9, 2016</p>
-            </div>
-          </div>
+        <div class="footer__element footer__element--second">
+          <p class="footer__title-section">Blogs</p>
         </div>
-        <div class="footer__element">
-          <p>Instagram</p>
+        <div class="footer__element footer__element--third">
+          <p class="footer__title-section">Instagram</p>
           <div class="footer__pictures">
             <span>
-              <img src="assets/footer-grid-3@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-3@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-2@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-2@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-1@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-1@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-6@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-6@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-5@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-5@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-4@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-4@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-9@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-9@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-8@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-8@3x.jpg"
+                alt="Mountains"
+              />
             </span>
             <span>
-              <img src="assets/footer-grid-7@3x.jpg" alt="Mountains" />
+              <img
+                class="footer-picture"
+                src="assets/footer-grid-7@3x.jpg"
+                alt="Mountains"
+              />
             </span>
           </div>
         </div>
         <span class="footer__separator"></span>
       </div>
       <div class="footer__footnote">
-        <p>&copy; 2016 MoGo free template by <span>Laaqiq</span></p>
+        <p class="footer-footnote__text">
+          &copy; 2016 MoGo free template by
+          <span class="footer-footnote__indicator">Laaqiq</span>
+        </p>
       </div>
     </footer>
+  <script type="module" src="js/app.js"></script>
   </body>
 </html>
