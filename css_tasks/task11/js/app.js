@@ -7,3 +7,5 @@ import {scroll} from './scroll.js';
 scroll();
 import {slider} from './slider.js';
 slider();
+import {fetchData} from './fetch.js';
+fetchData();

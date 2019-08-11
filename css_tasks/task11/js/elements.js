@@ -29,6 +29,8 @@ export const elements = new Promise((res) => {
       secondCarouselItems: [...document.querySelectorAll(
           '.decoration__wrapper--carousel-second .carousel-item'
       )],
+      mainBlog: document.querySelector('.standard__wrapper--blog'),
+      footerBlog: document.querySelector('.footer__element--second'),
     };
     res(DOMElements);
   });
