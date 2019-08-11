@@ -296,11 +296,25 @@
               media="(max-width:1024px)"
               srcset="assets/layer-43@2x.jpg"
             />
-            <img src="assets/layer-43@3x.jpg" alt="Man painting the wall" />
+            <img src="assets/layer-43@3x.jpg" alt="Man painting the wall" data-image="image1" data-image-active="active"/>
+          </picture>
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/layer-33@2x.jpg"
+            />
+            <img src="assets/layer-33@3x.jpg" alt="Man painting the wall" data-image="image2" />
+          </picture>
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="assets/layer-35@2x.jpg"
+            />
+            <img src="assets/layer-35@3x.jpg" alt="Man painting the wall" data-image="image3" />
           </picture>
         </div>
         <div class="service__element">
-          <details class="service-accordion service-accordion--first">
+          <details class="service-accordion service-accordion--first" data-image="image1">
             <summary class="service-accordion__title">Photography</summary>
             <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -312,7 +326,7 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </details>
-          <details class="service-accordion service-accordion--second">
+          <details class="service-accordion service-accordion--second" data-image="image2">
             <summary class="service-accordion__title">Creativity</summary>
             <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -324,7 +338,7 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </details>
-          <details class="service-accordion service-accordion--third">
+          <details class="service-accordion service-accordion--third" data-image="image3">
             <summary class="service-accordion__title">Web Design</summary>
             <p class="service-accordion__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -985,5 +999,6 @@
         </p>
       </div>
     </footer>
+  <script type="module" src="js/app.js"></script>
   </body>
 </html>
