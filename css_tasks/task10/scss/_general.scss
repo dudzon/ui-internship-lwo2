@@ -198,7 +198,16 @@ picture {
   margin: 0 auto;
   cursor: pointer;
   &--jumbotron {
-    padding-bottom: 2rem;
+    display:none;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 2rem;
+    background: url("../assets/play-circle-solid.svg") no-repeat;
+    background-size: contain;
+  }
+  &--jumbotron-active {
+    background: url("../assets/pause-circle-solid.svg") no-repeat;
+    background-size: contain;
   }
   &--features {
     display: inline;

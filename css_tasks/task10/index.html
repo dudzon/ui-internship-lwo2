@@ -13,35 +13,21 @@
   </head>
   <body>
     <section class="jumbotron">
-      <picture>
-        <source media="(max-width:678px)" srcset="assets/main-photo.jpg" />
+      <img src="assets/Blue Joy.jpg" alt="Beach" class="jumbotron__image" />
+      <video loop class="jumbotron__video" preload="auto">
         <source
-          media="(min-width:679px) and (max-width:1024px)"
-          srcset="assets/main-photo@2x.jpg"
+          src="assets/Blue Joy.mp4"
+          type="video/mp4"
+          poster="assets/Blue Joy.jpg"
         />
-        <img
-          src="assets/main-photo@3x.jpg"
-          alt="Mountain"
-          class="jumbotron__image"
-        />
-      </picture>
+        <source src="assets/Blue Joy.webm" type="video/webm" />
+      </video>
       <div class="jumbotron-text">
         <h1 class="jumbotron-text__headline">
           There is no other platforms for you as like
         </h1>
-        <span class="icon icon--jumbotron">
-          <picture>
-            <source
-              media="(max-width:678px)"
-              srcset="assets/play-video-icon.png"
-            />
-            <source
-              media="(min-width:679px) and (max-width:1024px)"
-              srcset="assets/play-video-icon@2x.png"
-            />
-            <img src="assets/play-video-icon@3x.png" alt="Icon" />
-          </picture>
-        </span>
+        <span class="icon icon--jumbotron "> </span>
+        <p class="jumbotron-message">Video is loading...</p>
         <button class="jumbotron-text__button jumbotron-text__button--animated">
           Try now
         </button>
