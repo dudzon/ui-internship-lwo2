@@ -26,14 +26,13 @@
   display: block;
   margin: 0 auto;
   font-size: $bigFontSize;
-  text-align:center;
+  text-align: center;
 }
 .decoration-element__green-text {
   @include normalWhiteText;
-  font-size:$greenTextFontSize;
+  font-size: $greenTextFontSize;
   text-transform: uppercase;
   text-align: center;
-  
 }
 .decoration--map {
   position: relative;
@@ -55,41 +54,40 @@
   justify-content: space-between;
   height: 10rem;
 }
-.decoration__wrapper--carousel {
+.decoration__wrapper--carousel-first,
+.decoration__wrapper--carousel-second {
   position: relative;
   height: 100%;
   align-items: center;
-  img {
-    width: 100%;
-  }
   .decoration-image__carousel {
     clip-path: circle(50% at 50% 50%);
   }
-  &::before {
+  .decoration-carousel__arrow {
     position: absolute;
-    top: 30%;
-    left: 10%;
     font-size: $bigFontSize;
-    content: "\02c2";
     cursor: pointer;
-  }
-  &::after {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    font-size: $bigFontSize;
-    content: "\02c3";
-    cursor: pointer;
+    &--right {
+      right: 10%;
+    }
+    &--left {
+      left: 10%;
+    }
   }
 }
+
 .decoration-carousel {
   padding: 5rem 0;
   background: $decorationBackground;
-  &__image {
+}
+.carousel-item {
+  display: none;
+  justify-content: space-between;
+  height: 10rem;
+  .decoration-carousel__image {
     padding: 2rem;
     border: 3px solid $mainThemeColor;
   }
-  &__text {
+  .decoration-carousel__text {
     position: relative;
     align-self: end;
     padding-left: 2rem;
@@ -109,16 +107,67 @@
       content: "";
     }
     &::after {
-      position: absolute;
-      margin-top: 1rem;
-      top: 105%;
-      left: calc(70px + (100 - 70) * ((100vw - 300px) / (1920 - 300)));
+      @include carouselText;
       @include decorativeText;
-      content: "John Doe";
     }
   }
 }
+.carousel-item.active {
+  display: flex;
+}
+.carousel-item.forward {
+  animation: fade;
+  animation-duration: 1.5s;
+}
+.carousel-item.backward {
+  animation: fade-backward;
+  animation-duration: 1.5s;
+}
+.decoration__wrapper--carousel-first
+  .carousel-first
+  .decoration-carousel__text:after,
+.decoration__wrapper--carousel-second
+  .carousel-first
+  .decoration-carousel__text:after {
+  content: "John Doe";
+}
+.decoration__wrapper--carousel-first
+  .carousel-second
+  .decoration-carousel__text:after,
+.decoration__wrapper--carousel-second
+  .carousel-second
+  .decoration-carousel__text:after {
+  content: "Mark Jackson";
+}
+.decoration__wrapper--carousel-first
+  .carousel-third
+  .decoration-carousel__text:after,
+.decoration__wrapper--carousel-second
+  .carousel-third
+  .decoration-carousel__text:after {
+  content: "Jules Verne";
+}
 
+@keyframes fade {
+  from {
+    opacity: 0.2;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-backward {
+  from {
+    opacity: 0.2;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .decoration-icons {
   background: $decorationBackground;
   img {

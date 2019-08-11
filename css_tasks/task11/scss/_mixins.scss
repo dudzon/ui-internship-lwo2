@@ -122,3 +122,9 @@
   font-style: italic;
   line-height: 1.85;
 }
+@mixin carouselText {
+  position: absolute;
+  margin-top: 1rem;
+  top: 105%;
+  left: calc(70px + (100 - 70) * ((100vw - 300px) / (1920 - 300)));
+}
