@@ -57,7 +57,7 @@
           </p>
           <button class="jumbotron-left-column__button">Download</button>
         </div>
-        <form action="" class="jumbotron__form">
+        <form action="" class="jumbotron__form" name="loginForm" >
           <h4 class="jumbotron-form__title section__title" >try your <span>free</span> trial today</h4>
           <input class="jumbotron-form__input" type="text" name="name" placeholder="Name">
           <input class="jumbotron-form__input" type="email" name="email" placeholder="Email">
@@ -351,11 +351,11 @@
         <div class="section__separator-center"></div>
         <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </header>
-      <form class="form__container">
+      <form action="" class="form__container" name="contactForm">
         <div class="form-left-column">
           <input class= "form-input" type="text" name="name" placeholder="Name" />
           <input class= "form-input" type="email" name="email" placeholder="Email"/>
-          <input class= "form-input" type="password" name="password" placeholder="Password"/>
+          <input class= "form-input" type="text" name="subject" placeholder="Subject"/>
         </div>
         <div class="form-right-column">
           <textarea class="form-input form-input--textarea" name="message" cols="20" rows="10" placeholder=" Message"></textarea>
@@ -374,5 +374,6 @@
       </div>
       <p class="footer__text section__text">&copy;&nbsp;Axure Design 2015.</p>
     </footer>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

@@ -32,6 +32,7 @@ $sectionTitleFontSize: calc(
   11px + (20 - 11) * ((100vw - 300px) / (1600 - 300))
 );
 $priceFont: calc(14px + (94 - 14) * ((100vw - 300px) / (1600 - 300)));
+$errorFontSize: calc(8px + (11 - 8) * ((100vw - 300px) / (1600 - 300)));
 
 // RESPONSIVE UNITS
 
